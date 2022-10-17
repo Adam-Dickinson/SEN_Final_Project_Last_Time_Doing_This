@@ -49,7 +49,6 @@
             this.lbl_Serach = new System.Windows.Forms.Label();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).BeginInit();
             this.gBPolicyDetails.SuspendLayout();
             this.SuspendLayout();
@@ -270,21 +269,11 @@
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(344, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // fProvider_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.lbl_Serach);
@@ -327,6 +316,5 @@
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Clear;
-        private System.Windows.Forms.Button button1;
     }
 }
