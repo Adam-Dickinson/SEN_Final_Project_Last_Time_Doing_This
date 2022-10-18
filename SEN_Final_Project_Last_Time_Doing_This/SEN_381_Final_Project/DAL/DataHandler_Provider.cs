@@ -15,7 +15,7 @@ namespace SEN_381_Final_Project.DAL
 
         }
 
-        string conn = "Server=(local); Initial Catalog= SEN_381_Final_Project; Integrated Security = SSPI";
+        string conn = "Data Source=PC-MASTERRACE\\SQLEXPRESS;Initial Catalog=SEN_381_Final_Project;Integrated Security=True";
 
         public DataTable displayProvider()
         {

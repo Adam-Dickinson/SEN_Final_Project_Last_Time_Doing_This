@@ -52,51 +52,51 @@
     <Compile Include="BLL\cPolicyServices.cs" />
     <Compile Include="BLL\cTreatmentService.cs" />
     <Compile Include="DAL\DataHandler_Provider.cs" />
-    <Compile Include="fCall_Center.cs">
+    <Compile Include="Presentation Layer\fCall_Center.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCall_Center.Designer.cs">
+    <Compile Include="Presentation Layer\fCall_Center.Designer.cs">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </Compile>
-    <Compile Include="fClient_And_Policy_Management.cs">
+    <Compile Include="Presentation Layer\fClient_And_Policy_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fClient_And_Policy_Management.Designer.cs">
+    <Compile Include="Presentation Layer\fClient_And_Policy_Management.Designer.cs">
       <DependentUpon>fClient_And_Policy_Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMainMenu.cs">
+    <Compile Include="Presentation Layer\fMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMainMenu.Designer.cs">
+    <Compile Include="Presentation Layer\fMainMenu.Designer.cs">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMedical_Department.cs">
+    <Compile Include="Presentation Layer\fMedical_Department.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMedical_Department.Designer.cs">
+    <Compile Include="Presentation Layer\fMedical_Department.Designer.cs">
       <DependentUpon>fMedical_Department.cs</DependentUpon>
     </Compile>
-    <Compile Include="fProduct_Maintenance.cs">
+    <Compile Include="Presentation Layer\fProduct_Maintenance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fProduct_Maintenance.Designer.cs">
+    <Compile Include="Presentation Layer\fProduct_Maintenance.Designer.cs">
       <DependentUpon>fProduct_Maintenance.cs</DependentUpon>
     </Compile>
-    <Compile Include="fProvider_Management.cs">
+    <Compile Include="Presentation Layer\fProvider_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fProvider_Management.Designer.cs">
+    <Compile Include="Presentation Layer\fProvider_Management.Designer.cs">
       <DependentUpon>fProvider_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fCall_Center.resx">
+    <EmbeddedResource Include="Presentation Layer\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMainMenu.resx">
+    <EmbeddedResource Include="Presentation Layer\fMainMenu.resx">
       <DependentUpon>fMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fProvider_Management.resx">
+    <EmbeddedResource Include="Presentation Layer\fProvider_Management.resx">
       <DependentUpon>fProvider_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
