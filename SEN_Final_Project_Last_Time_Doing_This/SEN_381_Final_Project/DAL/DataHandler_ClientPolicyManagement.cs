@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SEN_381_Final_Project.BLL
+namespace SEN_381_Final_Project.DAL
 {
-    class cClientServices
+    class DataHandler_ClientPolicyManagement
     {
     }
 }

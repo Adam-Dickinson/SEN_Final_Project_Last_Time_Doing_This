@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using SEN_381_Final_Project.BLL;
 
 namespace SEN_381_Final_Project.DAL
 {
@@ -14,6 +15,8 @@ namespace SEN_381_Final_Project.DAL
         {
 
         }
+
+        public cProvider provider = new cProvider();
 
         string conn = "Data Source=PC-MASTERRACE\\SQLEXPRESS;Initial Catalog=SEN_381_Final_Project;Integrated Security=True";
 
