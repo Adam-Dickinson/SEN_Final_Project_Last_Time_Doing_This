@@ -1,13 +1,16 @@
-﻿using SEN_381_Final_Project.DAL;
+﻿using SEN_381_Final_Project.BLL;
+using SEN_381_Final_Project.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SEN_381_Final_Project
 {
@@ -19,6 +22,7 @@ namespace SEN_381_Final_Project
         }
 
         DataHandler_Provider handler = new DataHandler_Provider();
+        cProvider cProvider = new cProvider();
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
@@ -27,9 +31,7 @@ namespace SEN_381_Final_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
-            var MainMenu = new fMainMenu();
-            MainMenu.Show();
+            
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
@@ -66,10 +68,9 @@ namespace SEN_381_Final_Project
             txt_Search.Clear();
 
         }
-
         private void fProvider_Management_Load(object sender, EventArgs e)
         {
-            dgvPolicyDetails.DataSource = handler.displayProvider();
+            
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)

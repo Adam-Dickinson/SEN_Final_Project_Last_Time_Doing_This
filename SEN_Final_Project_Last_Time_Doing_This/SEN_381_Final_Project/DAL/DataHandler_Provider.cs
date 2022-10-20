@@ -11,14 +11,13 @@ namespace SEN_381_Final_Project.DAL
 {
     class DataHandler_Provider
     {
+
+        string conn = "Data Source=PC-MASTERRACE\\SQLEXPRESS;Initial Catalog=SEN_381_Final_Project;Integrated Security=True";
+
         public DataHandler_Provider()
         {
 
         }
-
-        public cProvider provider = new cProvider();
-
-        string conn = "Data Source=PC-MASTERRACE\\SQLEXPRESS;Initial Catalog=SEN_381_Final_Project;Integrated Security=True";
 
         public DataTable displayProvider()
         {

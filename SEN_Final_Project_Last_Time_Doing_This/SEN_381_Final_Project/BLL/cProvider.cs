@@ -1,6 +1,10 @@
-﻿using System;
+﻿using SEN_381_Final_Project.DAL;
+using SEN_381_Final_Project.DAL.Adapters;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,10 +12,7 @@ namespace SEN_381_Final_Project.BLL
 {
     class cProvider
     {
-        public cProvider()
-        {
-
-        }
+        DataAdapter adapter = new DataAdapter();
 
         private int company_ID;
         private string company_Name;
@@ -19,19 +20,23 @@ namespace SEN_381_Final_Project.BLL
         private string address;
         private string status;
 
-        public cProvider(int company_ID, string company_Name, string location, string address, string status)
+        public List<cProvider> getProvider()
         {
-            this.company_ID = company_ID;
-            this.company_Name = company_Name;
-            this.location = location;
-            this.address = address;
-            this.status = status;
-        }
+            List<cProvider> providers = new List<cProvider>();
+            DataTable results = adapter.displayQuery("SELECT * FROM provider_details");
+            
+            foreach(DataRow result in results.Rows)
+            {
+                cProvider provider = new cProvider();
+                var id = result["Company_ID"];
+                var name = result["Provider_Name"];
+                var location = result["_Location"];
+                var address = result["_Address"];
+                var status = result["_Status"];
 
-        public int Company_ID { get => company_ID; set => company_ID = value; }
-        public string Company_Name { get => company_Name; set => company_Name = value; }
-        public string Location { get => location; set => location = value; }
-        public string Address { get => address; set => address = value; }
-        public string Status { get => status; set => status = value; }
+                providers.Add(provider);
+            }
+            return providers;
+        } 
     }
 }

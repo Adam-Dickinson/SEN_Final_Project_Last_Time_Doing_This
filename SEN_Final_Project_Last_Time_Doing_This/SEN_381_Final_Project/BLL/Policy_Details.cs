@@ -37,3 +37,4 @@ namespace SEN_381_Final_Project.BLL
         public int MonthlyRate1 { get => MonthlyRate; set => MonthlyRate = value; }
         public string CoveredTreatments { get => coveredTreatments; set => coveredTreatments = value; }
     }
+}

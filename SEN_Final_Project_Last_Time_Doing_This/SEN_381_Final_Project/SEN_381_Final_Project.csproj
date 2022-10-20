@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\cCallServices.cs" />
-    <Compile Include="BLL\cClientServices.cs" />
-    <Compile Include="BLL\cMedicalServices.cs" />
-    <Compile Include="BLL\cPolicyServices.cs" />
-    <Compile Include="BLL\cTreatmentService.cs" />
+    <Compile Include="BLL\cClient_Details.cs" />
+    <Compile Include="BLL\cMedical_Conditions.cs" />
+    <Compile Include="BLL\cProvider.cs" />
+    <Compile Include="BLL\Hospital.cs" />
+    <Compile Include="BLL\Policy_Details.cs" />
+    <Compile Include="DAL\DataHandler_CallCentre.cs" />
+    <Compile Include="DAL\DataHandler_ClientPolicyManagement.cs" />
+    <Compile Include="DAL\DataHandler_MedicalDepartment.cs" />
+    <Compile Include="DAL\DataHandler_ProductMaintenance.cs" />
     <Compile Include="DAL\DataHandler_Provider.cs" />
     <Compile Include="Presentation Layer\fCall_Center.cs">
       <SubType>Form</SubType>
