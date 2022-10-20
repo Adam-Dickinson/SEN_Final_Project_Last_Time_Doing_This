@@ -46,61 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\cClient_Details.cs" />
-    <Compile Include="BLL\cMedical_Conditions.cs" />
-    <Compile Include="BLL\cProvider.cs" />
-    <Compile Include="BLL\Hospital.cs" />
-    <Compile Include="BLL\Policy_Details.cs" />
-    <Compile Include="DAL\DataHandler_CallCentre.cs" />
-    <Compile Include="DAL\DataHandler_ClientPolicyManagement.cs" />
-    <Compile Include="DAL\DataHandler_MedicalDepartment.cs" />
-    <Compile Include="DAL\DataHandler_ProductMaintenance.cs" />
-    <Compile Include="DAL\DataHandler_Provider.cs" />
-    <Compile Include="Presentation Layer\fCall_Center.cs">
+    <Compile Include="Provider Management\BLL\Buisness Logic\ProviderBL.cs" />
+    <Compile Include="Call Centre\BLL\Buisness Object\cClient_Details.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Object\cMedical_Conditions.cs" />
+    <Compile Include="Provider Management\BLL\Buisness Object\cProviderBO.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Object\Hospital.cs" />
+    <Compile Include="Client and Policy Management\Policy Management\BLL\Buisness Object\Policy_Details.cs" />
+    <Compile Include="Call Centre\DAL\DataHandler\DataHandler_CallCentre.cs" />
+    <Compile Include="Client and Policy Management\Policy Management\DAL\DataHandler\DataHandler_PolicyManagement.cs" />
+    <Compile Include="Medical Department\DAL\DataHandler\DataHandler_MedicalDepartment.cs" />
+    <Compile Include="Product Management\DAL\DataHandler\DataHandler_ProductMaintenance.cs" />
+    <Compile Include="Provider Management\DAL\DataHandler\DataHandler_Provider.cs" />
+    <Compile Include="Call Centre\Presentation\fCall_Center.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\fCall_Center.Designer.cs">
+    <Compile Include="Call Centre\Presentation\fCall_Center.Designer.cs">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\fClient_And_Policy_Management.cs">
+    <Compile Include="Client and Policy Management\Policy Management\Presentation\fClient_And_Policy_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\fClient_And_Policy_Management.Designer.cs">
+    <Compile Include="Client and Policy Management\Policy Management\Presentation\fClient_And_Policy_Management.Designer.cs">
       <DependentUpon>fClient_And_Policy_Management.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\fMainMenu.cs">
+    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\fMainMenu.Designer.cs">
-      <DependentUpon>fMainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\fMedical_Department.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\fMedical_Department.Designer.cs">
+    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.Designer.cs">
       <DependentUpon>fMedical_Department.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\fProduct_Maintenance.cs">
+    <Compile Include="Product Management\Presentation\fProduct_Maintenance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\fProduct_Maintenance.Designer.cs">
+    <Compile Include="Product Management\Presentation\fProduct_Maintenance.Designer.cs">
       <DependentUpon>fProduct_Maintenance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\fProvider_Management.cs">
+    <Compile Include="Provider Management\Presentation\fProvider_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\fProvider_Management.Designer.cs">
+    <Compile Include="Provider Management\Presentation\fProvider_Management.Designer.cs">
       <DependentUpon>fProvider_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentation Layer\fCall_Center.resx">
+    <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\fMainMenu.resx">
-      <DependentUpon>fMainMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\fProvider_Management.resx">
+    <EmbeddedResource Include="Provider Management\Presentation\fProvider_Management.resx">
       <DependentUpon>fProvider_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,6 +117,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Call Centre\BLL\Buisness Logic\" />
+    <Folder Include="Call Centre\DAL\DA\" />
+    <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Logic\" />
+    <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Object\" />
+    <Folder Include="Client and Policy Management\Client Management\DAL\DataHandler\" />
+    <Folder Include="Client and Policy Management\Client Management\DAL\DA\" />
+    <Folder Include="Client and Policy Management\Client Management\Presentation\" />
+    <Folder Include="Client and Policy Management\Policy Management\BLL\Buisness Logic\" />
+    <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
+    <Folder Include="Medical Department\BLL\Buisness Logic\" />
+    <Folder Include="Medical Department\DAL\DA\" />
+    <Folder Include="Product Management\BLL\BL\" />
+    <Folder Include="Product Management\BLL\BO\" />
+    <Folder Include="Product Management\DAL\DA\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

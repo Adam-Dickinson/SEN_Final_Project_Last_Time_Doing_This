@@ -1,4 +1,5 @@
 ﻿using SEN_381_Final_Project.BLL;
+using SEN_381_Final_Project.BusinessLayer.BL;
 using SEN_381_Final_Project.DAL;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,7 @@ namespace SEN_381_Final_Project
             InitializeComponent();
         }
 
-        DataHandler_Provider handler = new DataHandler_Provider();
-        cProvider cProvider = new cProvider();
+        ProviderBL provider = new ProviderBL();
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
@@ -36,17 +36,17 @@ namespace SEN_381_Final_Project
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            dgvPolicyDetails.DataSource = handler.displayProvider();
+            dgvPolicyDetails.DataSource = provider.ShowAllProviders();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            handler.insertProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            /*handler.insertProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
             txt_Address.Clear();
-            cb_Status.SelectedIndex = -1;
+            cb_Status.SelectedIndex = -1;*/
         }
 
         private void dgvPolicyDetails_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -64,8 +64,8 @@ namespace SEN_381_Final_Project
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            dgvPolicyDetails.DataSource = handler.searchProvider(txt_Search.Text);
-            txt_Search.Clear();
+            /*dgvPolicyDetails.DataSource = handler.searchProvider(txt_Search.Text);
+            txt_Search.Clear();*/
 
         }
         private void fProvider_Management_Load(object sender, EventArgs e)
@@ -84,22 +84,22 @@ namespace SEN_381_Final_Project
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            handler.updateProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            /*handler.updateProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
             txt_Address.Clear();
-            cb_Status.SelectedIndex = -1;
+            cb_Status.SelectedIndex = -1;*/
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            handler.deleteProvider(int.Parse(txt_ID.Text));
+            /*handler.deleteProvider(int.Parse(txt_ID.Text));
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
             txt_Address.Clear();
-            cb_Status.SelectedIndex = -1;
+            cb_Status.SelectedIndex = -1;*/
         }
     }
 }

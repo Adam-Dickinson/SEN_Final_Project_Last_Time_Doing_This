@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEN_381_Final_Project.DAL
 {
-    class DataHandler_ClientPolicyManagement
+    class DataHandler_PolicyManagement
     {
     }
 }

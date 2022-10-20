@@ -16,5 +16,12 @@ namespace SEN_381_Final_Project
         {
             InitializeComponent();
         }
+
+        private void btn_provider_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fProvider_Management provider = new fProvider_Management();
+            provider.Show();
+        }
     }
 }
