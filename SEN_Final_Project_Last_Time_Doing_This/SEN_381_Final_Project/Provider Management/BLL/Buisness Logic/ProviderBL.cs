@@ -22,10 +22,10 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
             return provider.displayProvider();
         }
 
-        public List<cProviderBO> UpdateProvider(int company_id, string name, string location, string address, string status)
+        public string UpdateProvider(cProviderBO updateProvider)
         {
             DataHandler_Provider provider = new DataHandler_Provider();
-            return provider.updateProvider(company_id, name, location, address, status);
+            return provider.updateProvider();
         }
     }
 }
