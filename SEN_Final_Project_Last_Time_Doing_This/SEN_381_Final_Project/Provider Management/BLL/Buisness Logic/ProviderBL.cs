@@ -18,6 +18,7 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
     public class ProviderBL
     {
         DataHandler_Provider provider = new DataHandler_Provider();
+        cProviderBO providerBO = new cProviderBO();
         public DataTable ShowAllProviders()
         {
             return provider.displayProvider();
@@ -29,8 +30,8 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
         }
 
         public void deleteProvider(int id)
-        {
-            provider.deleteProvider(id);
+        {         
+            provider.deleteProvider(id);         
         }
 
         public DataTable searchProvider(string name)
@@ -42,5 +43,6 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
         {
             provider.insertProvider(id, name, location, address, status);
         }
+
     }
 }

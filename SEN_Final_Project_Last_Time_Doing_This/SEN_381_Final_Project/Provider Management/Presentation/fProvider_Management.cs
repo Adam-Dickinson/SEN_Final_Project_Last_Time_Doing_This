@@ -43,6 +43,7 @@ namespace SEN_381_Final_Project
         private void btn_Add_Click(object sender, EventArgs e)
         {
             provider.insertProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
@@ -86,6 +87,7 @@ namespace SEN_381_Final_Project
         private void btn_Update_Click(object sender, EventArgs e)
         {
             provider.updateProviders(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
@@ -96,6 +98,7 @@ namespace SEN_381_Final_Project
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             provider.deleteProvider(int.Parse(txt_ID.Text));
+            dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
             cb_Location.SelectedIndex = -1;
