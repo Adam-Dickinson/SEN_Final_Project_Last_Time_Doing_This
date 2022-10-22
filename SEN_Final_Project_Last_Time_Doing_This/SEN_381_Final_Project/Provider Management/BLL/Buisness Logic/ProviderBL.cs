@@ -12,20 +12,35 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
 using System.Xml.Linq;
 
+
 namespace SEN_381_Final_Project.BusinessLayer.BL
 {
     public class ProviderBL
     {
+        DataHandler_Provider provider = new DataHandler_Provider();
         public DataTable ShowAllProviders()
         {
-            DataHandler_Provider provider = new DataHandler_Provider();
             return provider.displayProvider();
         }
 
-        public string UpdateProvider(cProviderBO updateProvider)
+        public void updateProviders(int id, string name, string location, string address, string status)
         {
-            DataHandler_Provider provider = new DataHandler_Provider();
-            return provider.updateProvider();
+             provider.updateProvider(id, name, location, address, status);
+        }
+
+        public void deleteProvider(int id)
+        {
+            provider.deleteProvider(id);
+        }
+
+        public DataTable searchProvider(string name)
+        {
+            return provider.searchProvider(name);
+        }
+
+        public void insertProvider(int id, string name, string location, string address, string status)
+        {
+            provider.insertProvider(id, name, location, address, status);
         }
     }
 }
