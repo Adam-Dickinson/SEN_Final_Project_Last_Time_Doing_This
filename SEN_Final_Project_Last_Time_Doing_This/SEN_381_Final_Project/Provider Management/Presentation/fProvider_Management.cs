@@ -105,5 +105,10 @@ namespace SEN_381_Final_Project
             txt_Address.Clear();
             cb_Status.SelectedIndex = -1;
         }
+
+        private void txt_Address_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

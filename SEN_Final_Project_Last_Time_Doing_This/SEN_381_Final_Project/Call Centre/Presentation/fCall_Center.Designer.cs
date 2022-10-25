@@ -89,6 +89,7 @@
             this.btn_medical.TabIndex = 2;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = true;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_product
             // 

@@ -23,5 +23,10 @@ namespace SEN_381_Final_Project
             fProvider_Management provider = new fProvider_Management();
             provider.Show();
         }
+
+        private void btn_medical_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
