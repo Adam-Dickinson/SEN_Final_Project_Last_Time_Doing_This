@@ -26,6 +26,12 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
 
         public void updateProviders(int id, string name, string location, string address, string status)
         {
+             
+             providerBO.Company_ID = id;
+             providerBO.Company_Name = name;
+             providerBO.Location = location;
+             providerBO.Address = address;
+             providerBO.Status = status;
              provider.updateProvider(id, name, location, address, status);
         }
 

@@ -17,26 +17,11 @@ namespace SEN_381_Final_Project.BLL
         private string address;
         private string status;
 
-        public int Company_ID
-        {
-            get; set;
-        }
-        public string Company_Name
-        {
-            get; set;
-        }
-        public string Location
-        {
-            get; set;
-        }
-        public string Address
-        {
-            get; set;
-        }
-        public string Status
-        {
-            get; set;
-        }
-        
+       
+        public int Company_ID { get => company_ID; set => company_ID = value; }
+        public string Company_Name { get => company_Name; set => company_Name = value; }
+        public string Location { get => location; set => location = value; }
+        public string Address { get => address; set => address = value; }
+        public string Status { get => status; set => status = value; }
     } 
 }
