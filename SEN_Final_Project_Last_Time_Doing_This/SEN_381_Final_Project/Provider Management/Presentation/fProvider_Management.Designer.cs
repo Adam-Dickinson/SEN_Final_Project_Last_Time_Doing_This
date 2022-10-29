@@ -30,6 +30,11 @@
         {
             this.dgvPolicyDetails = new System.Windows.Forms.DataGridView();
             this.gBPolicyDetails = new System.Windows.Forms.GroupBox();
+            this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_providerID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.lbl_Status = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
@@ -42,12 +47,7 @@
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.lbl_Serach = new System.Windows.Forms.Label();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Refresh = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_providerID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
             this.btn_provider = new System.Windows.Forms.Button();
             this.btn_product = new System.Windows.Forms.Button();
             this.btn_medical = new System.Windows.Forms.Button();
@@ -92,6 +92,48 @@
             this.gBPolicyDetails.TabIndex = 1;
             this.gBPolicyDetails.TabStop = false;
             this.gBPolicyDetails.Text = "Policy Details";
+            // 
+            // txt_PhoneNumber
+            // 
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(101, 167);
+            this.txt_PhoneNumber.Name = "txt_PhoneNumber";
+            this.txt_PhoneNumber.Size = new System.Drawing.Size(146, 20);
+            this.txt_PhoneNumber.TabIndex = 17;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(91, 360);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.TabIndex = 2;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Phone Number";
+            // 
+            // txt_providerID
+            // 
+            this.txt_providerID.Location = new System.Drawing.Point(101, 27);
+            this.txt_providerID.Name = "txt_providerID";
+            this.txt_providerID.Size = new System.Drawing.Size(146, 20);
+            this.txt_providerID.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Provider ID";
             // 
             // btn_Clear
             // 
@@ -201,16 +243,6 @@
             this.lbl_Serach.TabIndex = 6;
             this.lbl_Serach.Text = "Serach Provider Name";
             // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Location = new System.Drawing.Point(91, 360);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
-            this.btn_Delete.TabIndex = 2;
-            this.btn_Delete.Text = "Delete";
-            this.btn_Delete.UseVisualStyleBackColor = true;
-            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
-            // 
             // btn_Refresh
             // 
             this.btn_Refresh.Location = new System.Drawing.Point(346, 666);
@@ -220,38 +252,6 @@
             this.btn_Refresh.Text = "Refresh Table";
             this.btn_Refresh.UseVisualStyleBackColor = true;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Provider ID";
-            // 
-            // txt_providerID
-            // 
-            this.txt_providerID.Location = new System.Drawing.Point(101, 27);
-            this.txt_providerID.Name = "txt_providerID";
-            this.txt_providerID.Size = new System.Drawing.Size(146, 20);
-            this.txt_providerID.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Phone Number";
-            // 
-            // txt_PhoneNumber
-            // 
-            this.txt_PhoneNumber.Location = new System.Drawing.Point(101, 167);
-            this.txt_PhoneNumber.Name = "txt_PhoneNumber";
-            this.txt_PhoneNumber.Size = new System.Drawing.Size(146, 20);
-            this.txt_PhoneNumber.TabIndex = 17;
             // 
             // btn_provider
             // 
@@ -297,6 +297,7 @@
             this.btn_callcentre.TabIndex = 8;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = true;
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // groupBox1
             // 

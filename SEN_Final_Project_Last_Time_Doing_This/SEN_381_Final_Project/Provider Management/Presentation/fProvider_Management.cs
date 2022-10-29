@@ -110,5 +110,12 @@ namespace SEN_381_Final_Project
         {
 
         }
+
+        private void btn_callcentre_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCall_Center CallCenter = new fCall_Center();
+            CallCenter.Show();
+        }
     }
 }

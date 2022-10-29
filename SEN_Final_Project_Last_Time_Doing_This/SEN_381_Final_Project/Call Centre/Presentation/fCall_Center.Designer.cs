@@ -34,28 +34,28 @@
             this.btn_product = new System.Windows.Forms.Button();
             this.btn_provider = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_StartCall = new System.Windows.Forms.Button();
-            this.btn_endCall = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_ClientID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_endCall = new System.Windows.Forms.Button();
+            this.btn_StartCall = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_approve = new System.Windows.Forms.Button();
             this.btn_decline = new System.Windows.Forms.Button();
             this.btn_pending = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cb_Condition = new System.Windows.Forms.ComboBox();
             this.cb_Provider = new System.Windows.Forms.ComboBox();
             this.cb_Treatment = new System.Windows.Forms.ComboBox();
+            this.cb_Condition = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,27 +65,27 @@
             // 
             // btn_callcentre
             // 
-            this.btn_callcentre.Location = new System.Drawing.Point(23, 119);
+            this.btn_callcentre.Location = new System.Drawing.Point(257, 11);
             this.btn_callcentre.Name = "btn_callcentre";
-            this.btn_callcentre.Size = new System.Drawing.Size(75, 23);
+            this.btn_callcentre.Size = new System.Drawing.Size(75, 24);
             this.btn_callcentre.TabIndex = 0;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = true;
             // 
             // btn_clientpolicy
             // 
-            this.btn_clientpolicy.Location = new System.Drawing.Point(23, 196);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(402, 11);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
-            this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
+            this.btn_clientpolicy.Size = new System.Drawing.Size(87, 24);
             this.btn_clientpolicy.TabIndex = 1;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = true;
             // 
             // btn_medical
             // 
-            this.btn_medical.Location = new System.Drawing.Point(23, 267);
+            this.btn_medical.Location = new System.Drawing.Point(580, 11);
             this.btn_medical.Name = "btn_medical";
-            this.btn_medical.Size = new System.Drawing.Size(75, 23);
+            this.btn_medical.Size = new System.Drawing.Size(75, 24);
             this.btn_medical.TabIndex = 2;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = true;
@@ -93,18 +93,18 @@
             // 
             // btn_product
             // 
-            this.btn_product.Location = new System.Drawing.Point(23, 351);
+            this.btn_product.Location = new System.Drawing.Point(740, 12);
             this.btn_product.Name = "btn_product";
-            this.btn_product.Size = new System.Drawing.Size(75, 23);
+            this.btn_product.Size = new System.Drawing.Size(75, 24);
             this.btn_product.TabIndex = 3;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = true;
             // 
             // btn_provider
             // 
-            this.btn_provider.Location = new System.Drawing.Point(23, 432);
+            this.btn_provider.Location = new System.Drawing.Point(924, 12);
             this.btn_provider.Name = "btn_provider";
-            this.btn_provider.Size = new System.Drawing.Size(75, 23);
+            this.btn_provider.Size = new System.Drawing.Size(75, 24);
             this.btn_provider.TabIndex = 4;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = true;
@@ -117,38 +117,18 @@
             this.groupBox1.Controls.Add(this.btn_endCall);
             this.groupBox1.Controls.Add(this.btn_StartCall);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(485, 12);
+            this.groupBox1.Location = new System.Drawing.Point(453, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 198);
+            this.groupBox1.Size = new System.Drawing.Size(376, 198);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // txt_ClientID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Call A Client";
-            // 
-            // btn_StartCall
-            // 
-            this.btn_StartCall.Location = new System.Drawing.Point(48, 89);
-            this.btn_StartCall.Name = "btn_StartCall";
-            this.btn_StartCall.Size = new System.Drawing.Size(75, 23);
-            this.btn_StartCall.TabIndex = 1;
-            this.btn_StartCall.Text = "Start";
-            this.btn_StartCall.UseVisualStyleBackColor = true;
-            // 
-            // btn_endCall
-            // 
-            this.btn_endCall.Location = new System.Drawing.Point(235, 89);
-            this.btn_endCall.Name = "btn_endCall";
-            this.btn_endCall.Size = new System.Drawing.Size(75, 23);
-            this.btn_endCall.TabIndex = 2;
-            this.btn_endCall.Text = "End";
-            this.btn_endCall.UseVisualStyleBackColor = true;
+            this.txt_ClientID.Location = new System.Drawing.Point(127, 151);
+            this.txt_ClientID.Name = "txt_ClientID";
+            this.txt_ClientID.Size = new System.Drawing.Size(100, 20);
+            this.txt_ClientID.TabIndex = 4;
             // 
             // label2
             // 
@@ -159,12 +139,32 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Enter Client ID to Call";
             // 
-            // txt_ClientID
+            // btn_endCall
             // 
-            this.txt_ClientID.Location = new System.Drawing.Point(127, 151);
-            this.txt_ClientID.Name = "txt_ClientID";
-            this.txt_ClientID.Size = new System.Drawing.Size(100, 20);
-            this.txt_ClientID.TabIndex = 4;
+            this.btn_endCall.Location = new System.Drawing.Point(235, 89);
+            this.btn_endCall.Name = "btn_endCall";
+            this.btn_endCall.Size = new System.Drawing.Size(75, 23);
+            this.btn_endCall.TabIndex = 2;
+            this.btn_endCall.Text = "End";
+            this.btn_endCall.UseVisualStyleBackColor = true;
+            // 
+            // btn_StartCall
+            // 
+            this.btn_StartCall.Location = new System.Drawing.Point(48, 89);
+            this.btn_StartCall.Name = "btn_StartCall";
+            this.btn_StartCall.Size = new System.Drawing.Size(75, 23);
+            this.btn_StartCall.TabIndex = 1;
+            this.btn_StartCall.Text = "Start";
+            this.btn_StartCall.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(137, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Call A Client";
             // 
             // groupBox2
             // 
@@ -173,29 +173,26 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(137, 267);
+            this.groupBox2.Location = new System.Drawing.Point(105, 297);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(532, 303);
+            this.groupBox2.Size = new System.Drawing.Size(548, 303);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client Details";
             // 
-            // dataGridView1
+            // textBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(520, 213);
-            this.dataGridView1.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(90, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
+            this.textBox1.TabIndex = 5;
             // 
-            // label3
+            // textBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Client Name";
+            this.textBox2.Location = new System.Drawing.Point(90, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(137, 20);
+            this.textBox2.TabIndex = 4;
             // 
             // label4
             // 
@@ -206,43 +203,46 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Client Surname";
             // 
-            // textBox2
+            // label3
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Client Name";
             // 
-            // textBox1
+            // dataGridView1
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 5;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 84);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(520, 213);
+            this.dataGridView1.TabIndex = 0;
             // 
             // btn_approve
             // 
-            this.btn_approve.Location = new System.Drawing.Point(146, 592);
+            this.btn_approve.Location = new System.Drawing.Point(114, 622);
             this.btn_approve.Name = "btn_approve";
-            this.btn_approve.Size = new System.Drawing.Size(75, 23);
+            this.btn_approve.Size = new System.Drawing.Size(91, 23);
             this.btn_approve.TabIndex = 7;
             this.btn_approve.Text = "Approve";
             this.btn_approve.UseVisualStyleBackColor = true;
             // 
             // btn_decline
             // 
-            this.btn_decline.Location = new System.Drawing.Point(253, 592);
+            this.btn_decline.Location = new System.Drawing.Point(221, 622);
             this.btn_decline.Name = "btn_decline";
-            this.btn_decline.Size = new System.Drawing.Size(75, 23);
+            this.btn_decline.Size = new System.Drawing.Size(91, 23);
             this.btn_decline.TabIndex = 8;
             this.btn_decline.Text = "Decline";
             this.btn_decline.UseVisualStyleBackColor = true;
             // 
             // btn_pending
             // 
-            this.btn_pending.Location = new System.Drawing.Point(357, 592);
+            this.btn_pending.Location = new System.Drawing.Point(325, 622);
             this.btn_pending.Name = "btn_pending";
-            this.btn_pending.Size = new System.Drawing.Size(75, 23);
+            this.btn_pending.Size = new System.Drawing.Size(91, 23);
             this.btn_pending.TabIndex = 9;
             this.btn_pending.Text = "Pending";
             this.btn_pending.UseVisualStyleBackColor = true;
@@ -256,55 +256,12 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(684, 226);
+            this.groupBox3.Location = new System.Drawing.Point(652, 256);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(529, 344);
+            this.groupBox3.Size = new System.Drawing.Size(545, 344);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Claim Details";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 125);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(520, 213);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Condition";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 89);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Treatment";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(269, 41);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Provider";
-            // 
-            // cb_Condition
-            // 
-            this.cb_Condition.FormattingEnabled = true;
-            this.cb_Condition.Location = new System.Drawing.Point(88, 33);
-            this.cb_Condition.Name = "cb_Condition";
-            this.cb_Condition.Size = new System.Drawing.Size(121, 21);
-            this.cb_Condition.TabIndex = 5;
             // 
             // cb_Provider
             // 
@@ -322,11 +279,54 @@
             this.cb_Treatment.Size = new System.Drawing.Size(121, 21);
             this.cb_Treatment.TabIndex = 11;
             // 
+            // cb_Condition
+            // 
+            this.cb_Condition.FormattingEnabled = true;
+            this.cb_Condition.Location = new System.Drawing.Point(88, 33);
+            this.cb_Condition.Name = "cb_Condition";
+            this.cb_Condition.Size = new System.Drawing.Size(121, 21);
+            this.cb_Condition.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(269, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Provider";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 89);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Treatment";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Condition";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 125);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(520, 213);
+            this.dataGridView2.TabIndex = 1;
+            // 
             // fCall_Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1261, 641);
+            this.ClientSize = new System.Drawing.Size(1261, 655);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_pending);
             this.Controls.Add(this.btn_decline);
