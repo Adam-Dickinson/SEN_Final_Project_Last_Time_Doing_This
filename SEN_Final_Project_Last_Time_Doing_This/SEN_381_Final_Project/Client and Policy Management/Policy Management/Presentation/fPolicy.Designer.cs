@@ -1,6 +1,6 @@
 ﻿namespace SEN_381_Final_Project
 {
-    partial class fClient_And_Policy_Management
+    partial class fPolicy
     {
         /// <summary>
         /// Required designer variable.

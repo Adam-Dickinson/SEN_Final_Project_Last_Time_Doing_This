@@ -69,6 +69,7 @@
             this.dgvPolicyDetails.Size = new System.Drawing.Size(563, 580);
             this.dgvPolicyDetails.TabIndex = 0;
             this.dgvPolicyDetails.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolicyDetails_CellClick);
+            this.dgvPolicyDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolicyDetails_CellContentClick);
             // 
             // gBPolicyDetails
             // 

@@ -117,5 +117,10 @@ namespace SEN_381_Final_Project
             fCall_Center CallCenter = new fCall_Center();
             CallCenter.Show();
         }
+
+        private void dgvPolicyDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

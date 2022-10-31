@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SEN_381_Final_Project
+namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation
 {
-    public partial class fClient_And_Policy_Management : Form
+    public partial class fClient : Form
     {
-        public fClient_And_Policy_Management()
+        public fClient()
         {
             InitializeComponent();
         }
