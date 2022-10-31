@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation
+namespace SEN_381_Final_Project.Product_Management.Presentation
 {
-    public partial class fClient : Form
+    public partial class fPolicy_From : Form
     {
-        public fClient()
+        public fPolicy_From()
         {
             InitializeComponent();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
