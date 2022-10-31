@@ -33,8 +33,6 @@
             this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_providerID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.lbl_Status = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
@@ -55,6 +53,10 @@
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbl_email = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_ID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).BeginInit();
             this.gBPolicyDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,11 +75,13 @@
             // 
             // gBPolicyDetails
             // 
+            this.gBPolicyDetails.Controls.Add(this.txt_ID);
+            this.gBPolicyDetails.Controls.Add(this.label3);
+            this.gBPolicyDetails.Controls.Add(this.txt_email);
+            this.gBPolicyDetails.Controls.Add(this.lbl_email);
             this.gBPolicyDetails.Controls.Add(this.txt_PhoneNumber);
             this.gBPolicyDetails.Controls.Add(this.btn_Delete);
             this.gBPolicyDetails.Controls.Add(this.label2);
-            this.gBPolicyDetails.Controls.Add(this.txt_providerID);
-            this.gBPolicyDetails.Controls.Add(this.label1);
             this.gBPolicyDetails.Controls.Add(this.btn_Clear);
             this.gBPolicyDetails.Controls.Add(this.lbl_Status);
             this.gBPolicyDetails.Controls.Add(this.lbl_Address);
@@ -89,21 +93,21 @@
             this.gBPolicyDetails.Controls.Add(this.btn_Add);
             this.gBPolicyDetails.Location = new System.Drawing.Point(705, 80);
             this.gBPolicyDetails.Name = "gBPolicyDetails";
-            this.gBPolicyDetails.Size = new System.Drawing.Size(261, 398);
+            this.gBPolicyDetails.Size = new System.Drawing.Size(261, 424);
             this.gBPolicyDetails.TabIndex = 1;
             this.gBPolicyDetails.TabStop = false;
             this.gBPolicyDetails.Text = "Policy Details";
             // 
             // txt_PhoneNumber
             // 
-            this.txt_PhoneNumber.Location = new System.Drawing.Point(101, 167);
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(104, 203);
             this.txt_PhoneNumber.Name = "txt_PhoneNumber";
             this.txt_PhoneNumber.Size = new System.Drawing.Size(146, 20);
             this.txt_PhoneNumber.TabIndex = 17;
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(91, 360);
+            this.btn_Delete.Location = new System.Drawing.Point(94, 384);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(75, 23);
             this.btn_Delete.TabIndex = 2;
@@ -114,31 +118,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 174);
+            this.label2.Location = new System.Drawing.Point(12, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Phone Number";
             // 
-            // txt_providerID
-            // 
-            this.txt_providerID.Location = new System.Drawing.Point(101, 27);
-            this.txt_providerID.Name = "txt_providerID";
-            this.txt_providerID.Size = new System.Drawing.Size(146, 20);
-            this.txt_providerID.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Provider ID";
-            // 
             // btn_Clear
             // 
-            this.btn_Clear.Location = new System.Drawing.Point(91, 261);
+            this.btn_Clear.Location = new System.Drawing.Point(94, 285);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(75, 23);
             this.btn_Clear.TabIndex = 13;
@@ -149,7 +137,7 @@
             // lbl_Status
             // 
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(9, 221);
+            this.lbl_Status.Location = new System.Drawing.Point(12, 245);
             this.lbl_Status.Name = "lbl_Status";
             this.lbl_Status.Size = new System.Drawing.Size(37, 13);
             this.lbl_Status.TabIndex = 11;
@@ -158,7 +146,7 @@
             // lbl_Address
             // 
             this.lbl_Address.AutoSize = true;
-            this.lbl_Address.Location = new System.Drawing.Point(9, 125);
+            this.lbl_Address.Location = new System.Drawing.Point(14, 122);
             this.lbl_Address.Name = "lbl_Address";
             this.lbl_Address.Size = new System.Drawing.Size(45, 13);
             this.lbl_Address.TabIndex = 10;
@@ -167,7 +155,7 @@
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(4, 80);
+            this.lbl_Name.Location = new System.Drawing.Point(9, 77);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(77, 13);
             this.lbl_Name.TabIndex = 8;
@@ -176,14 +164,17 @@
             // cb_Status
             // 
             this.cb_Status.FormattingEnabled = true;
-            this.cb_Status.Location = new System.Drawing.Point(101, 213);
+            this.cb_Status.Items.AddRange(new object[] {
+            "Active",
+            "No Longer Active"});
+            this.cb_Status.Location = new System.Drawing.Point(104, 237);
             this.cb_Status.Name = "cb_Status";
             this.cb_Status.Size = new System.Drawing.Size(149, 21);
             this.cb_Status.TabIndex = 6;
             // 
             // txt_Address
             // 
-            this.txt_Address.Location = new System.Drawing.Point(101, 125);
+            this.txt_Address.Location = new System.Drawing.Point(106, 122);
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.Size = new System.Drawing.Size(146, 20);
             this.txt_Address.TabIndex = 5;
@@ -191,14 +182,14 @@
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(101, 73);
+            this.txt_Name.Location = new System.Drawing.Point(106, 70);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(146, 20);
             this.txt_Name.TabIndex = 3;
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(162, 300);
+            this.btn_Update.Location = new System.Drawing.Point(165, 324);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(75, 23);
             this.btn_Update.TabIndex = 1;
@@ -208,7 +199,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(20, 300);
+            this.btn_Add.Location = new System.Drawing.Point(23, 324);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
             this.btn_Add.TabIndex = 0;
@@ -303,7 +294,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(705, 485);
+            this.groupBox1.Location = new System.Drawing.Point(705, 510);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(514, 179);
             this.groupBox1.TabIndex = 13;
@@ -313,10 +304,42 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(501, 150);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(14, 170);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(32, 13);
+            this.lbl_email.TabIndex = 18;
+            this.lbl_email.Text = "Email";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(104, 163);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(146, 20);
+            this.txt_email.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Provider ID";
+            // 
+            // txt_ID
+            // 
+            this.txt_ID.Location = new System.Drawing.Point(104, 27);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(146, 20);
+            this.txt_ID.TabIndex = 22;
             // 
             // fProvider_Management
             // 
@@ -367,8 +390,6 @@
         private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.TextBox txt_PhoneNumber;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_providerID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_provider;
         private System.Windows.Forms.Button btn_product;
         private System.Windows.Forms.Button btn_medical;
@@ -376,5 +397,9 @@
         private System.Windows.Forms.Button btn_callcentre;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.Label lbl_email;
+        private System.Windows.Forms.TextBox txt_ID;
+        private System.Windows.Forms.Label label3;
     }
 }
