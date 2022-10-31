@@ -29,18 +29,18 @@ namespace SEN_381_Final_Project.DAL
             return dt;
         }
 
-        public void insertProvider(int id, string name, string location, string address, string status)
+        public void insertProvider(string name, string address, string email, string phoneNumber, string status)
         {
             using (SqlConnection connect = new SqlConnection(conn)) 
             {
                 SqlCommand cmd = new SqlCommand("spAddProvider", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Company_ID", id);
                 cmd.Parameters.AddWithValue("@Provider_Name", name);
-                cmd.Parameters.AddWithValue("@_Location", location);
-                cmd.Parameters.AddWithValue("@_Address", address);
-                cmd.Parameters.AddWithValue("@_Status", status);
+                cmd.Parameters.AddWithValue("@Provider_Address", address);
+                cmd.Parameters.AddWithValue("@Provider_Email", email);
+                cmd.Parameters.AddWithValue("@Provider_PhoneNumber", phoneNumber);
+                cmd.Parameters.AddWithValue("@Provider_Status", status);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();
@@ -67,7 +67,7 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void updateProvider(int id, string name, string location, string address, string status)
+        public void updateProvider(string name, string address, string email, string phoneNumber, string status)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -75,11 +75,11 @@ namespace SEN_381_Final_Project.DAL
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Company_ID", id);
                 cmd.Parameters.AddWithValue("@Provider_Name", name);
-                cmd.Parameters.AddWithValue("@_Location", location);
-                cmd.Parameters.AddWithValue("@_Address", address);
-                cmd.Parameters.AddWithValue("@_Status", status);
+                cmd.Parameters.AddWithValue("@Provider_Address", address);
+                cmd.Parameters.AddWithValue("@Provider_Email", email);
+                cmd.Parameters.AddWithValue("@Provider_PhoneNumber", phoneNumber);
+                cmd.Parameters.AddWithValue("@Provider_Status", status);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();
@@ -94,7 +94,7 @@ namespace SEN_381_Final_Project.DAL
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Company_ID", id);
+                cmd.Parameters.AddWithValue("@Provider_ID", id);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();

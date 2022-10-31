@@ -11,17 +11,18 @@ namespace SEN_381_Final_Project.BLL
 {
     public class cProviderBO
     {
-        private int company_ID;
-        private string company_Name;
-        private string location;
-        private string address;
-        private string status;
+        private int provider_id;
+        private string provider_name;
+        private string provider_address;
+        private string provider_email;
+        private string provider_phoneNumber;
+        private string provider_status;
 
-       
-        public int Company_ID { get => company_ID; set => company_ID = value; }
-        public string Company_Name { get => company_Name; set => company_Name = value; }
-        public string Location { get => location; set => location = value; }
-        public string Address { get => address; set => address = value; }
-        public string Status { get => status; set => status = value; }
+        public int Provider_id { get => provider_id; set => provider_id = value; }
+        public string Provider_name { get => provider_name; set => provider_name = value; }
+        public string Provider_address { get => provider_address; set => provider_address = value; }
+        public string Provider_email { get => provider_email; set => provider_email = value; }
+        public string Provider_phoneNumber { get => provider_phoneNumber; set => provider_phoneNumber = value; }
+        public string Provider_Status { get => provider_status; set => provider_status = value; }
     } 
 }

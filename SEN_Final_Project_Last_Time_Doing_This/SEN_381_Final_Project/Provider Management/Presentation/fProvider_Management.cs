@@ -42,12 +42,13 @@ namespace SEN_381_Final_Project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            provider.insertProvider(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            provider.insertProvider(txt_Name.Text, txt_Address.Text,txt_email.Text ,txt_PhoneNumber.Text, cb_Status.Text);
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
-            cb_Location.SelectedIndex = -1;
+            txt_email.Clear();
             txt_Address.Clear();
+            txt_PhoneNumber.Clear();
             cb_Status.SelectedIndex = -1;
         }
 
@@ -58,9 +59,10 @@ namespace SEN_381_Final_Project
                 DataGridViewRow dgvRow = dgvPolicyDetails.Rows[e.RowIndex];
                 txt_ID.Text = dgvRow.Cells[0].Value.ToString();
                 txt_Name.Text = dgvRow.Cells[1].Value.ToString();
-                cb_Location.Text = dgvRow.Cells[2].Value.ToString();    
+                txt_email.Text = dgvRow.Cells[2].Value.ToString();    
                 txt_Address.Text = dgvRow.Cells[3].Value.ToString();
-                cb_Status.Text = dgvRow.Cells[4].Value.ToString();
+                txt_PhoneNumber.Text = dgvRow.Cells[4].Value.ToString();
+                cb_Status.Text = dgvRow.Cells[5].Value.ToString();
             }
         }
 
@@ -79,19 +81,21 @@ namespace SEN_381_Final_Project
         {
             txt_ID.Clear();
             txt_Name.Clear();
-            cb_Location.SelectedIndex = -1;
+            txt_email.Clear();
+            txt_Address.Clear();
             txt_Address.Clear();
             cb_Status.SelectedIndex = -1;
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            provider.updateProviders(int.Parse(txt_ID.Text), txt_Name.Text, cb_Location.Text, txt_Address.Text, cb_Status.Text);
+            provider.updateProviders(txt_Name.Text, txt_Address.Text, txt_email.Text, txt_PhoneNumber.Text, cb_Status.Text);
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
-            cb_Location.SelectedIndex = -1;
+            txt_email.Clear();
             txt_Address.Clear();
+            txt_PhoneNumber.Clear();
             cb_Status.SelectedIndex = -1;
         }
 
@@ -101,8 +105,9 @@ namespace SEN_381_Final_Project
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
-            cb_Location.SelectedIndex = -1;
+            txt_email.Clear();
             txt_Address.Clear();
+            txt_PhoneNumber.Clear();
             cb_Status.SelectedIndex = -1;
         }
 
