@@ -42,7 +42,7 @@ namespace SEN_381_Final_Project
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            provider.insertProvider(txt_Name.Text, txt_Address.Text,txt_email.Text ,txt_PhoneNumber.Text, cb_Status.Text);
+            provider.insertProvider(int.Parse(txt_ID.Text),txt_Name.Text, txt_Address.Text,txt_email.Text ,txt_PhoneNumber.Text, cb_Status.Text);
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();
@@ -89,7 +89,7 @@ namespace SEN_381_Final_Project
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            provider.updateProviders(txt_Name.Text, txt_Address.Text, txt_email.Text, txt_PhoneNumber.Text, cb_Status.Text);
+            provider.updateProviders(int.Parse(txt_ID.Text), txt_Name.Text, txt_Address.Text, txt_email.Text, txt_PhoneNumber.Text, cb_Status.Text);
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();

@@ -24,14 +24,14 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
             return provider.displayProvider();
         }
 
-        public void updateProviders(string name, string address, string email, string phoneNumber, string status)
+        public void updateProviders(int id,string name, string address, string email, string phoneNumber, string status)
         {
 
              providerBO.Provider_name = name;
              providerBO.Provider_address = address;
              providerBO.Provider_email = email;
              providerBO.Provider_Status = status;
-             provider.updateProvider(name, address, email, phoneNumber, status);
+             provider.updateProvider(id, name, address, email, phoneNumber, status);
         }
 
         public void deleteProvider(int id)
@@ -44,9 +44,9 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
             return provider.searchProvider(name);
         }
 
-        public void insertProvider(string name, string address, string email, string phoneNumber, string status)
+        public void insertProvider(int id, string name, string address, string email, string phoneNumber, string status)
         {
-            provider.insertProvider(name, address,email, phoneNumber, status);
+            provider.insertProvider(id, name, address,email, phoneNumber, status);
         }
 
     }

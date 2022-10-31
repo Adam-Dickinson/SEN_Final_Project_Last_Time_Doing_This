@@ -22,20 +22,21 @@ namespace SEN_381_Final_Project.DAL
         public DataTable displayProvider()
         {
             SqlConnection con = new SqlConnection(conn);
-            SqlDataAdapter adapter = new SqlDataAdapter("spDisplayProviders", con);
+            SqlDataAdapter adapter = new SqlDataAdapter("spDisplayProvider", con);
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             return dt;
         }
 
-        public void insertProvider(string name, string address, string email, string phoneNumber, string status)
+        public void insertProvider(int id, string name, string address, string email, string phoneNumber, string status)
         {
             using (SqlConnection connect = new SqlConnection(conn)) 
             {
                 SqlCommand cmd = new SqlCommand("spAddProvider", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@Provider_ID", id);
                 cmd.Parameters.AddWithValue("@Provider_Name", name);
                 cmd.Parameters.AddWithValue("@Provider_Address", address);
                 cmd.Parameters.AddWithValue("@Provider_Email", email);
@@ -67,7 +68,7 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void updateProvider(string name, string address, string email, string phoneNumber, string status)
+        public void updateProvider(int id, string name, string address, string email, string phoneNumber, string status)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -75,6 +76,7 @@ namespace SEN_381_Final_Project.DAL
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@Provider_ID", id);
                 cmd.Parameters.AddWithValue("@Provider_Name", name);
                 cmd.Parameters.AddWithValue("@Provider_Address", address);
                 cmd.Parameters.AddWithValue("@Provider_Email", email);
