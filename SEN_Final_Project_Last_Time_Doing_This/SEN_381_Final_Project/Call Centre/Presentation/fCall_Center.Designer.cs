@@ -173,7 +173,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(105, 297);
+            this.groupBox2.Location = new System.Drawing.Point(98, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(548, 303);
             this.groupBox2.TabIndex = 6;
@@ -286,6 +286,7 @@
             this.cb_Condition.Name = "cb_Condition";
             this.cb_Condition.Size = new System.Drawing.Size(121, 21);
             this.cb_Condition.TabIndex = 5;
+            this.cb_Condition.SelectedIndexChanged += new System.EventHandler(this.cb_Condition_SelectedIndexChanged);
             // 
             // label7
             // 

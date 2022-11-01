@@ -28,5 +28,10 @@ namespace SEN_381_Final_Project
         {
 
         }
+
+        private void cb_Condition_SelectedIndexChanged(object sender, EventArgs e)
+        { 
+
+        }
     }
 }
