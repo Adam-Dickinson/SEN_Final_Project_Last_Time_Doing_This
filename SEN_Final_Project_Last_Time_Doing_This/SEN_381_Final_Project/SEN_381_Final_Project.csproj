@@ -96,6 +96,9 @@
     <EmbeddedResource Include="Client and Policy Management\Client Management\Presentation\fClient.resx">
       <DependentUpon>fClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Product Management\Presentation\fPolicy_From.resx">
+      <DependentUpon>fPolicy_From.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Provider Management\Presentation\fProvider_Management.resx">
       <DependentUpon>fProvider_Management.cs</DependentUpon>
     </EmbeddedResource>
