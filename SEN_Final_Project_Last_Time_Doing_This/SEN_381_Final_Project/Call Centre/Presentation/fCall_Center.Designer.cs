@@ -44,7 +44,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Client = new System.Windows.Forms.DataGridView();
             this.btn_approve = new System.Windows.Forms.Button();
             this.btn_decline = new System.Windows.Forms.Button();
             this.btn_pending = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -147,6 +147,7 @@
             this.btn_endCall.TabIndex = 2;
             this.btn_endCall.Text = "End";
             this.btn_endCall.UseVisualStyleBackColor = true;
+            this.btn_endCall.Click += new System.EventHandler(this.btn_endCall_Click);
             // 
             // btn_StartCall
             // 
@@ -156,6 +157,7 @@
             this.btn_StartCall.TabIndex = 1;
             this.btn_StartCall.Text = "Start";
             this.btn_StartCall.UseVisualStyleBackColor = true;
+            this.btn_StartCall.Click += new System.EventHandler(this.btn_StartCall_Click);
             // 
             // label1
             // 
@@ -172,7 +174,7 @@
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgv_Client);
             this.groupBox2.Location = new System.Drawing.Point(98, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(548, 303);
@@ -212,13 +214,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Client Name";
             // 
-            // dataGridView1
+            // dgv_Client
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(520, 213);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_Client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Client.Location = new System.Drawing.Point(6, 84);
+            this.dgv_Client.Name = "dgv_Client";
+            this.dgv_Client.Size = new System.Drawing.Size(520, 213);
+            this.dgv_Client.TabIndex = 0;
             // 
             // btn_approve
             // 
@@ -228,6 +230,7 @@
             this.btn_approve.TabIndex = 7;
             this.btn_approve.Text = "Approve";
             this.btn_approve.UseVisualStyleBackColor = true;
+            this.btn_approve.Click += new System.EventHandler(this.btn_approve_Click);
             // 
             // btn_decline
             // 
@@ -237,6 +240,7 @@
             this.btn_decline.TabIndex = 8;
             this.btn_decline.Text = "Decline";
             this.btn_decline.UseVisualStyleBackColor = true;
+            this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
             // btn_pending
             // 
@@ -344,7 +348,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -369,7 +373,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Client;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_approve;
         private System.Windows.Forms.Button btn_decline;

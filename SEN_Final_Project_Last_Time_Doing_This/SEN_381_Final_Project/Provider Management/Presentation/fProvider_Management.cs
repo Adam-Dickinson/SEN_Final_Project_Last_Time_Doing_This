@@ -68,7 +68,7 @@ namespace SEN_381_Final_Project
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            dgvPolicyDetails.DataSource =  provider.searchProvider(txt_Search.Text);
+            dgvPolicyDetails.DataSource = provider.searchProvider(txt_Search.Text);
             txt_Search.Clear();
 
         }

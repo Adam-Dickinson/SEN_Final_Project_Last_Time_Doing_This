@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
     <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,7 +129,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Call Centre\BLL\Buisness Logic\" />
     <Folder Include="Call Centre\DAL\DA\" />
     <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Logic\" />
     <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Object\" />
