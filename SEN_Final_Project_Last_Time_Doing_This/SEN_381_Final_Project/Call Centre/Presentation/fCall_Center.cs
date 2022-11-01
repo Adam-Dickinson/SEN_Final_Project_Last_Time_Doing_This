@@ -62,5 +62,12 @@ namespace SEN_381_Final_Project
             String message = "Claim has been declined";
             MessageBox.Show(message);
         }
+
+        private void dgv_Client_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgvRow = dgv_Client.Rows[e.RowIndex];
+            txt_Name.Text = dgvRow.Cells[1].Value.ToString();
+            txt_Surname.Text = dgvRow.Cells[2].Value.ToString();
+        }
     }
 }

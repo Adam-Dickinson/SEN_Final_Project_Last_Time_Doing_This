@@ -40,8 +40,8 @@
             this.btn_StartCall = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.txt_Surname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Client = new System.Windows.Forms.DataGridView();
@@ -170,8 +170,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txt_Name);
+            this.groupBox2.Controls.Add(this.txt_Surname);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dgv_Client);
@@ -182,19 +182,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client Details";
             // 
-            // textBox1
+            // txt_Name
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 5;
+            this.txt_Name.Location = new System.Drawing.Point(90, 20);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(137, 20);
+            this.txt_Name.TabIndex = 5;
             // 
-            // textBox2
+            // txt_Surname
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 4;
+            this.txt_Surname.Location = new System.Drawing.Point(90, 48);
+            this.txt_Surname.Name = "txt_Surname";
+            this.txt_Surname.Size = new System.Drawing.Size(137, 20);
+            this.txt_Surname.TabIndex = 4;
             // 
             // label4
             // 
@@ -221,6 +221,7 @@
             this.dgv_Client.Name = "dgv_Client";
             this.dgv_Client.Size = new System.Drawing.Size(520, 213);
             this.dgv_Client.TabIndex = 0;
+            this.dgv_Client.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Client_CellClick);
             // 
             // btn_approve
             // 
@@ -370,11 +371,11 @@
         private System.Windows.Forms.TextBox txt_ClientID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Surname;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_Client;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Button btn_approve;
         private System.Windows.Forms.Button btn_decline;
         private System.Windows.Forms.Button btn_pending;
