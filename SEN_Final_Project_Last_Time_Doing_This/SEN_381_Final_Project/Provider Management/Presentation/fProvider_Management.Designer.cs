@@ -30,6 +30,10 @@
         {
             this.dgvPolicyDetails = new System.Windows.Forms.DataGridView();
             this.gBPolicyDetails = new System.Windows.Forms.GroupBox();
+            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,10 +57,6 @@
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbl_email = new System.Windows.Forms.Label();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_ID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).BeginInit();
             this.gBPolicyDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,6 +97,38 @@
             this.gBPolicyDetails.TabIndex = 1;
             this.gBPolicyDetails.TabStop = false;
             this.gBPolicyDetails.Text = "Policy Details";
+            // 
+            // txt_ID
+            // 
+            this.txt_ID.Location = new System.Drawing.Point(104, 27);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(146, 20);
+            this.txt_ID.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Provider ID";
+            // 
+            // txt_email
+            // 
+            this.txt_email.Location = new System.Drawing.Point(104, 163);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(146, 20);
+            this.txt_email.TabIndex = 19;
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Location = new System.Drawing.Point(14, 170);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(32, 13);
+            this.lbl_email.TabIndex = 18;
+            this.lbl_email.Text = "Email";
             // 
             // txt_PhoneNumber
             // 
@@ -304,48 +336,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(501, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // lbl_email
-            // 
-            this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(14, 170);
-            this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(32, 13);
-            this.lbl_email.TabIndex = 18;
-            this.lbl_email.Text = "Email";
-            // 
-            // txt_email
-            // 
-            this.txt_email.Location = new System.Drawing.Point(104, 163);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(146, 20);
-            this.txt_email.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Provider ID";
-            // 
-            // txt_ID
-            // 
-            this.txt_ID.Location = new System.Drawing.Point(104, 27);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(146, 20);
-            this.txt_ID.TabIndex = 22;
             // 
             // fProvider_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1243, 702);
+            this.ClientSize = new System.Drawing.Size(1243, 724);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
             this.Controls.Add(this.btn_product);
