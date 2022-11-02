@@ -135,6 +135,7 @@
     <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
     <Folder Include="Medical Department\BLL\Buisness Logic\" />
     <Folder Include="Medical Department\DAL\DA\" />
+    <Folder Include="Medical Department\NewFolder1\" />
     <Folder Include="Product Management\BLL\BL\" />
     <Folder Include="Product Management\BLL\BO\" />
     <Folder Include="Product Management\DAL\DA\" />
