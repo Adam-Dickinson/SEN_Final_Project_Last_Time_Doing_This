@@ -53,6 +53,12 @@
     <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.Designer.cs">
       <DependentUpon>fClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical Department\Presentation\fMedical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical Department\Presentation\fMedical.Designer.cs">
+      <DependentUpon>fMedical.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product Management\Presentation\fPolicy_From.cs">
       <SubType>Form</SubType>
     </Compile>
