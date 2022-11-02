@@ -96,6 +96,9 @@
     <EmbeddedResource Include="Client and Policy Management\Client Management\Presentation\fClient.resx">
       <DependentUpon>fClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Medical Department\Presentation\fMedical.resx">
+      <DependentUpon>fMedical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product Management\Presentation\fPolicy_From.resx">
       <DependentUpon>fPolicy_From.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,7 +138,6 @@
     <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
     <Folder Include="Medical Department\BLL\Buisness Logic\" />
     <Folder Include="Medical Department\DAL\DA\" />
-    <Folder Include="Medical Department\NewFolder1\" />
     <Folder Include="Product Management\BLL\BL\" />
     <Folder Include="Product Management\BLL\BO\" />
     <Folder Include="Product Management\DAL\DA\" />
