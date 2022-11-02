@@ -1,5 +1,6 @@
 ﻿using SEN_381_Final_Project.BusinessLayer.BL;
 using SEN_381_Final_Project.Call_Centre.BLL.Buisness_Object;
+using SEN_381_Final_Project.Medical_Department.Presentation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,9 @@ namespace SEN_381_Final_Project
 
         private void btn_medical_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            fMedical medical = new fMedical();
+            medical.Show();
         }
 
         private void cb_Condition_SelectedIndexChanged(object sender, EventArgs e)

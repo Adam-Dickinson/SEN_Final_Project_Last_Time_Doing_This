@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SEN_381_Final_Project.BusinessLayer.BL;
+using SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,124 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
         public fMedical()
         {
             InitializeComponent();
+        }
+
+        MedicalBL Condition = new MedicalBL();
+
+        private void btn_AddMC_Click(object sender, EventArgs e)
+        {
+            Condition.insertCondition(int.Parse(txt_CID.Text), txt_MCName.Text, rtxt_MCInformation.Text);
+            dgv_MC.DataSource = Condition.displayConditions();
+            txt_CID.Clear();
+            txt_MCName.Clear();
+            rtxt_MCInformation.Clear();
+            cb_TreatmentMC.DataSource = Condition.displayConditions();
+            cb_TreatmentMC.DisplayMember = "Condition_Name";
+        }
+
+        private void dgv_MC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fMedical_Load(object sender, EventArgs e)
+        {
+            dgv_MC.DataSource = Condition.displayConditions();
+            dgv_Treatment.DataSource = Condition.displayTreatments();
+
+            cb_TreatmentMC.Text = "Select a medical Condition";
+        }
+
+        private void dgv_MC_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_MC_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = dgv_MC.Rows[e.RowIndex];
+                txt_CID.Text = dgvRow.Cells[0].Value.ToString();
+                txt_MCName.Text = dgvRow.Cells[1].Value.ToString();
+                rtxt_MCInformation.Text = dgvRow.Cells[2].Value.ToString();
+            }
+        }
+
+
+
+        private void btn_AddTreatment_Click(object sender, EventArgs e)
+        {
+            Condition.insertTreatment(int.Parse(txt_TID.Text), txt_TreatmentName.Text, rtxt_TreatmentDescription.Text, cb_TreatmentMC.Text);
+            dgv_Treatment.DataSource = Condition.displayTreatments();
+            txt_TID.Clear();
+            txt_TreatmentName.Clear();
+            rtxt_TreatmentDescription.Clear();
+            cb_TreatmentMC.Text = "Select a medical Condition";
+        }
+
+        private void cb_TreatmentMC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_TreatmentMC_Enter(object sender, EventArgs e)
+        {
+            if(cb_TreatmentMC.Text == "Placeholder")
+            {
+                cb_TreatmentMC.DataSource = Condition.displayConditions();
+                cb_TreatmentMC.DisplayMember = "Condition_Name";
+            }
+        }
+
+        private void cb_TreatmentMC_Leave(object sender, EventArgs e)
+        {
+            if( cb_TreatmentMC.Text == " ")
+            {
+                cb_TreatmentMC.Text = "Select a medical Condition";
+            }
+        }
+
+        private void dgv_Treatment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = dgv_Treatment.Rows[e.RowIndex];
+                txt_TID.Text = dgvRow.Cells[0].Value.ToString();
+                txt_TreatmentName.Text = dgvRow.Cells[1].Value.ToString();
+                rtxt_TreatmentDescription.Text = dgvRow.Cells[2].Value.ToString();
+                cb_TreatmentMC.Text = dgvRow.Cells[3].Value.ToString();
+            }
+        }
+
+        private void btn_SearchTreatment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_SearchMC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_UpdateTreatment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_UpdateMC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteTreatment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteMC_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

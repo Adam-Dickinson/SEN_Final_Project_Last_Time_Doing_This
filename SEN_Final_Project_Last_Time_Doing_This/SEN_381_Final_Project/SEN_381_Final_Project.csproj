@@ -53,6 +53,7 @@
     <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.Designer.cs">
       <DependentUpon>fClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical Department\BLL\Buisness Object\MedicalBL.cs" />
     <Compile Include="Medical Department\Presentation\fMedical.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,8 +137,6 @@
     <Folder Include="Client and Policy Management\Client Management\DAL\DA\" />
     <Folder Include="Client and Policy Management\Policy Management\BLL\Buisness Logic\" />
     <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
-    <Folder Include="Medical Department\BLL\Buisness Logic\" />
-    <Folder Include="Medical Department\DAL\DA\" />
     <Folder Include="Product Management\BLL\BL\" />
     <Folder Include="Product Management\BLL\BO\" />
     <Folder Include="Product Management\DAL\DA\" />
