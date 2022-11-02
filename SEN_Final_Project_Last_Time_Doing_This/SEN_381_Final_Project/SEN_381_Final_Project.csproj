@@ -76,12 +76,6 @@
     <Compile Include="Call Centre\Presentation\fCall_Center.Designer.cs">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.Designer.cs">
-      <DependentUpon>fMedical_Department.cs</DependentUpon>
-    </Compile>
     <Compile Include="Provider Management\Presentation\fProvider_Management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +129,7 @@
     <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
     <Folder Include="Medical Department\BLL\Buisness Logic\" />
     <Folder Include="Medical Department\DAL\DA\" />
+    <Folder Include="Medical Department\NewFolder1\" />
     <Folder Include="Product Management\BLL\BL\" />
     <Folder Include="Product Management\BLL\BO\" />
     <Folder Include="Product Management\DAL\DA\" />
