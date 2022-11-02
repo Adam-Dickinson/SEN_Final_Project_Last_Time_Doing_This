@@ -53,6 +53,12 @@
     <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.Designer.cs">
       <DependentUpon>fClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical Department\Presentation\fMedical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical Department\Presentation\fMedical.Designer.cs">
+      <DependentUpon>fMedical.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product Management\Presentation\fPolicy_From.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +81,6 @@
     </Compile>
     <Compile Include="Call Centre\Presentation\fCall_Center.Designer.cs">
       <DependentUpon>fCall_Center.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client and Policy Management\Presentation\fMedical_Department.Designer.cs">
-      <DependentUpon>fMedical_Department.cs</DependentUpon>
     </Compile>
     <Compile Include="Provider Management\Presentation\fProvider_Management.cs">
       <SubType>Form</SubType>
