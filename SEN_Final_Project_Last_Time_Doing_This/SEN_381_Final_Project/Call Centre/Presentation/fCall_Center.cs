@@ -1,5 +1,6 @@
 ﻿using SEN_381_Final_Project.BusinessLayer.BL;
 using SEN_381_Final_Project.Call_Centre.BLL.Buisness_Object;
+using SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation;
 using SEN_381_Final_Project.Medical_Department.Presentation;
 using System;
 using System.Collections.Generic;
@@ -71,6 +72,13 @@ namespace SEN_381_Final_Project
             DataGridViewRow dgvRow = dgv_Client.Rows[e.RowIndex];
             txt_Name.Text = dgvRow.Cells[1].Value.ToString();
             txt_Surname.Text = dgvRow.Cells[2].Value.ToString();
+        }
+
+        private void btn_clientpolicy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fManagment_Client_Policy management = new fManagment_Client_Policy();
+            management.Show();
         }
     }
 }

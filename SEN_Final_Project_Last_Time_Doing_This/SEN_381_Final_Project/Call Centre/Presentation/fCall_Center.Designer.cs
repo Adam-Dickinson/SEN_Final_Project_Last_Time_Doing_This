@@ -80,6 +80,7 @@
             this.btn_clientpolicy.TabIndex = 1;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = true;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_medical
             // 

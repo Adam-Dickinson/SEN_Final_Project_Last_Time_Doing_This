@@ -80,7 +80,7 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
 
         private void cb_TreatmentMC_Enter(object sender, EventArgs e)
         {
-            if(cb_TreatmentMC.Text == "Placeholder")
+            if(cb_TreatmentMC.Text == "Select a medical Condition")
             {
                 cb_TreatmentMC.DataSource = Condition.displayConditions();
                 cb_TreatmentMC.DisplayMember = "Condition_Name";
@@ -109,32 +109,49 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
 
         private void btn_SearchTreatment_Click(object sender, EventArgs e)
         {
-
+            dgv_Treatment.DataSource = Condition.searchTreatment(txt_TreatmentNameSearch.Text);
         }
 
         private void btn_SearchMC_Click(object sender, EventArgs e)
         {
-
+            dgv_MC.DataSource = Condition.searchCondition(txt_MCNameSearch.Text);
         }
 
         private void btn_UpdateTreatment_Click(object sender, EventArgs e)
         {
-
+            Condition.updateTreatment(int.Parse(txt_TID.Text), txt_TreatmentName.Text, rtxt_TreatmentDescription.Text, cb_TreatmentMC.Text);
+            txt_TID.Clear();
+            txt_TreatmentName.Clear();
+            rtxt_TreatmentDescription.Clear();
+            cb_TreatmentMC.Text = "Select a medical Condition";
         }
 
         private void btn_UpdateMC_Click(object sender, EventArgs e)
         {
-
+            Condition.TestUpdate(int.Parse(txt_CID.Text), txt_MCName.Text, rtxt_MCInformation.Text, txt_MCName.Text);
+            dgv_Treatment.DataSource = Condition.displayTreatments(); 
+            dgv_MC.DataSource = Condition.displayConditions();
         }
 
         private void btn_DeleteTreatment_Click(object sender, EventArgs e)
         {
-
+            Condition.deleteTreatment(int.Parse(txt_TID.Text));
+            dgv_Treatment.DataSource = Condition.displayTreatments();
+            txt_TID.Clear();
+            txt_TreatmentName.Clear();
+            rtxt_TreatmentDescription.Clear();
+            cb_TreatmentMC.Text = "Select a medical Condition";
         }
 
         private void btn_DeleteMC_Click(object sender, EventArgs e)
         {
-
+            Condition.deleteCondition(int.Parse(txt_CID.Text));
+            dgv_MC.DataSource = Condition.displayConditions();
+            txt_CID.Clear();
+            txt_MCName.Clear();
+            rtxt_MCInformation.Clear();
+            cb_TreatmentMC.DataSource = Condition.displayConditions();
+            cb_TreatmentMC.DisplayMember = "Condition_Name";
         }
     }
 }

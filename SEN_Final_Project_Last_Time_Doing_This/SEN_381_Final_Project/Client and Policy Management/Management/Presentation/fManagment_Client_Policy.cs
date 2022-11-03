@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation
 {
-    public partial class fClient : Form
+    public partial class fManagment_Client_Policy : Form
     {
-        public fClient()
+        public fManagment_Client_Policy()
         {
             InitializeComponent();
         }

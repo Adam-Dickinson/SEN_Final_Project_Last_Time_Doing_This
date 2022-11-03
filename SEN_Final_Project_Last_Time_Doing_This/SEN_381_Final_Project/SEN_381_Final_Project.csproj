@@ -47,13 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
-    <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.cs">
+    <Compile Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client and Policy Management\Client Management\Presentation\fClient.Designer.cs">
-      <DependentUpon>fClient.cs</DependentUpon>
+    <Compile Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.Designer.cs">
+      <DependentUpon>fManagment_Client_Policy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medical Department\BLL\Buisness Object\MedicalBL.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Logic\cTreatment.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Logic\MedicalBL.cs" />
     <Compile Include="Medical Department\Presentation\fMedical.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,12 +69,10 @@
     </Compile>
     <Compile Include="Provider Management\BLL\Buisness Logic\ProviderBL.cs" />
     <Compile Include="Call Centre\BLL\Buisness Object\cClient_Details.cs" />
-    <Compile Include="Medical Department\BLL\Buisness Object\cMedical_Conditions.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Logic\cMedical_Conditions.cs" />
     <Compile Include="Provider Management\BLL\Buisness Object\cProviderBO.cs" />
-    <Compile Include="Medical Department\BLL\Buisness Object\Hospital.cs" />
-    <Compile Include="Client and Policy Management\Policy Management\BLL\Buisness Object\Policy_Details.cs" />
+    <Compile Include="Medical Department\BLL\Buisness Logic\Hospital.cs" />
     <Compile Include="Call Centre\DAL\DataHandler\DataHandler_CallCentre.cs" />
-    <Compile Include="Client and Policy Management\Policy Management\DAL\DataHandler\DataHandler_PolicyManagement.cs" />
     <Compile Include="Medical Department\DAL\DataHandler\DataHandler_MedicalDepartment.cs" />
     <Compile Include="Product Management\DAL\DataHandler\DataHandler_ProductMaintenance.cs" />
     <Compile Include="Provider Management\DAL\DataHandler\DataHandler_Provider.cs" />
@@ -94,8 +93,8 @@
     <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client and Policy Management\Client Management\Presentation\fClient.resx">
-      <DependentUpon>fClient.cs</DependentUpon>
+    <EmbeddedResource Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.resx">
+      <DependentUpon>fManagment_Client_Policy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medical Department\Presentation\fMedical.resx">
       <DependentUpon>fMedical.cs</DependentUpon>
@@ -131,12 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Call Centre\DAL\DA\" />
-    <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Logic\" />
-    <Folder Include="Client and Policy Management\Client Management\BLL\Buisness Object\" />
-    <Folder Include="Client and Policy Management\Client Management\DAL\DataHandler\" />
-    <Folder Include="Client and Policy Management\Client Management\DAL\DA\" />
-    <Folder Include="Client and Policy Management\Policy Management\BLL\Buisness Logic\" />
-    <Folder Include="Client and Policy Management\Policy Management\DAL\DA\" />
+    <Folder Include="Client and Policy Management\Management\BLL\Buisness Logic\" />
+    <Folder Include="Client and Policy Management\Management\BLL\Buisness Object\" />
+    <Folder Include="Client and Policy Management\Management\DAL\DataHandler\" />
+    <Folder Include="Client and Policy Management\Management\DAL\DA\" />
     <Folder Include="Product Management\BLL\BL\" />
     <Folder Include="Product Management\BLL\BO\" />
     <Folder Include="Product Management\DAL\DA\" />
