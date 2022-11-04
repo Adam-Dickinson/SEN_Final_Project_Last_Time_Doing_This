@@ -2,6 +2,7 @@
 using SEN_381_Final_Project.Call_Centre.BLL.Buisness_Object;
 using SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation;
 using SEN_381_Final_Project.Medical_Department.Presentation;
+using SEN_381_Final_Project.Product_Management.Presentation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,6 +80,13 @@ namespace SEN_381_Final_Project
             this.Hide();
             fManagment_Client_Policy management = new fManagment_Client_Policy();
             management.Show();
+        }
+
+        private void btn_product_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fPolicy_From policy = new fPolicy_From();
+            policy.Show();
         }
     }
 }

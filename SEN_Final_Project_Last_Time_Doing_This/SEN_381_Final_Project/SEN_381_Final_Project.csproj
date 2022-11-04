@@ -61,6 +61,8 @@
     <Compile Include="Medical Department\Presentation\fMedical.Designer.cs">
       <DependentUpon>fMedical.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product Management\BLL\cPolicyBL.cs" />
+    <Compile Include="Product Management\BLL\cPolicyBO.cs" />
     <Compile Include="Product Management\DAL\DataHandler\DataHandler_Policy.cs" />
     <Compile Include="Product Management\Presentation\fPolicy_From.cs">
       <SubType>Form</SubType>
@@ -134,7 +136,6 @@
     <Folder Include="Client and Policy Management\Management\BLL\Buisness Object\" />
     <Folder Include="Client and Policy Management\Management\DAL\DataHandler\" />
     <Folder Include="Client and Policy Management\Management\DAL\DA\" />
-    <Folder Include="Product Management\BLL\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circuit-board-technology-background-purple-and-blue-light-banner-electronic-system-concept-vector.jpg" />
