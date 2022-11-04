@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SEN_381_Final_Project.DAL
+namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
 {
-    class DataHandler_ProductMaintenance
+    class DataHandler_Policy
     {
     }
 }

@@ -19,7 +19,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
