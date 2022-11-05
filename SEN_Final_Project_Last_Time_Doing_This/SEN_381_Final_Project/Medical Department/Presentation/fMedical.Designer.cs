@@ -115,9 +115,9 @@
             // dgv_Treatment
             // 
             this.dgv_Treatment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Treatment.Location = new System.Drawing.Point(6, 63);
+            this.dgv_Treatment.Location = new System.Drawing.Point(6, 56);
             this.dgv_Treatment.Name = "dgv_Treatment";
-            this.dgv_Treatment.Size = new System.Drawing.Size(384, 203);
+            this.dgv_Treatment.Size = new System.Drawing.Size(418, 203);
             this.dgv_Treatment.TabIndex = 10;
             // 
             // dgv_MC
@@ -125,7 +125,7 @@
             this.dgv_MC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_MC.Location = new System.Drawing.Point(6, 63);
             this.dgv_MC.Name = "dgv_MC";
-            this.dgv_MC.Size = new System.Drawing.Size(384, 203);
+            this.dgv_MC.Size = new System.Drawing.Size(453, 203);
             this.dgv_MC.TabIndex = 11;
             // 
             // groupBox1
@@ -152,7 +152,7 @@
             // 
             // btn_SearchTreatment
             // 
-            this.btn_SearchTreatment.Location = new System.Drawing.Point(315, 27);
+            this.btn_SearchTreatment.Location = new System.Drawing.Point(349, 25);
             this.btn_SearchTreatment.Name = "btn_SearchTreatment";
             this.btn_SearchTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_SearchTreatment.TabIndex = 21;
@@ -163,7 +163,7 @@
             // 
             this.txt_TreatmentNameSearch.Location = new System.Drawing.Point(51, 27);
             this.txt_TreatmentNameSearch.Name = "txt_TreatmentNameSearch";
-            this.txt_TreatmentNameSearch.Size = new System.Drawing.Size(258, 20);
+            this.txt_TreatmentNameSearch.Size = new System.Drawing.Size(292, 20);
             this.txt_TreatmentNameSearch.TabIndex = 20;
             // 
             // label6
@@ -280,7 +280,7 @@
             // 
             // btn_SearchMC
             // 
-            this.btn_SearchMC.Location = new System.Drawing.Point(315, 27);
+            this.btn_SearchMC.Location = new System.Drawing.Point(384, 25);
             this.btn_SearchMC.Name = "btn_SearchMC";
             this.btn_SearchMC.Size = new System.Drawing.Size(75, 23);
             this.btn_SearchMC.TabIndex = 24;
@@ -291,7 +291,7 @@
             // 
             this.txt_MCNameSearch.Location = new System.Drawing.Point(47, 27);
             this.txt_MCNameSearch.Name = "txt_MCNameSearch";
-            this.txt_MCNameSearch.Size = new System.Drawing.Size(262, 20);
+            this.txt_MCNameSearch.Size = new System.Drawing.Size(331, 20);
             this.txt_MCNameSearch.TabIndex = 23;
             // 
             // label7
