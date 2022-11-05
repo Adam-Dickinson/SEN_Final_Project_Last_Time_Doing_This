@@ -37,6 +37,8 @@
             this.dgv_Treatment = new System.Windows.Forms.DataGridView();
             this.dgv_MC = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_TID = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btn_SearchTreatment = new System.Windows.Forms.Button();
             this.txt_TreatmentNameSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_CID = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btn_SearchMC = new System.Windows.Forms.Button();
             this.txt_MCNameSearch = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -119,6 +123,7 @@
             this.dgv_Treatment.Name = "dgv_Treatment";
             this.dgv_Treatment.Size = new System.Drawing.Size(418, 203);
             this.dgv_Treatment.TabIndex = 10;
+            this.dgv_Treatment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Treatment_CellClick);
             // 
             // dgv_MC
             // 
@@ -127,9 +132,13 @@
             this.dgv_MC.Name = "dgv_MC";
             this.dgv_MC.Size = new System.Drawing.Size(453, 203);
             this.dgv_MC.TabIndex = 11;
+            this.dgv_MC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MC_CellClick_1);
+            this.dgv_MC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MC_CellContentClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_TID);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btn_SearchTreatment);
             this.groupBox1.Controls.Add(this.txt_TreatmentNameSearch);
             this.groupBox1.Controls.Add(this.label6);
@@ -145,10 +154,26 @@
             this.groupBox1.Controls.Add(this.dgv_Treatment);
             this.groupBox1.Location = new System.Drawing.Point(2, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(430, 411);
+            this.groupBox1.Size = new System.Drawing.Size(430, 451);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Treatment";
+            // 
+            // txt_TID
+            // 
+            this.txt_TID.Location = new System.Drawing.Point(90, 274);
+            this.txt_TID.Name = "txt_TID";
+            this.txt_TID.Size = new System.Drawing.Size(300, 20);
+            this.txt_TID.TabIndex = 28;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 278);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "ID";
             // 
             // btn_SearchTreatment
             // 
@@ -158,6 +183,7 @@
             this.btn_SearchTreatment.TabIndex = 21;
             this.btn_SearchTreatment.Text = "Search";
             this.btn_SearchTreatment.UseVisualStyleBackColor = true;
+            this.btn_SearchTreatment.Click += new System.EventHandler(this.btn_SearchTreatment_Click);
             // 
             // txt_TreatmentNameSearch
             // 
@@ -177,7 +203,7 @@
             // 
             // rtxt_TreatmentDescription
             // 
-            this.rtxt_TreatmentDescription.Location = new System.Drawing.Point(90, 301);
+            this.rtxt_TreatmentDescription.Location = new System.Drawing.Point(90, 331);
             this.rtxt_TreatmentDescription.Name = "rtxt_TreatmentDescription";
             this.rtxt_TreatmentDescription.Size = new System.Drawing.Size(300, 42);
             this.rtxt_TreatmentDescription.TabIndex = 18;
@@ -187,46 +213,52 @@
             // 
             this.btn_DeleteTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_DeleteTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_DeleteTreatment.Location = new System.Drawing.Point(258, 382);
+            this.btn_DeleteTreatment.Location = new System.Drawing.Point(258, 412);
             this.btn_DeleteTreatment.Name = "btn_DeleteTreatment";
             this.btn_DeleteTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_DeleteTreatment.TabIndex = 17;
             this.btn_DeleteTreatment.Text = "Delete";
             this.btn_DeleteTreatment.UseVisualStyleBackColor = false;
+            this.btn_DeleteTreatment.Click += new System.EventHandler(this.btn_DeleteTreatment_Click);
             // 
             // btn_UpdateTreatment
             // 
             this.btn_UpdateTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_UpdateTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_UpdateTreatment.Location = new System.Drawing.Point(147, 382);
+            this.btn_UpdateTreatment.Location = new System.Drawing.Point(147, 412);
             this.btn_UpdateTreatment.Name = "btn_UpdateTreatment";
             this.btn_UpdateTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_UpdateTreatment.TabIndex = 16;
             this.btn_UpdateTreatment.Text = "Update ";
             this.btn_UpdateTreatment.UseVisualStyleBackColor = false;
+            this.btn_UpdateTreatment.Click += new System.EventHandler(this.btn_UpdateTreatment_Click);
             // 
             // btn_AddTreatment
             // 
             this.btn_AddTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_AddTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_AddTreatment.Location = new System.Drawing.Point(45, 382);
+            this.btn_AddTreatment.Location = new System.Drawing.Point(45, 412);
             this.btn_AddTreatment.Name = "btn_AddTreatment";
             this.btn_AddTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_AddTreatment.TabIndex = 15;
             this.btn_AddTreatment.Text = "Add ";
             this.btn_AddTreatment.UseVisualStyleBackColor = false;
+            this.btn_AddTreatment.Click += new System.EventHandler(this.btn_AddTreatment_Click);
             // 
             // cb_TreatmentMC
             // 
             this.cb_TreatmentMC.FormattingEnabled = true;
-            this.cb_TreatmentMC.Location = new System.Drawing.Point(90, 349);
+            this.cb_TreatmentMC.Location = new System.Drawing.Point(90, 379);
             this.cb_TreatmentMC.Name = "cb_TreatmentMC";
             this.cb_TreatmentMC.Size = new System.Drawing.Size(300, 21);
             this.cb_TreatmentMC.TabIndex = 17;
+            this.cb_TreatmentMC.TextChanged += new System.EventHandler(this.cb_TreatmentMC_TextChanged);
+            this.cb_TreatmentMC.Enter += new System.EventHandler(this.cb_TreatmentMC_Enter);
+            this.cb_TreatmentMC.Leave += new System.EventHandler(this.cb_TreatmentMC_Leave);
             // 
             // txt_TreatmentName
             // 
-            this.txt_TreatmentName.Location = new System.Drawing.Point(90, 275);
+            this.txt_TreatmentName.Location = new System.Drawing.Point(90, 305);
             this.txt_TreatmentName.Name = "txt_TreatmentName";
             this.txt_TreatmentName.Size = new System.Drawing.Size(300, 20);
             this.txt_TreatmentName.TabIndex = 13;
@@ -234,7 +266,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 352);
+            this.label5.Location = new System.Drawing.Point(3, 382);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 14;
@@ -243,7 +275,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 309);
+            this.label2.Location = new System.Drawing.Point(3, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 12;
@@ -252,7 +284,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 278);
+            this.label1.Location = new System.Drawing.Point(3, 308);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 11;
@@ -260,6 +292,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_CID);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btn_SearchMC);
             this.groupBox2.Controls.Add(this.txt_MCNameSearch);
             this.groupBox2.Controls.Add(this.label7);
@@ -278,6 +312,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Medical Conditions";
             // 
+            // txt_CID
+            // 
+            this.txt_CID.Location = new System.Drawing.Point(93, 278);
+            this.txt_CID.Name = "txt_CID";
+            this.txt_CID.Size = new System.Drawing.Size(300, 20);
+            this.txt_CID.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 282);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "ID";
+            // 
             // btn_SearchMC
             // 
             this.btn_SearchMC.Location = new System.Drawing.Point(384, 25);
@@ -286,6 +336,7 @@
             this.btn_SearchMC.TabIndex = 24;
             this.btn_SearchMC.Text = "Search";
             this.btn_SearchMC.UseVisualStyleBackColor = true;
+            this.btn_SearchMC.Click += new System.EventHandler(this.btn_SearchMC_Click);
             // 
             // txt_MCNameSearch
             // 
@@ -305,7 +356,7 @@
             // 
             // rtxt_MCInformation
             // 
-            this.rtxt_MCInformation.Location = new System.Drawing.Point(90, 304);
+            this.rtxt_MCInformation.Location = new System.Drawing.Point(93, 331);
             this.rtxt_MCInformation.Name = "rtxt_MCInformation";
             this.rtxt_MCInformation.Size = new System.Drawing.Size(300, 39);
             this.rtxt_MCInformation.TabIndex = 21;
@@ -321,6 +372,7 @@
             this.btn_DeleteMC.TabIndex = 20;
             this.btn_DeleteMC.Text = "Delete";
             this.btn_DeleteMC.UseVisualStyleBackColor = false;
+            this.btn_DeleteMC.Click += new System.EventHandler(this.btn_DeleteMC_Click);
             // 
             // btn_UpdateMC
             // 
@@ -332,6 +384,7 @@
             this.btn_UpdateMC.TabIndex = 19;
             this.btn_UpdateMC.Text = "Update ";
             this.btn_UpdateMC.UseVisualStyleBackColor = false;
+            this.btn_UpdateMC.Click += new System.EventHandler(this.btn_UpdateMC_Click);
             // 
             // btn_AddMC
             // 
@@ -343,10 +396,11 @@
             this.btn_AddMC.TabIndex = 18;
             this.btn_AddMC.Text = "Add ";
             this.btn_AddMC.UseVisualStyleBackColor = false;
+            this.btn_AddMC.Click += new System.EventHandler(this.btn_AddMC_Click);
             // 
             // txt_MCName
             // 
-            this.txt_MCName.Location = new System.Drawing.Point(90, 278);
+            this.txt_MCName.Location = new System.Drawing.Point(93, 305);
             this.txt_MCName.Name = "txt_MCName";
             this.txt_MCName.Size = new System.Drawing.Size(300, 20);
             this.txt_MCName.TabIndex = 15;
@@ -354,7 +408,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 316);
+            this.label4.Location = new System.Drawing.Point(6, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 13;
@@ -363,7 +417,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 282);
+            this.label3.Location = new System.Drawing.Point(6, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 12;
@@ -389,6 +443,7 @@
             this.Controls.Add(this.btn_callcentre);
             this.Name = "fMedical";
             this.Text = "fMedical";
+            this.Load += new System.EventHandler(this.fMedical_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -433,5 +488,9 @@
         private System.Windows.Forms.Button btn_UpdateMC;
         private System.Windows.Forms.Button btn_AddMC;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox txt_TID;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_CID;
+        private System.Windows.Forms.Label label8;
     }
 }
