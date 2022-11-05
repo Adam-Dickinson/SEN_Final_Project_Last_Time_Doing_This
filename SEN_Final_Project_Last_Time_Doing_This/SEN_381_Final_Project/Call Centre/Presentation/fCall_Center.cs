@@ -78,7 +78,7 @@ namespace SEN_381_Final_Project
         private void btn_clientpolicy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fManagment_Client_Policy management = new fManagment_Client_Policy();
+            fManagment_Client management = new fManagment_Client();
             management.Show();
         }
 
@@ -87,6 +87,13 @@ namespace SEN_381_Final_Project
             this.Hide();
             fPolicy_From policy = new fPolicy_From();
             policy.Show();
+        }
+
+        private void btn_callcentre_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fCall_Center call = new fCall_Center();
+            call.Show();
         }
     }
 }

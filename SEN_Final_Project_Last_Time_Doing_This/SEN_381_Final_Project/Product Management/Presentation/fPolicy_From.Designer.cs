@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btn_PSearch = new System.Windows.Forms.Button();
             this.txt_PSearch = new System.Windows.Forms.TextBox();
@@ -51,10 +55,6 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -87,6 +87,50 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Policy";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(783, 199);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 13);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Cover Level: 2 = Silver";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(783, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Cover Level: 3 = Gold";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(783, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Cover Level: 4 = Bronze";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(783, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Cover Level: 1 = Bronze";
             // 
             // groupBox5
             // 
@@ -273,6 +317,7 @@
             this.btn_provider.TabIndex = 36;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = false;
+            this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // btn_product
             // 
@@ -284,6 +329,7 @@
             this.btn_product.TabIndex = 35;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = false;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_medical
             // 
@@ -295,6 +341,7 @@
             this.btn_medical.TabIndex = 34;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = false;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_clientpolicy
             // 
@@ -306,6 +353,7 @@
             this.btn_clientpolicy.TabIndex = 33;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = false;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_callcentre
             // 
@@ -317,50 +365,7 @@
             this.btn_callcentre.TabIndex = 32;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(783, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Cover Level: 1 = Bronze";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(783, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Cover Level: 4 = Bronze";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(783, 212);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Cover Level: 3 = Gold";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(783, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 13);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Cover Level: 2 = Silver";
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // fPolicy_From
             // 

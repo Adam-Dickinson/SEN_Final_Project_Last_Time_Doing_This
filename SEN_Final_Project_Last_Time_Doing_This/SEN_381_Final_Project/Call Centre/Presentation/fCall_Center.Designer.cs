@@ -71,6 +71,7 @@
             this.btn_callcentre.TabIndex = 0;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = true;
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // btn_clientpolicy
             // 
