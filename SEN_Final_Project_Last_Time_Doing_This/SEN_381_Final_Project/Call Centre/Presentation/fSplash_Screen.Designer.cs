@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSplash_Screen));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -43,15 +42,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.Logo_Background;
+            this.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.Logo_Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fSplash_Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fSplash_Screen";
-            this.Load += new System.EventHandler(this.fSplash_Screen_Load);
+            this.Text = "Splash_Screen";
+            this.Load += new System.EventHandler(this.Splash_Screen_Load);
             this.ResumeLayout(false);
 
         }
