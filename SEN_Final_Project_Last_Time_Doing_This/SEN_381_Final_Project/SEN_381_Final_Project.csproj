@@ -47,17 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
-    <Compile Include="Call Centre\Presentation\fSplash_Screen.cs">
+    <Compile Include="Client Management\Management\Presentation\fManagment_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Call Centre\Presentation\fSplash_Screen.Designer.cs">
-      <DependentUpon>fSplash_Screen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.Designer.cs">
-      <DependentUpon>fManagment_Client_Policy.cs</DependentUpon>
+    <Compile Include="Client Management\Management\Presentation\fManagment_Client.Designer.cs">
+      <DependentUpon>fManagment_Client.cs</DependentUpon>
     </Compile>
     <Compile Include="Medical Department\BLL\Buisness Logic\cTreatment.cs" />
     <Compile Include="Medical Department\BLL\Buisness Logic\MedicalBL.cs" />
@@ -101,11 +95,8 @@
     <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Call Centre\Presentation\fSplash_Screen.resx">
-      <DependentUpon>fSplash_Screen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Client and Policy Management\Management\Presentation\fManagment_Client_Policy.resx">
-      <DependentUpon>fManagment_Client_Policy.cs</DependentUpon>
+    <EmbeddedResource Include="Client Management\Management\Presentation\fManagment_Client.resx">
+      <DependentUpon>fManagment_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medical Department\Presentation\fMedical.resx">
       <DependentUpon>fMedical.cs</DependentUpon>
@@ -140,29 +131,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Call Centre\DAL\DA\" />
-    <Folder Include="Client and Policy Management\Management\BLL\Buisness Logic\" />
-    <Folder Include="Client and Policy Management\Management\BLL\Buisness Object\" />
-    <Folder Include="Client and Policy Management\Management\DAL\DataHandler\" />
-    <Folder Include="Client and Policy Management\Management\DAL\DA\" />
+    <Folder Include="Client Management\Management\BLL\Buisness Logic\" />
+    <Folder Include="Client Management\Management\BLL\Buisness Object\" />
+    <Folder Include="Client Management\Management\DAL\DataHandler\" />
+    <Folder Include="Client Management\Management\DAL\DA\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\circuit-board-technology-background-purple-and-blue-light-banner-electronic-system-concept-vector.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Answer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Answer.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Declline.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo_Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo_Background1.png" />
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

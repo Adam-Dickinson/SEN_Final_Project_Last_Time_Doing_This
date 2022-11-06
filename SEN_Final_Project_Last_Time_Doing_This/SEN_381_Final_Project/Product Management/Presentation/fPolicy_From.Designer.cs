@@ -317,6 +317,7 @@
             this.btn_provider.TabIndex = 36;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = false;
+            this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // btn_product
             // 
@@ -328,6 +329,7 @@
             this.btn_product.TabIndex = 35;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = false;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_medical
             // 
@@ -339,6 +341,7 @@
             this.btn_medical.TabIndex = 34;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = false;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_clientpolicy
             // 
@@ -350,6 +353,7 @@
             this.btn_clientpolicy.TabIndex = 33;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = false;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_callcentre
             // 
@@ -361,12 +365,13 @@
             this.btn_callcentre.TabIndex = 32;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // fPolicy_From
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1014, 406);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(984, 406);
             this.Controls.Add(this.btn_provider);
             this.Controls.Add(this.btn_product);
             this.Controls.Add(this.btn_medical);
@@ -374,9 +379,7 @@
             this.Controls.Add(this.btn_callcentre);
             this.Controls.Add(this.groupBox3);
             this.Name = "fPolicy_From";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "fPolicy_From";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fPolicy_From_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

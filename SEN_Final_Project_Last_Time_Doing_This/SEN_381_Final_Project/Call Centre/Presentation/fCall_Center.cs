@@ -14,11 +14,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SEN_381_Final_Project
-
 {
     public partial class fCall_Center : Form
     {
-      
         public fCall_Center()
         {
             InitializeComponent();
@@ -51,16 +49,6 @@ namespace SEN_381_Final_Project
             txt_Search.Clear();*/
 
             dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
-          
-        }
-
-        private void Set_btn_StartCall_Icon()
-        {
-            // Assign an image to the button.
-            btn_StartCall.Image = Image.FromFile("C:\\Graphics\\Answer.ico");
-            // Align the image and text on the button.
-            btn_StartCall.ImageAlign = ContentAlignment.MiddleRight;
-            btn_StartCall.TextAlign = ContentAlignment.MiddleLeft;
         }
 
         private void btn_endCall_Click(object sender, EventArgs e)
@@ -90,7 +78,7 @@ namespace SEN_381_Final_Project
         private void btn_clientpolicy_Click(object sender, EventArgs e)
         {
             this.Hide();
-            fManagment_Client_Policy management = new fManagment_Client_Policy();
+            fManagment_Client management = new fManagment_Client();
             management.Show();
         }
 
@@ -101,14 +89,11 @@ namespace SEN_381_Final_Project
             policy.Show();
         }
 
-        private void txt_Name_TextChanged(object sender, EventArgs e)
+        private void btn_callcentre_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void fCall_Center_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            fCall_Center call = new fCall_Center();
+            call.Show();
         }
     }
 }

@@ -79,6 +79,7 @@
             this.btn_provider.TabIndex = 9;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = true;
+            this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // btn_product
             // 
@@ -88,6 +89,7 @@
             this.btn_product.TabIndex = 8;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = true;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_medical
             // 
@@ -97,6 +99,7 @@
             this.btn_medical.TabIndex = 7;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = true;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_clientpolicy
             // 
@@ -106,6 +109,7 @@
             this.btn_clientpolicy.TabIndex = 6;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = true;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_callcentre
             // 
@@ -115,6 +119,7 @@
             this.btn_callcentre.TabIndex = 5;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = true;
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // dgv_Treatment
             // 

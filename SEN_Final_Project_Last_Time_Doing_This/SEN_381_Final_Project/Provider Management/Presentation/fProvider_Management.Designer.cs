@@ -285,6 +285,7 @@
             this.btn_provider.TabIndex = 12;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = true;
+            this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // btn_product
             // 
@@ -294,6 +295,7 @@
             this.btn_product.TabIndex = 11;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = true;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_medical
             // 
@@ -303,6 +305,7 @@
             this.btn_medical.TabIndex = 10;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = true;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_clientpolicy
             // 
@@ -312,6 +315,7 @@
             this.btn_clientpolicy.TabIndex = 9;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = true;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_callcentre
             // 

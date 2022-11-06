@@ -1,6 +1,6 @@
 ﻿namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation
 {
-    partial class fManagment_Client_Policy
+    partial class fManagment_Client
     {
         /// <summary>
         /// Required designer variable.
@@ -123,7 +123,6 @@
             this.btn_CDelete.TabIndex = 3;
             this.btn_CDelete.Text = "Delete";
             this.btn_CDelete.UseVisualStyleBackColor = false;
-            this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
             // 
             // txt_CName
             // 
@@ -277,6 +276,7 @@
             this.btn_provider.TabIndex = 27;
             this.btn_provider.Text = "Provider";
             this.btn_provider.UseVisualStyleBackColor = false;
+            this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // btn_product
             // 
@@ -288,6 +288,7 @@
             this.btn_product.TabIndex = 26;
             this.btn_product.Text = "Product";
             this.btn_product.UseVisualStyleBackColor = false;
+            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_medical
             // 
@@ -299,6 +300,7 @@
             this.btn_medical.TabIndex = 25;
             this.btn_medical.Text = "Medical";
             this.btn_medical.UseVisualStyleBackColor = false;
+            this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_clientpolicy
             // 
@@ -310,6 +312,7 @@
             this.btn_clientpolicy.TabIndex = 24;
             this.btn_clientpolicy.Text = "Management";
             this.btn_clientpolicy.UseVisualStyleBackColor = false;
+            this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_callcentre
             // 
@@ -321,6 +324,7 @@
             this.btn_callcentre.TabIndex = 23;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
+            this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // groupBox1
             // 
@@ -523,7 +527,6 @@
             this.btn_CSearch.TabIndex = 26;
             this.btn_CSearch.Text = "Search";
             this.btn_CSearch.UseVisualStyleBackColor = false;
-            this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
             // 
             // txt_CSearch
             // 
@@ -550,13 +553,13 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "ID Number";
             // 
-            // fManagment_Client_Policy
+            // fManagment_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 438);
+            this.ClientSize = new System.Drawing.Size(1600, 403);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -564,10 +567,8 @@
             this.Controls.Add(this.btn_medical);
             this.Controls.Add(this.btn_clientpolicy);
             this.Controls.Add(this.btn_callcentre);
-            this.Name = "fManagment_Client_Policy";
+            this.Name = "fManagment_Client";
             this.Text = "fClient";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.fManagment_Client_Policy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
