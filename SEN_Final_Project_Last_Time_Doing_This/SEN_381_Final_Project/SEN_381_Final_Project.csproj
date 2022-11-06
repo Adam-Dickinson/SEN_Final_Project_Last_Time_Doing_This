@@ -47,21 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Client Management\BLL\cCleintBL.cs" />
     <Compile Include="Client Management\BLL\cClient.cs" />
     <Compile Include="Client Management\BLL\cFamily.cs" />
     <Compile Include="Client Management\DAL\DataHandler_Client.cs" />
     <Compile Include="Client Management\Presentation\fManagment_Client.cs">
-=======
-    <Compile Include="Call Centre\Presentation\fSplash_Screen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Call Centre\Presentation\fSplash_Screen.Designer.cs">
-      <DependentUpon>fSplash_Screen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Client Management\Management\Presentation\fManagment_Client.cs">
->>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Client Management\Presentation\fManagment_Client.Designer.cs">
@@ -109,14 +99,7 @@
     <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
     <EmbeddedResource Include="Client Management\Presentation\fManagment_Client.resx">
-=======
-    <EmbeddedResource Include="Call Centre\Presentation\fSplash_Screen.resx">
-      <DependentUpon>fSplash_Screen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Client Management\Management\Presentation\fManagment_Client.resx">
->>>>>>> Stashed changes
       <DependentUpon>fManagment_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medical Department\Presentation\fMedical.resx">
@@ -157,51 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logo_Background2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Decline1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\searchmagnifierinterfacesymbol_79894.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\searchmagnifierinterfacesymbol_798941.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_circle_create_expand_new_plus_icon_123218.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh_paper_load_update_icon_141966.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1487086362-cancel_81578.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\waste_bin_delete_remove_recycle_icon_123840.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_circle_create_expand_new_plus_icon_1232181.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_circle_create_expand_new_plus_icon_1232182.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\searchmagnifierinterfacesymbol_798942.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_circle_create_expand_new_plus_icon_1232183.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\refresh_paper_load_update_icon_1419661.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add_circle_create_expand_new_plus_icon_1232184.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4213447-arrow-load-loading-refresh-reload-restart-sync_115423.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

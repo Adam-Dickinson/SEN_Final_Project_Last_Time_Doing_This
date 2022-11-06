@@ -131,7 +131,6 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             provider.Show();
         }
 
-<<<<<<< Updated upstream
         private void dgv_Policy_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -165,11 +164,6 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
 
             this.dgv_Policy.Columns["Policy_ID"].Visible = false;
             this.dgv_Policy.Columns["Cover_ID"].Visible = false;
-=======
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
->>>>>>> Stashed changes
         }
     }
 }

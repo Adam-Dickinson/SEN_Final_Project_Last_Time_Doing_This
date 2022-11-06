@@ -95,10 +95,5 @@ namespace SEN_381_Final_Project
             fCall_Center call = new fCall_Center();
             call.Show();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
