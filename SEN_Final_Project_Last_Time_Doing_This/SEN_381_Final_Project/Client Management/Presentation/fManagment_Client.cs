@@ -1,4 +1,5 @@
-﻿using SEN_381_Final_Project.Medical_Department.Presentation;
+﻿using SEN_381_Final_Project.Client_Management.BLL;
+using SEN_381_Final_Project.Medical_Department.Presentation;
 using SEN_381_Final_Project.Product_Management.Presentation;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
         {
             InitializeComponent();
         }
+
+        cCleintBL client = new cCleintBL();
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -57,6 +60,11 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             this.Hide();
             fProvider_Management provider = new fProvider_Management();
             provider.Show();
+        }
+
+        private void fManagment_Client_Load(object sender, EventArgs e)
+        {
+            dgv_Client.DataSource = client.displayClient();
         }
     }
 }

@@ -65,6 +65,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_Reload = new System.Windows.Forms.Button();
+            this.btn_reload2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -142,6 +144,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Reload);
             this.groupBox1.Controls.Add(this.txt_TID);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btn_SearchTreatment);
@@ -218,7 +221,7 @@
             // 
             this.btn_DeleteTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_DeleteTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_DeleteTreatment.Location = new System.Drawing.Point(258, 412);
+            this.btn_DeleteTreatment.Location = new System.Drawing.Point(223, 412);
             this.btn_DeleteTreatment.Name = "btn_DeleteTreatment";
             this.btn_DeleteTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_DeleteTreatment.TabIndex = 17;
@@ -230,7 +233,7 @@
             // 
             this.btn_UpdateTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_UpdateTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_UpdateTreatment.Location = new System.Drawing.Point(147, 412);
+            this.btn_UpdateTreatment.Location = new System.Drawing.Point(112, 412);
             this.btn_UpdateTreatment.Name = "btn_UpdateTreatment";
             this.btn_UpdateTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_UpdateTreatment.TabIndex = 16;
@@ -242,7 +245,7 @@
             // 
             this.btn_AddTreatment.BackColor = System.Drawing.Color.DimGray;
             this.btn_AddTreatment.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_AddTreatment.Location = new System.Drawing.Point(45, 412);
+            this.btn_AddTreatment.Location = new System.Drawing.Point(10, 412);
             this.btn_AddTreatment.Name = "btn_AddTreatment";
             this.btn_AddTreatment.Size = new System.Drawing.Size(75, 23);
             this.btn_AddTreatment.TabIndex = 15;
@@ -297,6 +300,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_reload2);
             this.groupBox2.Controls.Add(this.txt_CID);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btn_SearchMC);
@@ -371,7 +375,7 @@
             // 
             this.btn_DeleteMC.BackColor = System.Drawing.Color.DimGray;
             this.btn_DeleteMC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_DeleteMC.Location = new System.Drawing.Point(292, 382);
+            this.btn_DeleteMC.Location = new System.Drawing.Point(233, 382);
             this.btn_DeleteMC.Name = "btn_DeleteMC";
             this.btn_DeleteMC.Size = new System.Drawing.Size(75, 23);
             this.btn_DeleteMC.TabIndex = 20;
@@ -383,7 +387,7 @@
             // 
             this.btn_UpdateMC.BackColor = System.Drawing.Color.DimGray;
             this.btn_UpdateMC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_UpdateMC.Location = new System.Drawing.Point(181, 382);
+            this.btn_UpdateMC.Location = new System.Drawing.Point(122, 382);
             this.btn_UpdateMC.Name = "btn_UpdateMC";
             this.btn_UpdateMC.Size = new System.Drawing.Size(75, 23);
             this.btn_UpdateMC.TabIndex = 19;
@@ -395,7 +399,7 @@
             // 
             this.btn_AddMC.BackColor = System.Drawing.Color.DimGray;
             this.btn_AddMC.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_AddMC.Location = new System.Drawing.Point(79, 382);
+            this.btn_AddMC.Location = new System.Drawing.Point(20, 382);
             this.btn_AddMC.Name = "btn_AddMC";
             this.btn_AddMC.Size = new System.Drawing.Size(75, 23);
             this.btn_AddMC.TabIndex = 18;
@@ -432,6 +436,30 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Reload.Location = new System.Drawing.Point(329, 412);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.TabIndex = 29;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
+            // btn_reload2
+            // 
+            this.btn_reload2.BackColor = System.Drawing.Color.DimGray;
+            this.btn_reload2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_reload2.Location = new System.Drawing.Point(345, 382);
+            this.btn_reload2.Name = "btn_reload2";
+            this.btn_reload2.Size = new System.Drawing.Size(75, 23);
+            this.btn_reload2.TabIndex = 30;
+            this.btn_reload2.Text = "Reload";
+            this.btn_reload2.UseVisualStyleBackColor = false;
+            this.btn_reload2.Click += new System.EventHandler(this.btn_reload2_Click);
             // 
             // fMedical
             // 
@@ -497,5 +525,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_CID;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_Reload;
+        private System.Windows.Forms.Button btn_reload2;
     }
 }

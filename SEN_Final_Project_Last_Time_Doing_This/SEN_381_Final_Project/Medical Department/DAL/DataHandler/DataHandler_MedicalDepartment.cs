@@ -33,7 +33,7 @@ namespace SEN_381_Final_Project.DAL
         public DataTable displayTreatments()
         {
             SqlConnection con = new SqlConnection(conn);
-            SqlDataAdapter adapter = new SqlDataAdapter("spDisplayTreatments", con);
+            SqlDataAdapter adapter = new SqlDataAdapter("spDisplayTreatment", con);
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -56,17 +56,17 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void addTreatment(int id, string name, string descrip, string Cname)
+        public void addTreatment(int id, string name, string descrip, int conID)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spAddTreatment", connect);
+                SqlCommand cmd = new SqlCommand("spAddTreatments", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Treatment_ID", id);
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);
                 cmd.Parameters.AddWithValue("@Treatment_Description", descrip);
-                cmd.Parameters.AddWithValue("@Medical_Condition", Cname);
+                cmd.Parameters.AddWithValue("@Condition_ID", conID);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();
@@ -77,7 +77,7 @@ namespace SEN_381_Final_Project.DAL
         {
             using(SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spSearchTreatment", connect);
+                SqlCommand cmd = new SqlCommand("spSearchTreatmentS", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);
@@ -113,7 +113,7 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void updateTreatment(int id, string name, string descrip, string Cname)
+        public void updateTreatment(int id, string name, string descrip, int conID)
         {
             using(SqlConnection connect = new SqlConnection(conn))
             {
@@ -123,7 +123,7 @@ namespace SEN_381_Final_Project.DAL
                 cmd.Parameters.AddWithValue("@Treatment_ID", id);
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);
                 cmd.Parameters.AddWithValue("@Treatment_Description", descrip);
-                cmd.Parameters.AddWithValue("@Medical_Condition", Cname);
+                cmd.Parameters.AddWithValue("@Condition_ID", conID);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();

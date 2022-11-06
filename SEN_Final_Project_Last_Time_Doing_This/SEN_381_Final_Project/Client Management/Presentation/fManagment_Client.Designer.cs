@@ -74,6 +74,7 @@
             this.txt_CID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_Reload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -88,7 +89,7 @@
             this.dgv_Client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Client.Location = new System.Drawing.Point(6, 25);
             this.dgv_Client.Name = "dgv_Client";
-            this.dgv_Client.Size = new System.Drawing.Size(488, 279);
+            this.dgv_Client.Size = new System.Drawing.Size(488, 260);
             this.dgv_Client.TabIndex = 0;
             // 
             // btn_CAdd
@@ -477,6 +478,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_Reload);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.txt_CID);
             this.groupBox2.Controls.Add(this.label8);
@@ -553,13 +555,24 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "ID Number";
             // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Reload.Location = new System.Drawing.Point(200, 291);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.TabIndex = 26;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            // 
             // fManagment_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1600, 403);
+            this.ClientSize = new System.Drawing.Size(1495, 403);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -569,6 +582,7 @@
             this.Controls.Add(this.btn_callcentre);
             this.Name = "fManagment_Client";
             this.Text = "fClient";
+            this.Load += new System.EventHandler(this.fManagment_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -631,5 +645,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btn_FSearch;
         private System.Windows.Forms.TextBox txt_FSearch;
+        private System.Windows.Forms.Button btn_Reload;
     }
 }

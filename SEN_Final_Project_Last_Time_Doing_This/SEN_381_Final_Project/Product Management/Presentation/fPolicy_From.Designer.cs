@@ -55,6 +55,7 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
+            this.btn_Reload = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_Reload);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
@@ -306,6 +308,8 @@
             this.dgv_Policy.Name = "dgv_Policy";
             this.dgv_Policy.Size = new System.Drawing.Size(481, 256);
             this.dgv_Policy.TabIndex = 0;
+            this.dgv_Policy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Policy_CellClick);
+            this.dgv_Policy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Policy_CellContentClick);
             // 
             // btn_provider
             // 
@@ -367,6 +371,18 @@
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Reload.Location = new System.Drawing.Point(222, 281);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.TabIndex = 45;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
             // fPolicy_From
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,5 +435,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Reload;
     }
 }

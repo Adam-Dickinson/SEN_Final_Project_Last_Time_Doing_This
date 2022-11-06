@@ -49,7 +49,7 @@ namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spSearchPolicy", connect);
+                SqlCommand cmd = new SqlCommand("spSearchPolicyNew", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Policy_Name", name);

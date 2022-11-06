@@ -47,10 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
-    <Compile Include="Client Management\Management\Presentation\fManagment_Client.cs">
+    <Compile Include="Client Management\BLL\cCleintBL.cs" />
+    <Compile Include="Client Management\BLL\cClient.cs" />
+    <Compile Include="Client Management\BLL\cFamily.cs" />
+    <Compile Include="Client Management\DAL\DataHandler_Client.cs" />
+    <Compile Include="Client Management\Presentation\fManagment_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Client Management\Management\Presentation\fManagment_Client.Designer.cs">
+    <Compile Include="Client Management\Presentation\fManagment_Client.Designer.cs">
       <DependentUpon>fManagment_Client.cs</DependentUpon>
     </Compile>
     <Compile Include="Medical Department\BLL\Buisness Logic\cTreatment.cs" />
@@ -95,7 +99,7 @@
     <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client Management\Management\Presentation\fManagment_Client.resx">
+    <EmbeddedResource Include="Client Management\Presentation\fManagment_Client.resx">
       <DependentUpon>fManagment_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Medical Department\Presentation\fMedical.resx">
@@ -130,12 +134,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Client Management\Management\BLL\Buisness Logic\" />
-    <Folder Include="Client Management\Management\BLL\Buisness Object\" />
-    <Folder Include="Client Management\Management\DAL\DataHandler\" />
-    <Folder Include="Client Management\Management\DAL\DA\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\circuit-board-technology-background-purple-and-blue-light-banner-electronic-system-concept-vector.jpg" />
   </ItemGroup>

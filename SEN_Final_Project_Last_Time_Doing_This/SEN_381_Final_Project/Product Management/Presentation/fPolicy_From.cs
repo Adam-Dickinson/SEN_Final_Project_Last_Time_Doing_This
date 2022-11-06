@@ -46,6 +46,8 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
         private void fPolicy_From_Load(object sender, EventArgs e)
         {
             dgv_Policy.DataSource = policy.showAllPolicys();
+            this.dgv_Policy.Columns["Policy_ID"].Visible = false;
+            this.dgv_Policy.Columns["Cover_ID"].Visible = false;
         }
 
         private void btn_PSearch_Click(object sender, EventArgs e)
@@ -58,18 +60,40 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
         {
             policy.addPolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text);
             dgv_Policy.DataSource = policy.showAllPolicys();
+
+            txt_PID.Clear();
+            txt_PName.Clear();
+            txt_PPrice.Clear();
+            txt_PSearch.Clear();
+            cb_Status.SelectedIndex = -1;
+            cb_CoverLevel.SelectedIndex = -1;
         }
 
         private void btn_PUpdate_Click(object sender, EventArgs e)
         {
             policy.updatePolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text);
             dgv_Policy.DataSource = policy.showAllPolicys();
+
+            txt_PID.Clear();
+            txt_PName.Clear();
+            txt_PPrice.Clear();
+            txt_PSearch.Clear();
+            cb_Status.SelectedIndex = -1;
+            cb_CoverLevel.SelectedIndex = -1;
         }
+
 
         private void btn_PDelete_Click(object sender, EventArgs e)
         {
             policy.deletePolicy(int.Parse(txt_PID.Text));
             dgv_Policy.DataSource = policy.showAllPolicys();
+
+            txt_PID.Clear();
+            txt_PName.Clear();
+            txt_PPrice.Clear();
+            txt_PSearch.Clear();
+            cb_Status.SelectedIndex = -1;
+            cb_CoverLevel.SelectedIndex = -1;
         }
 
         private void btn_callcentre_Click(object sender, EventArgs e)
@@ -105,6 +129,41 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             this.Hide();
             fProvider_Management provider = new fProvider_Management();
             provider.Show();
+        }
+
+        private void dgv_Policy_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow dgvRow = dgv_Policy.Rows[e.RowIndex];
+
+                txt_PID.Text = dgvRow.Cells[0].Value.ToString();
+                txt_PName.Text = dgvRow.Cells[1].Value.ToString();
+                txt_PPrice.Text = dgvRow.Cells[2].Value.ToString();
+                cb_Status.Text = dgvRow.Cells[3].Value.ToString();
+                cb_CoverLevel.Text = dgvRow.Cells[5].Value.ToString();
+            }
+        }
+
+        private void dgv_Policy_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_Reload_Click(object sender, EventArgs e)
+        {
+
+            dgv_Policy.DataSource = policy.showAllPolicys();
+
+            txt_PID.Clear();
+            txt_PName.Clear();
+            txt_PPrice.Clear();
+            txt_PSearch.Clear();
+            cb_Status.SelectedIndex = -1;
+            cb_CoverLevel.SelectedIndex = -1;
+
+            this.dgv_Policy.Columns["Policy_ID"].Visible = false;
+            this.dgv_Policy.Columns["Cover_ID"].Visible = false;
         }
     }
 }

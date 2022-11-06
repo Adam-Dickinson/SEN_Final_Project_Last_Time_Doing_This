@@ -35,14 +35,14 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
             Condition.addCondition(id, name, info);
         }
 
-        public void insertTreatment(int id, string name, string descrip, string Cname)
+        public void insertTreatment(int id, string name, string descrip, int conID)
         {
             tratment.Id = id;
             tratment.Name = name;
             tratment.Description = descrip;
-            tratment.Medical_condition = Cname;
+            tratment.Condition_ID = conID;
 
-            Condition.addTreatment(id, name, descrip, Cname);
+            Condition.addTreatment(id, name, descrip, conID);
         }
 
         public DataTable searchCondition(string name)
@@ -68,14 +68,14 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
             Condition.updateCondition(id, name, info);
         }
 
-        public void updateTreatment(int id, string name, string descrip, string Cname)
+        public void updateTreatment(int id, string name, string descrip, int conID)
         {
             tratment.Id = id;
             tratment.Name = name;
             tratment.Description = descrip;
-            tratment.Medical_condition = Cname;
+            tratment.Condition_ID = conID;
 
-            Condition.updateTreatment(id, name, descrip, Cname);
+            Condition.updateTreatment(id, name, descrip, conID);
         }
 
         public void deleteCondition(int id)

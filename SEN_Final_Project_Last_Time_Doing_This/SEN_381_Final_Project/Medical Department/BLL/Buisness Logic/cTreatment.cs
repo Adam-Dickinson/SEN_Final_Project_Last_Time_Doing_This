@@ -16,11 +16,11 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
         private int id;
         private string name;
         private string description;
-        private string medical_condition;
+        private int condition_id;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
-        public string Medical_condition { get => medical_condition; set => medical_condition = value; }
+        public int Condition_ID { get => condition_id; set => condition_id = value; }
     }
 }
