@@ -345,6 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1243, 724);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -359,6 +360,7 @@
             this.Controls.Add(this.gBPolicyDetails);
             this.Controls.Add(this.dgvPolicyDetails);
             this.Name = "fProvider_Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fProvider_Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).EndInit();
             this.gBPolicyDetails.ResumeLayout(false);

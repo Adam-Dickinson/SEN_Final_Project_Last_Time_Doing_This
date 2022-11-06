@@ -63,10 +63,60 @@ namespace SEN_381_Final_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Answer {
+            get {
+                object obj = ResourceManager.GetObject("Answer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Answer1 {
+            get {
+                object obj = ResourceManager.GetObject("Answer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circuit_board_technology_background_purple_and_blue_light_banner_electronic_system_concept_vector {
             get {
                 object obj = ResourceManager.GetObject("circuit-board-technology-background-purple-and-blue-light-banner-electronic-syste" +
                         "m-concept-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Declline {
+            get {
+                object obj = ResourceManager.GetObject("Declline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Background {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_Background1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Background1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

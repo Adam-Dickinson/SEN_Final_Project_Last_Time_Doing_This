@@ -53,6 +53,9 @@
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_FSearch = new System.Windows.Forms.Button();
+            this.txt_FSearch = new System.Windows.Forms.TextBox();
             this.txt_FID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txt_FName = new System.Windows.Forms.TextBox();
@@ -65,21 +68,18 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dgv_Family = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_CSearch = new System.Windows.Forms.Button();
+            this.txt_CSearch = new System.Windows.Forms.TextBox();
             this.txt_CID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.txt_CSearch = new System.Windows.Forms.TextBox();
-            this.btn_CSearch = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btn_FSearch = new System.Windows.Forms.Button();
-            this.txt_FSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Family)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Client
@@ -123,6 +123,7 @@
             this.btn_CDelete.TabIndex = 3;
             this.btn_CDelete.Text = "Delete";
             this.btn_CDelete.UseVisualStyleBackColor = false;
+            this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
             // 
             // txt_CName
             // 
@@ -342,6 +343,35 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Family";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btn_FSearch);
+            this.groupBox6.Controls.Add(this.txt_FSearch);
+            this.groupBox6.Location = new System.Drawing.Point(373, 25);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(276, 40);
+            this.groupBox6.TabIndex = 32;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Search Family";
+            // 
+            // btn_FSearch
+            // 
+            this.btn_FSearch.BackColor = System.Drawing.Color.DimGray;
+            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_FSearch.Location = new System.Drawing.Point(161, 11);
+            this.btn_FSearch.Name = "btn_FSearch";
+            this.btn_FSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_FSearch.TabIndex = 26;
+            this.btn_FSearch.Text = "Search";
+            this.btn_FSearch.UseVisualStyleBackColor = false;
+            // 
+            // txt_FSearch
+            // 
+            this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
+            this.txt_FSearch.Name = "txt_FSearch";
+            this.txt_FSearch.Size = new System.Drawing.Size(108, 20);
+            this.txt_FSearch.TabIndex = 25;
+            // 
             // txt_FID
             // 
             this.txt_FID.Location = new System.Drawing.Point(453, 85);
@@ -472,6 +502,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_CSearch);
+            this.groupBox4.Controls.Add(this.txt_CSearch);
+            this.groupBox4.Location = new System.Drawing.Point(507, 25);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(276, 40);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Search Client";
+            // 
+            // btn_CSearch
+            // 
+            this.btn_CSearch.BackColor = System.Drawing.Color.DimGray;
+            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_CSearch.Location = new System.Drawing.Point(161, 11);
+            this.btn_CSearch.Name = "btn_CSearch";
+            this.btn_CSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_CSearch.TabIndex = 26;
+            this.btn_CSearch.Text = "Search";
+            this.btn_CSearch.UseVisualStyleBackColor = false;
+            this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
+            // 
+            // txt_CSearch
+            // 
+            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
+            this.txt_CSearch.Name = "txt_CSearch";
+            this.txt_CSearch.Size = new System.Drawing.Size(108, 20);
+            this.txt_CSearch.TabIndex = 25;
+            // 
             // txt_CID
             // 
             this.txt_CID.Location = new System.Drawing.Point(583, 65);
@@ -490,71 +550,13 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "ID Number";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btn_CSearch);
-            this.groupBox4.Controls.Add(this.txt_CSearch);
-            this.groupBox4.Location = new System.Drawing.Point(507, 25);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 40);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search Client";
-            // 
-            // txt_CSearch
-            // 
-            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
-            this.txt_CSearch.Name = "txt_CSearch";
-            this.txt_CSearch.Size = new System.Drawing.Size(108, 20);
-            this.txt_CSearch.TabIndex = 25;
-            // 
-            // btn_CSearch
-            // 
-            this.btn_CSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CSearch.Location = new System.Drawing.Point(161, 11);
-            this.btn_CSearch.Name = "btn_CSearch";
-            this.btn_CSearch.Size = new System.Drawing.Size(75, 23);
-            this.btn_CSearch.TabIndex = 26;
-            this.btn_CSearch.Text = "Search";
-            this.btn_CSearch.UseVisualStyleBackColor = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.btn_FSearch);
-            this.groupBox6.Controls.Add(this.txt_FSearch);
-            this.groupBox6.Location = new System.Drawing.Point(373, 25);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(276, 40);
-            this.groupBox6.TabIndex = 32;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Search Family";
-            // 
-            // btn_FSearch
-            // 
-            this.btn_FSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_FSearch.Location = new System.Drawing.Point(161, 11);
-            this.btn_FSearch.Name = "btn_FSearch";
-            this.btn_FSearch.Size = new System.Drawing.Size(75, 23);
-            this.btn_FSearch.TabIndex = 26;
-            this.btn_FSearch.Text = "Search";
-            this.btn_FSearch.UseVisualStyleBackColor = false;
-            // 
-            // txt_FSearch
-            // 
-            this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
-            this.txt_FSearch.Name = "txt_FSearch";
-            this.txt_FSearch.Size = new System.Drawing.Size(108, 20);
-            this.txt_FSearch.TabIndex = 25;
-            // 
             // fManagment_Client_Policy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1600, 403);
+            this.ClientSize = new System.Drawing.Size(1370, 438);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -564,16 +566,18 @@
             this.Controls.Add(this.btn_callcentre);
             this.Name = "fManagment_Client_Policy";
             this.Text = "fClient";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fManagment_Client_Policy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Family)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }

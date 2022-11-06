@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEN_381_Final_Project.Call_Centre.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace SEN_381_Final_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new fSplash_Screen());
             Application.Run(new fCall_Center());
         }
     }

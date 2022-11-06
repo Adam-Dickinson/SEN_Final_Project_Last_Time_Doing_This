@@ -21,5 +21,20 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
         {
            
         }
+
+        private void btn_CSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fManagment_Client_Policy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
