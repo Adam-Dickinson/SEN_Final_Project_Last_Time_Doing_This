@@ -21,5 +21,25 @@ namespace SEN_381_Final_Project.Client_Management.BLL
         {
             return client.displayClients();
         }
+
+        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        {
+            client.addClient(id,name, surname, DOB, address, PhoneNumber, isFamily, pID, pName);
+        }
+
+        public void updateClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        {
+            client.updateClient(id, name, surname, DOB, address, PhoneNumber, isFamily, pID, pName);
+        }
+
+        public DataTable searchClient(string name)
+        {
+            return client.searchClient(name);
+        }
+
+        public void deleteClient(int id)
+        {
+            client.deleteClient(id);
+        }
     }
 }

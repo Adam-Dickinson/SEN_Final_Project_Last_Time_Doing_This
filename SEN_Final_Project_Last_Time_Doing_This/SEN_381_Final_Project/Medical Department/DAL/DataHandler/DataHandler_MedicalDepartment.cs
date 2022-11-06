@@ -77,7 +77,7 @@ namespace SEN_381_Final_Project.DAL
         {
             using(SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spSearchTreatmentS", connect);
+                SqlCommand cmd = new SqlCommand("spSearchTreatments", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);

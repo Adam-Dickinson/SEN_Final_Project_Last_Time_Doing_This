@@ -68,13 +68,13 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dgv_Family = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Reload = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_CSearch = new System.Windows.Forms.Button();
             this.txt_CSearch = new System.Windows.Forms.TextBox();
             this.txt_CID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_Reload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -102,6 +102,7 @@
             this.btn_CAdd.TabIndex = 1;
             this.btn_CAdd.Text = "Add ";
             this.btn_CAdd.UseVisualStyleBackColor = false;
+            this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
             // 
             // btn_CUpdate
             // 
@@ -113,6 +114,7 @@
             this.btn_CUpdate.TabIndex = 2;
             this.btn_CUpdate.Text = "Update ";
             this.btn_CUpdate.UseVisualStyleBackColor = false;
+            this.btn_CUpdate.Click += new System.EventHandler(this.btn_CUpdate_Click);
             // 
             // btn_CDelete
             // 
@@ -124,6 +126,7 @@
             this.btn_CDelete.TabIndex = 3;
             this.btn_CDelete.Text = "Delete";
             this.btn_CDelete.UseVisualStyleBackColor = false;
+            this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
             // 
             // txt_CName
             // 
@@ -178,6 +181,7 @@
             this.cb_CPolicy.Name = "cb_CPolicy";
             this.cb_CPolicy.Size = new System.Drawing.Size(197, 21);
             this.cb_CPolicy.TabIndex = 12;
+            this.cb_CPolicy.Enter += new System.EventHandler(this.cb_CPolicy_Enter);
             // 
             // label1
             // 
@@ -508,6 +512,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Client";
             // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Reload.Location = new System.Drawing.Point(200, 291);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.TabIndex = 26;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btn_CSearch);
@@ -529,6 +545,7 @@
             this.btn_CSearch.TabIndex = 26;
             this.btn_CSearch.Text = "Search";
             this.btn_CSearch.UseVisualStyleBackColor = false;
+            this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
             // 
             // txt_CSearch
             // 
@@ -554,17 +571,6 @@
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 23;
             this.label8.Text = "ID Number";
-            // 
-            // btn_Reload
-            // 
-            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Reload.Location = new System.Drawing.Point(200, 291);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
-            this.btn_Reload.TabIndex = 26;
-            this.btn_Reload.Text = "Reload";
-            this.btn_Reload.UseVisualStyleBackColor = false;
             // 
             // fManagment_Client
             // 
