@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagment_Client));
             this.dgv_Client = new System.Windows.Forms.DataGridView();
             this.btn_CAdd = new System.Windows.Forms.Button();
             this.btn_CUpdate = new System.Windows.Forms.Button();
@@ -94,73 +95,79 @@
             // 
             // btn_CAdd
             // 
-            this.btn_CAdd.BackColor = System.Drawing.Color.DimGray;
-            this.btn_CAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CAdd.Location = new System.Drawing.Point(500, 291);
+            this.btn_CAdd.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CAdd.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.add_circle_create_expand_new_plus_icon_123218;
+            this.btn_CAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CAdd.Location = new System.Drawing.Point(537, 274);
             this.btn_CAdd.Name = "btn_CAdd";
-            this.btn_CAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_CAdd.Size = new System.Drawing.Size(41, 40);
             this.btn_CAdd.TabIndex = 1;
-            this.btn_CAdd.Text = "Add ";
             this.btn_CAdd.UseVisualStyleBackColor = false;
             this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
             // 
             // btn_CUpdate
             // 
-            this.btn_CUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btn_CUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CUpdate.Location = new System.Drawing.Point(602, 291);
+            this.btn_CUpdate.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CUpdate.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.refresh_paper_load_update_icon_141966;
+            this.btn_CUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CUpdate.Location = new System.Drawing.Point(602, 274);
             this.btn_CUpdate.Name = "btn_CUpdate";
-            this.btn_CUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btn_CUpdate.Size = new System.Drawing.Size(43, 40);
             this.btn_CUpdate.TabIndex = 2;
-            this.btn_CUpdate.Text = "Update ";
             this.btn_CUpdate.UseVisualStyleBackColor = false;
             this.btn_CUpdate.Click += new System.EventHandler(this.btn_CUpdate_Click);
             // 
             // btn_CDelete
             // 
-            this.btn_CDelete.BackColor = System.Drawing.Color.DimGray;
-            this.btn_CDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CDelete.Location = new System.Drawing.Point(713, 291);
+            this.btn_CDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CDelete.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.waste_bin_delete_remove_recycle_icon_123840;
+            this.btn_CDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CDelete.Location = new System.Drawing.Point(667, 274);
             this.btn_CDelete.Name = "btn_CDelete";
-            this.btn_CDelete.Size = new System.Drawing.Size(75, 23);
+            this.btn_CDelete.Size = new System.Drawing.Size(44, 40);
             this.btn_CDelete.TabIndex = 3;
-            this.btn_CDelete.Text = "Delete";
             this.btn_CDelete.UseVisualStyleBackColor = false;
             this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
             // 
             // txt_CName
             // 
-            this.txt_CName.Location = new System.Drawing.Point(586, 88);
+            this.txt_CName.Location = new System.Drawing.Point(583, 88);
             this.txt_CName.Name = "txt_CName";
             this.txt_CName.Size = new System.Drawing.Size(200, 20);
             this.txt_CName.TabIndex = 4;
             // 
             // txt_CSurname
             // 
-            this.txt_CSurname.Location = new System.Drawing.Point(586, 114);
+            this.txt_CSurname.Location = new System.Drawing.Point(583, 114);
             this.txt_CSurname.Name = "txt_CSurname";
-            this.txt_CSurname.Size = new System.Drawing.Size(197, 20);
+            this.txt_CSurname.Size = new System.Drawing.Size(200, 20);
             this.txt_CSurname.TabIndex = 5;
             // 
             // txt_CAddress
             // 
-            this.txt_CAddress.Location = new System.Drawing.Point(586, 140);
+            this.txt_CAddress.Location = new System.Drawing.Point(583, 140);
             this.txt_CAddress.Name = "txt_CAddress";
-            this.txt_CAddress.Size = new System.Drawing.Size(197, 20);
+            this.txt_CAddress.Size = new System.Drawing.Size(200, 20);
             this.txt_CAddress.TabIndex = 6;
             // 
             // txt_CPhoneNumber
             // 
-            this.txt_CPhoneNumber.Location = new System.Drawing.Point(586, 166);
+            this.txt_CPhoneNumber.Location = new System.Drawing.Point(583, 166);
             this.txt_CPhoneNumber.Name = "txt_CPhoneNumber";
-            this.txt_CPhoneNumber.Size = new System.Drawing.Size(197, 20);
+            this.txt_CPhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.txt_CPhoneNumber.TabIndex = 7;
             // 
             // dtp_Client
             // 
-            this.dtp_Client.Location = new System.Drawing.Point(586, 192);
+            this.dtp_Client.Location = new System.Drawing.Point(583, 192);
             this.dtp_Client.Name = "dtp_Client";
-            this.dtp_Client.Size = new System.Drawing.Size(197, 20);
+            this.dtp_Client.Size = new System.Drawing.Size(200, 20);
             this.dtp_Client.TabIndex = 10;
             // 
             // cb_CFamily
@@ -169,17 +176,17 @@
             this.cb_CFamily.Items.AddRange(new object[] {
             "Individual",
             "Family"});
-            this.cb_CFamily.Location = new System.Drawing.Point(586, 218);
+            this.cb_CFamily.Location = new System.Drawing.Point(583, 218);
             this.cb_CFamily.Name = "cb_CFamily";
-            this.cb_CFamily.Size = new System.Drawing.Size(197, 21);
+            this.cb_CFamily.Size = new System.Drawing.Size(200, 21);
             this.cb_CFamily.TabIndex = 11;
             // 
             // cb_CPolicy
             // 
             this.cb_CPolicy.FormattingEnabled = true;
-            this.cb_CPolicy.Location = new System.Drawing.Point(586, 247);
+            this.cb_CPolicy.Location = new System.Drawing.Point(583, 247);
             this.cb_CPolicy.Name = "cb_CPolicy";
-            this.cb_CPolicy.Size = new System.Drawing.Size(197, 21);
+            this.cb_CPolicy.Size = new System.Drawing.Size(200, 21);
             this.cb_CPolicy.TabIndex = 12;
             this.cb_CPolicy.Enter += new System.EventHandler(this.cb_CPolicy_Enter);
             // 
@@ -273,8 +280,9 @@
             // 
             // btn_provider
             // 
-            this.btn_provider.BackColor = System.Drawing.Color.DimGray;
-            this.btn_provider.ForeColor = System.Drawing.Color.Snow;
+            this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_provider.Location = new System.Drawing.Point(1143, 36);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
@@ -285,8 +293,9 @@
             // 
             // btn_product
             // 
-            this.btn_product.BackColor = System.Drawing.Color.DimGray;
-            this.btn_product.ForeColor = System.Drawing.Color.Snow;
+            this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_product.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_product.Location = new System.Drawing.Point(981, 36);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
@@ -297,8 +306,9 @@
             // 
             // btn_medical
             // 
-            this.btn_medical.BackColor = System.Drawing.Color.DimGray;
-            this.btn_medical.ForeColor = System.Drawing.Color.Snow;
+            this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_medical.Location = new System.Drawing.Point(655, 36);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
@@ -309,8 +319,9 @@
             // 
             // btn_clientpolicy
             // 
-            this.btn_clientpolicy.BackColor = System.Drawing.Color.DimGray;
-            this.btn_clientpolicy.ForeColor = System.Drawing.Color.Snow;
+            this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_clientpolicy.Location = new System.Drawing.Point(811, 36);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
@@ -321,8 +332,9 @@
             // 
             // btn_callcentre
             // 
-            this.btn_callcentre.BackColor = System.Drawing.Color.DimGray;
-            this.btn_callcentre.ForeColor = System.Drawing.Color.Snow;
+            this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_callcentre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_callcentre.Location = new System.Drawing.Point(481, 36);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
@@ -365,20 +377,22 @@
             // 
             // btn_FSearch
             // 
-            this.btn_FSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_FSearch.Location = new System.Drawing.Point(161, 11);
+            this.btn_FSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_FSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_FSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_FSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_FSearch.Location = new System.Drawing.Point(242, 14);
             this.btn_FSearch.Name = "btn_FSearch";
-            this.btn_FSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_FSearch.Size = new System.Drawing.Size(28, 20);
             this.btn_FSearch.TabIndex = 26;
-            this.btn_FSearch.Text = "Search";
             this.btn_FSearch.UseVisualStyleBackColor = false;
             // 
             // txt_FSearch
             // 
             this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
             this.txt_FSearch.Name = "txt_FSearch";
-            this.txt_FSearch.Size = new System.Drawing.Size(108, 20);
+            this.txt_FSearch.Size = new System.Drawing.Size(230, 20);
             this.txt_FSearch.TabIndex = 25;
             // 
             // txt_FID
@@ -401,30 +415,30 @@
             // 
             // txt_FName
             // 
-            this.txt_FName.Location = new System.Drawing.Point(456, 108);
+            this.txt_FName.Location = new System.Drawing.Point(453, 110);
             this.txt_FName.Name = "txt_FName";
             this.txt_FName.Size = new System.Drawing.Size(200, 20);
             this.txt_FName.TabIndex = 25;
             // 
             // txt_FSurname
             // 
-            this.txt_FSurname.Location = new System.Drawing.Point(456, 134);
+            this.txt_FSurname.Location = new System.Drawing.Point(453, 134);
             this.txt_FSurname.Name = "txt_FSurname";
-            this.txt_FSurname.Size = new System.Drawing.Size(197, 20);
+            this.txt_FSurname.Size = new System.Drawing.Size(200, 20);
             this.txt_FSurname.TabIndex = 26;
             // 
             // txt_FAddress
             // 
-            this.txt_FAddress.Location = new System.Drawing.Point(456, 160);
+            this.txt_FAddress.Location = new System.Drawing.Point(453, 156);
             this.txt_FAddress.Name = "txt_FAddress";
-            this.txt_FAddress.Size = new System.Drawing.Size(197, 20);
+            this.txt_FAddress.Size = new System.Drawing.Size(200, 20);
             this.txt_FAddress.TabIndex = 27;
             // 
             // txt_FPhoneNumber
             // 
-            this.txt_FPhoneNumber.Location = new System.Drawing.Point(456, 186);
+            this.txt_FPhoneNumber.Location = new System.Drawing.Point(453, 182);
             this.txt_FPhoneNumber.Name = "txt_FPhoneNumber";
-            this.txt_FPhoneNumber.Size = new System.Drawing.Size(197, 20);
+            this.txt_FPhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.txt_FPhoneNumber.TabIndex = 28;
             // 
             // label16
@@ -514,13 +528,15 @@
             // 
             // btn_Reload
             // 
-            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Reload.Location = new System.Drawing.Point(200, 291);
+            this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Reload.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Reload.Location = new System.Drawing.Point(201, 285);
             this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.Size = new System.Drawing.Size(34, 26);
             this.btn_Reload.TabIndex = 26;
-            this.btn_Reload.Text = "Reload";
             this.btn_Reload.UseVisualStyleBackColor = false;
             this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
@@ -537,13 +553,15 @@
             // 
             // btn_CSearch
             // 
-            this.btn_CSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_CSearch.Location = new System.Drawing.Point(161, 11);
+            this.btn_CSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_CSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CSearch.Location = new System.Drawing.Point(241, 14);
             this.btn_CSearch.Name = "btn_CSearch";
-            this.btn_CSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_CSearch.Size = new System.Drawing.Size(29, 20);
             this.btn_CSearch.TabIndex = 26;
-            this.btn_CSearch.Text = "Search";
             this.btn_CSearch.UseVisualStyleBackColor = false;
             this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
             // 
@@ -551,7 +569,7 @@
             // 
             this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
             this.txt_CSearch.Name = "txt_CSearch";
-            this.txt_CSearch.Size = new System.Drawing.Size(108, 20);
+            this.txt_CSearch.Size = new System.Drawing.Size(229, 20);
             this.txt_CSearch.TabIndex = 25;
             // 
             // txt_CID
@@ -576,7 +594,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1495, 403);
             this.Controls.Add(this.groupBox2);
@@ -586,8 +604,10 @@
             this.Controls.Add(this.btn_medical);
             this.Controls.Add(this.btn_clientpolicy);
             this.Controls.Add(this.btn_callcentre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fManagment_Client";
-            this.Text = "fClient";
+            this.Text = "Client Management Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fManagment_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).EndInit();
             this.groupBox1.ResumeLayout(false);

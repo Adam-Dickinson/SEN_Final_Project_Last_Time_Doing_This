@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCall_Center));
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_medical = new System.Windows.Forms.Button();
@@ -36,8 +37,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_ClientID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_endCall = new System.Windows.Forms.Button();
-            this.btn_StartCall = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -56,6 +55,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_endCall = new System.Windows.Forms.Button();
+            this.btn_StartCall = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
@@ -65,52 +66,62 @@
             // 
             // btn_callcentre
             // 
+            this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_callcentre.Location = new System.Drawing.Point(257, 11);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(75, 24);
             this.btn_callcentre.TabIndex = 0;
             this.btn_callcentre.Text = "Call Centre";
-            this.btn_callcentre.UseVisualStyleBackColor = true;
+            this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
             // btn_clientpolicy
             // 
+            this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientpolicy.Location = new System.Drawing.Point(402, 11);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 24);
             this.btn_clientpolicy.TabIndex = 1;
             this.btn_clientpolicy.Text = "Management";
-            this.btn_clientpolicy.UseVisualStyleBackColor = true;
+            this.btn_clientpolicy.UseVisualStyleBackColor = false;
             this.btn_clientpolicy.Click += new System.EventHandler(this.btn_clientpolicy_Click);
             // 
             // btn_medical
             // 
+            this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_medical.Location = new System.Drawing.Point(580, 11);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 24);
             this.btn_medical.TabIndex = 2;
             this.btn_medical.Text = "Medical";
-            this.btn_medical.UseVisualStyleBackColor = true;
+            this.btn_medical.UseVisualStyleBackColor = false;
             this.btn_medical.Click += new System.EventHandler(this.btn_medical_Click);
             // 
             // btn_product
             // 
+            this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_product.Location = new System.Drawing.Point(740, 12);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 24);
             this.btn_product.TabIndex = 3;
             this.btn_product.Text = "Product";
-            this.btn_product.UseVisualStyleBackColor = true;
+            this.btn_product.UseVisualStyleBackColor = false;
             this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // btn_provider
             // 
+            this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_provider.Location = new System.Drawing.Point(924, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 24);
             this.btn_provider.TabIndex = 4;
             this.btn_provider.Text = "Provider";
-            this.btn_provider.UseVisualStyleBackColor = true;
+            this.btn_provider.UseVisualStyleBackColor = false;
             this.btn_provider.Click += new System.EventHandler(this.btn_provider_Click);
             // 
             // groupBox1
@@ -141,26 +152,6 @@
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Enter Client ID to Call";
-            // 
-            // btn_endCall
-            // 
-            this.btn_endCall.Location = new System.Drawing.Point(235, 89);
-            this.btn_endCall.Name = "btn_endCall";
-            this.btn_endCall.Size = new System.Drawing.Size(75, 23);
-            this.btn_endCall.TabIndex = 2;
-            this.btn_endCall.Text = "End";
-            this.btn_endCall.UseVisualStyleBackColor = true;
-            this.btn_endCall.Click += new System.EventHandler(this.btn_endCall_Click);
-            // 
-            // btn_StartCall
-            // 
-            this.btn_StartCall.Location = new System.Drawing.Point(48, 89);
-            this.btn_StartCall.Name = "btn_StartCall";
-            this.btn_StartCall.Size = new System.Drawing.Size(75, 23);
-            this.btn_StartCall.TabIndex = 1;
-            this.btn_StartCall.Text = "Start";
-            this.btn_StartCall.UseVisualStyleBackColor = true;
-            this.btn_StartCall.Click += new System.EventHandler(this.btn_StartCall_Click);
             // 
             // label1
             // 
@@ -228,32 +219,38 @@
             // 
             // btn_approve
             // 
+            this.btn_approve.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_approve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_approve.Location = new System.Drawing.Point(114, 622);
             this.btn_approve.Name = "btn_approve";
             this.btn_approve.Size = new System.Drawing.Size(91, 23);
             this.btn_approve.TabIndex = 7;
             this.btn_approve.Text = "Approve";
-            this.btn_approve.UseVisualStyleBackColor = true;
+            this.btn_approve.UseVisualStyleBackColor = false;
             this.btn_approve.Click += new System.EventHandler(this.btn_approve_Click);
             // 
             // btn_decline
             // 
+            this.btn_decline.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_decline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_decline.Location = new System.Drawing.Point(221, 622);
             this.btn_decline.Name = "btn_decline";
             this.btn_decline.Size = new System.Drawing.Size(91, 23);
             this.btn_decline.TabIndex = 8;
             this.btn_decline.Text = "Decline";
-            this.btn_decline.UseVisualStyleBackColor = true;
+            this.btn_decline.UseVisualStyleBackColor = false;
             this.btn_decline.Click += new System.EventHandler(this.btn_decline_Click);
             // 
             // btn_pending
             // 
+            this.btn_pending.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_pending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pending.Location = new System.Drawing.Point(325, 622);
             this.btn_pending.Name = "btn_pending";
             this.btn_pending.Size = new System.Drawing.Size(91, 23);
             this.btn_pending.TabIndex = 9;
             this.btn_pending.Text = "Pending";
-            this.btn_pending.UseVisualStyleBackColor = true;
+            this.btn_pending.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -331,10 +328,37 @@
             this.dataGridView2.Size = new System.Drawing.Size(520, 213);
             this.dataGridView2.TabIndex = 1;
             // 
+            // btn_endCall
+            // 
+            this.btn_endCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_end_128_28144;
+            this.btn_endCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_endCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_endCall.Location = new System.Drawing.Point(238, 53);
+            this.btn_endCall.Name = "btn_endCall";
+            this.btn_endCall.Size = new System.Drawing.Size(75, 73);
+            this.btn_endCall.TabIndex = 2;
+            this.btn_endCall.UseVisualStyleBackColor = true;
+            this.btn_endCall.Click += new System.EventHandler(this.btn_endCall_Click);
+            // 
+            // btn_StartCall
+            // 
+            this.btn_StartCall.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_StartCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_128_28145;
+            this.btn_StartCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_StartCall.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_StartCall.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_StartCall.Location = new System.Drawing.Point(43, 53);
+            this.btn_StartCall.Name = "btn_StartCall";
+            this.btn_StartCall.Size = new System.Drawing.Size(73, 73);
+            this.btn_StartCall.TabIndex = 1;
+            this.btn_StartCall.UseVisualStyleBackColor = false;
+            this.btn_StartCall.Click += new System.EventHandler(this.btn_StartCall_Click);
+            // 
             // fCall_Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1261, 655);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_pending);
@@ -347,7 +371,10 @@
             this.Controls.Add(this.btn_medical);
             this.Controls.Add(this.btn_clientpolicy);
             this.Controls.Add(this.btn_callcentre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCall_Center";
+            this.Text = "Call Center ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

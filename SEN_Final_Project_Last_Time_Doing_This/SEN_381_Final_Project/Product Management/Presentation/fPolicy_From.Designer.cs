@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPolicy_From));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_Reload = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +57,6 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
-            this.btn_Reload = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -89,6 +90,20 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Policy";
+            // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Reload.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Reload.Location = new System.Drawing.Point(222, 281);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(43, 32);
+            this.btn_Reload.TabIndex = 45;
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // label4
             // 
@@ -147,13 +162,15 @@
             // 
             // btn_PSearch
             // 
-            this.btn_PSearch.BackColor = System.Drawing.Color.DimGray;
-            this.btn_PSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_PSearch.Location = new System.Drawing.Point(161, 11);
+            this.btn_PSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_PSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_PSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_PSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PSearch.Location = new System.Drawing.Point(243, 14);
             this.btn_PSearch.Name = "btn_PSearch";
-            this.btn_PSearch.Size = new System.Drawing.Size(75, 23);
+            this.btn_PSearch.Size = new System.Drawing.Size(27, 20);
             this.btn_PSearch.TabIndex = 26;
-            this.btn_PSearch.Text = "Search";
             this.btn_PSearch.UseVisualStyleBackColor = false;
             this.btn_PSearch.Click += new System.EventHandler(this.btn_PSearch_Click);
             // 
@@ -161,7 +178,7 @@
             // 
             this.txt_PSearch.Location = new System.Drawing.Point(6, 14);
             this.txt_PSearch.Name = "txt_PSearch";
-            this.txt_PSearch.Size = new System.Drawing.Size(108, 20);
+            this.txt_PSearch.Size = new System.Drawing.Size(231, 20);
             this.txt_PSearch.TabIndex = 25;
             // 
             // cb_CoverLevel
@@ -191,37 +208,43 @@
             // 
             // btn_PDelete
             // 
-            this.btn_PDelete.BackColor = System.Drawing.Color.DimGray;
-            this.btn_PDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_PDelete.Location = new System.Drawing.Point(720, 264);
+            this.btn_PDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_PDelete.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.waste_bin_delete_remove_recycle_icon_123840;
+            this.btn_PDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_PDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PDelete.Location = new System.Drawing.Point(706, 215);
             this.btn_PDelete.Name = "btn_PDelete";
-            this.btn_PDelete.Size = new System.Drawing.Size(75, 23);
+            this.btn_PDelete.Size = new System.Drawing.Size(43, 33);
             this.btn_PDelete.TabIndex = 37;
-            this.btn_PDelete.Text = "Delete";
             this.btn_PDelete.UseVisualStyleBackColor = false;
             this.btn_PDelete.Click += new System.EventHandler(this.btn_PDelete_Click);
             // 
             // btn_PUpdate
             // 
-            this.btn_PUpdate.BackColor = System.Drawing.Color.DimGray;
-            this.btn_PUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_PUpdate.Location = new System.Drawing.Point(609, 264);
+            this.btn_PUpdate.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_PUpdate.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.refresh_paper_load_update_icon_141966;
+            this.btn_PUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_PUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PUpdate.Location = new System.Drawing.Point(643, 215);
             this.btn_PUpdate.Name = "btn_PUpdate";
-            this.btn_PUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btn_PUpdate.Size = new System.Drawing.Size(42, 33);
             this.btn_PUpdate.TabIndex = 36;
-            this.btn_PUpdate.Text = "Update ";
             this.btn_PUpdate.UseVisualStyleBackColor = false;
             this.btn_PUpdate.Click += new System.EventHandler(this.btn_PUpdate_Click);
             // 
             // btn_PAdd
             // 
-            this.btn_PAdd.BackColor = System.Drawing.Color.DimGray;
-            this.btn_PAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_PAdd.Location = new System.Drawing.Point(507, 264);
+            this.btn_PAdd.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_PAdd.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.add_circle_create_expand_new_plus_icon_123218;
+            this.btn_PAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_PAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_PAdd.Location = new System.Drawing.Point(581, 215);
             this.btn_PAdd.Name = "btn_PAdd";
-            this.btn_PAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_PAdd.Size = new System.Drawing.Size(40, 33);
             this.btn_PAdd.TabIndex = 35;
-            this.btn_PAdd.Text = "Add ";
             this.btn_PAdd.UseVisualStyleBackColor = false;
             this.btn_PAdd.Click += new System.EventHandler(this.btn_PAdd_Click);
             // 
@@ -313,8 +336,9 @@
             // 
             // btn_provider
             // 
-            this.btn_provider.BackColor = System.Drawing.Color.DimGray;
-            this.btn_provider.ForeColor = System.Drawing.Color.Snow;
+            this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_provider.Location = new System.Drawing.Point(728, 27);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
@@ -325,8 +349,9 @@
             // 
             // btn_product
             // 
-            this.btn_product.BackColor = System.Drawing.Color.DimGray;
-            this.btn_product.ForeColor = System.Drawing.Color.Snow;
+            this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_product.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_product.Location = new System.Drawing.Point(566, 27);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
@@ -337,8 +362,9 @@
             // 
             // btn_medical
             // 
-            this.btn_medical.BackColor = System.Drawing.Color.DimGray;
-            this.btn_medical.ForeColor = System.Drawing.Color.Snow;
+            this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_medical.Location = new System.Drawing.Point(240, 27);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
@@ -349,8 +375,9 @@
             // 
             // btn_clientpolicy
             // 
-            this.btn_clientpolicy.BackColor = System.Drawing.Color.DimGray;
-            this.btn_clientpolicy.ForeColor = System.Drawing.Color.Snow;
+            this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_clientpolicy.Location = new System.Drawing.Point(396, 27);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
@@ -361,8 +388,9 @@
             // 
             // btn_callcentre
             // 
-            this.btn_callcentre.BackColor = System.Drawing.Color.DimGray;
-            this.btn_callcentre.ForeColor = System.Drawing.Color.Snow;
+            this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_callcentre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_callcentre.Location = new System.Drawing.Point(66, 27);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
@@ -371,22 +399,11 @@
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
-            // btn_Reload
-            // 
-            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Reload.Location = new System.Drawing.Point(222, 281);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
-            this.btn_Reload.TabIndex = 45;
-            this.btn_Reload.Text = "Reload";
-            this.btn_Reload.UseVisualStyleBackColor = false;
-            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
-            // 
             // fPolicy_From
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 406);
             this.Controls.Add(this.btn_provider);
             this.Controls.Add(this.btn_product);
@@ -394,8 +411,10 @@
             this.Controls.Add(this.btn_clientpolicy);
             this.Controls.Add(this.btn_callcentre);
             this.Controls.Add(this.groupBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fPolicy_From";
-            this.Text = "fPolicy_From";
+            this.Text = "Policy Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fPolicy_From_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
