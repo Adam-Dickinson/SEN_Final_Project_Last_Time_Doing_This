@@ -63,6 +63,36 @@ namespace SEN_381_Final_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1487086362_cancel_81578 {
+            get {
+                object obj = ResourceManager.GetObject("1487086362-cancel_81578", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4213447_arrow_load_loading_refresh_reload_restart_sync_115423 {
+            get {
+                object obj = ResourceManager.GetObject("4213447-arrow-load-loading-refresh-reload-restart-sync_115423", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_circle_create_expand_new_plus_icon_123218 {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_create_expand_new_plus_icon_123218", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap circuit_board_technology_background_purple_and_blue_light_banner_electronic_system_concept_vector {
             get {
                 object obj = ResourceManager.GetObject("circuit-board-technology-background-purple-and-blue-light-banner-electronic-syste" +
@@ -74,9 +104,59 @@ namespace SEN_381_Final_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_call_128_28145 {
+            get {
+                object obj = ResourceManager.GetObject("ic_call_128_28145", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_call_end_128_28144 {
+            get {
+                object obj = ResourceManager.GetObject("ic_call_end_128_28144", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresh_paper_load_update_icon_141966 {
+            get {
+                object obj = ResourceManager.GetObject("refresh_paper_load_update_icon_141966", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchmagnifierinterfacesymbol_79894 {
+            get {
+                object obj = ResourceManager.GetObject("searchmagnifierinterfacesymbol_79894", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waste_bin_delete_remove_recycle_icon_123840 {
+            get {
+                object obj = ResourceManager.GetObject("waste_bin_delete_remove_recycle_icon_123840", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
