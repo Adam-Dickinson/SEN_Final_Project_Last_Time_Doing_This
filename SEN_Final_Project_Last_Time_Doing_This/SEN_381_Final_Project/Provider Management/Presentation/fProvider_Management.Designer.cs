@@ -299,7 +299,7 @@
             // 
             // btn_medical
             // 
-            this.btn_medical.Location = new System.Drawing.Point(417, 12);
+            this.btn_medical.Location = new System.Drawing.Point(555, 12);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 10;
@@ -309,7 +309,7 @@
             // 
             // btn_clientpolicy
             // 
-            this.btn_clientpolicy.Location = new System.Drawing.Point(573, 12);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(387, 12);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 9;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_Reload = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
-            this.btn_Reload = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -89,6 +89,18 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Policy";
+            // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Reload.Location = new System.Drawing.Point(222, 281);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
+            this.btn_Reload.TabIndex = 45;
+            this.btn_Reload.Text = "Reload";
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // label4
             // 
@@ -339,7 +351,7 @@
             // 
             this.btn_medical.BackColor = System.Drawing.Color.DimGray;
             this.btn_medical.ForeColor = System.Drawing.Color.Snow;
-            this.btn_medical.Location = new System.Drawing.Point(240, 27);
+            this.btn_medical.Location = new System.Drawing.Point(396, 27);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 34;
@@ -351,7 +363,7 @@
             // 
             this.btn_clientpolicy.BackColor = System.Drawing.Color.DimGray;
             this.btn_clientpolicy.ForeColor = System.Drawing.Color.Snow;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(396, 27);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(228, 27);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 33;
@@ -370,18 +382,6 @@
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
-            // 
-            // btn_Reload
-            // 
-            this.btn_Reload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Reload.Location = new System.Drawing.Point(222, 281);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(75, 23);
-            this.btn_Reload.TabIndex = 45;
-            this.btn_Reload.Text = "Reload";
-            this.btn_Reload.UseVisualStyleBackColor = false;
-            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
             // fPolicy_From
             // 

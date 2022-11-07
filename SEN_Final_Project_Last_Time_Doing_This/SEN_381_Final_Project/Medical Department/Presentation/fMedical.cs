@@ -44,6 +44,9 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             dgv_Treatment.DataSource = Condition.displayTreatments();
 
             cb_TreatmentMC.Text = "Select a medical Condition ID";
+
+            this.dgv_Treatment.Columns["Treatment_ID"].Visible = false;
+            this.dgv_MC.Columns["Condition_ID"].Visible = false;
         }
 
         private void dgv_MC_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -198,6 +201,9 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_TreatmentNameSearch.Clear();
 
             cb_TreatmentMC.Text = "Select a medical Condition ID";
+
+            this.dgv_Treatment.Columns["Treatment_ID"].Visible = false;
+            this.dgv_MC.Columns["Condition_ID"].Visible = false;
         }
 
         private void btn_reload2_Click(object sender, EventArgs e)
@@ -207,6 +213,9 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_MCName.Clear();
             rtxt_MCInformation.Clear();
             txt_MCNameSearch.Clear();
+
+            this.dgv_Treatment.Columns["Treatment_ID"].Visible = false;
+            this.dgv_MC.Columns["Condition_ID"].Visible = false;
         }
     }
 }

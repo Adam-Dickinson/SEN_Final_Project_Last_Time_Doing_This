@@ -22,6 +22,9 @@ namespace SEN_381_Final_Project
             InitializeComponent();
         }
 
+        public int Seconds;
+        public int Minutes;
+
         private void btn_provider_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -48,12 +51,32 @@ namespace SEN_381_Final_Project
             /*dgvPolicyDetails.DataSource = provider.searchProvider(txt_Search.Text);
             txt_Search.Clear();*/
 
-            dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
+            //dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
+
+            call_timer.Enabled = true;
+            Minutes = 0;
+            Seconds = 0;
         }
 
         private void btn_endCall_Click(object sender, EventArgs e)
         {
-            txt_ClientID.Clear();
+            //txt_ClientID.Clear();
+
+            call_timer.Enabled = false;
+
+            
+            if (int.Parse(CallTimeMinutesLabel.Text) == 0)
+            {
+                MessageBox.Show("The Call Lasted For " + CallTimeMinutesLabel.Text + ":" + CallTimeSecondsLabel.Text + " Seconds");
+            }
+            else
+            {
+                MessageBox.Show("The Call Lasted For " + CallTimeMinutesLabel.Text + ":" + CallTimeSecondsLabel.Text + " Minutes");
+            }
+
+            CallTimeMinutesLabel.Text = "0";
+            CallTimeSecondsLabel.Text = "00";
+
         }
 
         private void btn_approve_Click(object sender, EventArgs e)
@@ -94,6 +117,40 @@ namespace SEN_381_Final_Project
             this.Hide();
             fCall_Center call = new fCall_Center();
             call.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void call_timer_Tick(object sender, EventArgs e)
+        {
+
+            string sMinutes;
+            string sSeconds;
+
+            Seconds += 1;
+            if (Seconds == 60)
+            {
+                Seconds = 0;
+                Minutes += Minutes + 1;
+            }
+
+            sMinutes = Minutes.ToString();
+            sSeconds = Seconds.ToString();
+
+            if (Seconds < 10)
+            {
+                sSeconds = "0" + sSeconds;
+                CallTimeMinutesLabel.Text = sMinutes;
+                CallTimeSecondsLabel.Text = sSeconds;
+            }
+            else
+            {
+                CallTimeMinutesLabel.Text = Minutes.ToString();
+                CallTimeSecondsLabel.Text = Seconds.ToString();
+            }
         }
     }
 }

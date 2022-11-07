@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SEN_381_Final_Project.Client_Management.DAL
 {
@@ -27,11 +28,31 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             return dt;
         }
 
-        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        public DataTable displayRoles()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            SqlDataAdapter adapter = new SqlDataAdapter("showRoles", con);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public DataTable displayFamily()
+        {
+            SqlConnection con = new SqlConnection(conn);
+            SqlDataAdapter adapter = new SqlDataAdapter("spDisplayFamily", con);
+            adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spAddClient", connection);
+                SqlCommand cmd = new SqlCommand("spAdddClient", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);
@@ -41,8 +62,27 @@ namespace SEN_381_Final_Project.Client_Management.DAL
                 cmd.Parameters.AddWithValue("@Client_Address", address);
                 cmd.Parameters.AddWithValue("@Client_PhoneNumber", PhoneNumber);
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
+                cmd.Parameters.AddWithValue("@Role_ID", rID);
                 cmd.Parameters.AddWithValue("@Policy_ID", pID);
-                cmd.Parameters.AddWithValue("@Policy_Type", pName);
+                cmd.Parameters.AddWithValue("@Policy_Name", pName);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void addFamily(int cid, int rID, string name, string surname, string phonenumber)
+        {
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spAddFamily", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Client_ID", cid);
+                cmd.Parameters.AddWithValue("@Role_ID", rID);
+                cmd.Parameters.AddWithValue("@Member_Name", name);
+                cmd.Parameters.AddWithValue("@Member_Surname", surname);
+                cmd.Parameters.AddWithValue("@Member_PhoneNumber", phonenumber);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -75,7 +115,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spSearchClient", connect);
+                SqlCommand cmd = new SqlCommand("spSearchClients", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_Name", name);
@@ -102,6 +142,26 @@ namespace SEN_381_Final_Project.Client_Management.DAL
 
                 connect.Open();
                 cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable searchFamily(string surname)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spSearchFamily", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Member_Surname", surname);
+
+                connect.Open();
+                DataTable dt = new DataTable();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    dt.Load(reader);
+                    return dt;
+                }
             }
         }
     }

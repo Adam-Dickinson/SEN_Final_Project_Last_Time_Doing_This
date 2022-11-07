@@ -22,9 +22,24 @@ namespace SEN_381_Final_Project.Client_Management.BLL
             return client.displayClients();
         }
 
-        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        public DataTable displayRoles()
         {
-            client.addClient(id,name, surname, DOB, address, PhoneNumber, isFamily, pID, pName);
+            return client.displayRoles();
+        }
+
+        public DataTable displayFamily()
+        {
+            return client.displayFamily();
+        }
+
+        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
+        {
+            client.addClient(id,name, surname, DOB, address, PhoneNumber, isFamily, rID, pID, pName);
+        }
+
+        public void addFamily(int cid, int rID, string name, string surname, string phonenumber)
+        {
+            client.addFamily(cid, rID, name, surname, phonenumber);
         }
 
         public void updateClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
@@ -35,6 +50,11 @@ namespace SEN_381_Final_Project.Client_Management.BLL
         public DataTable searchClient(string name)
         {
             return client.searchClient(name);
+        }
+
+        public DataTable searchFamily(string surname)
+        {
+            return client.searchFamily(surname);
         }
 
         public void deleteClient(int id)
