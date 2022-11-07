@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -48,17 +49,17 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             return dt;
         }
 
-        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
+        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spAdddClient", connection);
+                SqlCommand cmd = new SqlCommand("spAddddClient", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);
                 cmd.Parameters.AddWithValue("@Client_Name", name);
                 cmd.Parameters.AddWithValue("@Client_Surname", surname);
-                cmd.Parameters.AddWithValue("@Client_DOB", DOB);
+                cmd.Parameters.AddWithValue("@Client_Age", age);
                 cmd.Parameters.AddWithValue("@Client_Address", address);
                 cmd.Parameters.AddWithValue("@Client_PhoneNumber", PhoneNumber);
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
@@ -89,22 +90,41 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             }
         }
 
-        public void updateClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        public void updateClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spUpdateClientNew", connection);
+                SqlCommand cmd = new SqlCommand("spUpdateClientsNew1", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);
                 cmd.Parameters.AddWithValue("@Client_Name", name);
                 cmd.Parameters.AddWithValue("@Client_Surname", surname);
-                cmd.Parameters.AddWithValue("@Client_DOB", DOB);
+                cmd.Parameters.AddWithValue("@Client_Age", age);
                 cmd.Parameters.AddWithValue("@Client_Address", address);
                 cmd.Parameters.AddWithValue("@Client_PhoneNumber", PhoneNumber);
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
+                cmd.Parameters.AddWithValue("@Role_ID", rID);
                 cmd.Parameters.AddWithValue("@Policy_ID", pID);
                 cmd.Parameters.AddWithValue("@Policy_Type", pName);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void updateFamily(int cid, int rID, string name, string surname, string phonenumber)
+        {
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateFamily", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Client_ID", cid);
+                cmd.Parameters.AddWithValue("@Role_ID", rID);
+                cmd.Parameters.AddWithValue("@Member_Name", name);
+                cmd.Parameters.AddWithValue("@Member_Surname", surname);
+                cmd.Parameters.AddWithValue("@Member_PhoneNumber", phonenumber);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -136,6 +156,20 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             using (SqlConnection connect = new SqlConnection(conn))
             {
                 SqlCommand cmd = new SqlCommand("spDeleteClient", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Client_ID", id);
+
+                connect.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void deleteFamily(int id)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteFamily", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);

@@ -32,9 +32,9 @@ namespace SEN_381_Final_Project.Client_Management.BLL
             return client.displayFamily();
         }
 
-        public void addClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
+        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
         {
-            client.addClient(id,name, surname, DOB, address, PhoneNumber, isFamily, rID, pID, pName);
+            client.addClient(id,name, surname, age, address, PhoneNumber, isFamily, rID, pID, pName);
         }
 
         public void addFamily(int cid, int rID, string name, string surname, string phonenumber)
@@ -42,9 +42,14 @@ namespace SEN_381_Final_Project.Client_Management.BLL
             client.addFamily(cid, rID, name, surname, phonenumber);
         }
 
-        public void updateClient(int id, string name, string surname, DateTime DOB, string address, string PhoneNumber, string isFamily, int pID, string pName)
+        public void updateClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
         {
-            client.updateClient(id, name, surname, DOB, address, PhoneNumber, isFamily, pID, pName);
+            client.updateClient(id, name, surname, age, address, PhoneNumber, isFamily, rID, pID, pName);
+        }
+
+        public void updateFamily(int cid, int rID, string name, string surname, string phonenumber)
+        {
+            client.updateFamily(cid, rID, name, surname, phonenumber);
         }
 
         public DataTable searchClient(string name)
@@ -60,6 +65,11 @@ namespace SEN_381_Final_Project.Client_Management.BLL
         public void deleteClient(int id)
         {
             client.deleteClient(id);
+        }
+
+        public void deleteFamily(int id)
+        {
+            client.deleteFamily(id);
         }
     }
 }

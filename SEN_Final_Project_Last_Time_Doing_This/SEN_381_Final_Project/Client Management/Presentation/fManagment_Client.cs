@@ -98,6 +98,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             txt_CPhoneNumber.Clear();
             txt_CSearch.Clear();
             txt_CSurname.Clear();
+            txt_Age.Clear();
             cb_CFamily.SelectedIndex = -1;
             cb_CPolicy.Text = "Select a Policy";
             cb_RoleID.Text = "1: Main 2: Beneficiary";
@@ -125,28 +126,44 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
 
             if (cb_CFamily.Text == "Individual")
             {
-                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, dtp_Client.Value, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text),int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);
+                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text),int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);
                 MessageBox.Show("Client Has been added");
 
                 txt_CID.Clear();
                 txt_CName.Clear();
                 txt_CSurname.Clear();
                 txt_CAddress.Clear();
+                txt_Age.Clear();
                 txt_CPhoneNumber.Clear();
                 cb_CFamily.SelectedIndex = -1;
-                cb_RoleID.SelectedIndex = -1;
-                cb_CPolicy.SelectedIndex = -1;
+                cb_CPolicy.Text = "Select a Policy";
+                cb_RoleID.Text = "1: Main 2: Beneficiary";
             }
             else if (cb_CFamily.Text == "Family")
             {
                 btn_AddFamily.Visible = true;
-                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, dtp_Client.Value, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text), int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);   
+                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text), int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);   
             }
         }
 
         private void btn_CUpdate_Click(object sender, EventArgs e)
         {
-            
+            client.updateClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text.ToString(), txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text), int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);
+
+            txt_CID.Clear();
+            txt_CName.Clear();
+            txt_CSurname.Clear();
+            txt_CAddress.Clear();
+            txt_Age.Clear();
+            txt_CPhoneNumber.Clear();
+            cb_CFamily.SelectedIndex = -1;
+            cb_RoleID.SelectedIndex = -1;
+            cb_CPolicy.SelectedIndex = -1;
+
+            cb_CPolicy.Text = "Select a Policy";
+            cb_RoleID.Text = "1: Main 2: Beneficiary";
+
+            dgv_Client.DataSource = client.displayClient();
         }
 
         private void btn_CDelete_Click(object sender, EventArgs e)
@@ -158,6 +175,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             txt_CName.Clear();
             txt_CSurname.Clear();
             txt_CAddress.Clear();
+            txt_Age.Clear();
             txt_CPhoneNumber.Clear();
             cb_CFamily.SelectedIndex = -1;
             cb_RoleID.SelectedIndex = -1;
@@ -191,6 +209,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             txt_CName.Clear();
             txt_CSurname.Clear();
             txt_CAddress.Clear();
+            txt_Age.Clear();
             txt_CPhoneNumber.Clear();
             cb_CFamily.SelectedIndex = -1;
             cb_RoleID.SelectedIndex = -1;
@@ -233,8 +252,9 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
                 txt_CID.Text = dgvRow.Cells[0].Value.ToString();
                 txt_CName.Text = dgvRow.Cells[1].Value.ToString();
                 txt_CSurname.Text = dgvRow.Cells[2].Value.ToString();
-                txt_CAddress.Text = dgvRow.Cells[3].Value.ToString();
-                txt_CPhoneNumber.Text = dgvRow.Cells[4].Value.ToString();
+                txt_CAddress.Text = dgvRow.Cells[4].Value.ToString();
+                txt_CPhoneNumber.Text = dgvRow.Cells[5].Value.ToString();
+                txt_Age.Text = dgvRow.Cells[3].Value.ToString();
                 cb_CFamily.Text = dgvRow.Cells[6].Value.ToString();
                 cb_RoleID.Text = dgvRow.Cells[7].Value.ToString();
                 cb_CPolicy.Text = dgvRow.Cells[8].Value.ToString();

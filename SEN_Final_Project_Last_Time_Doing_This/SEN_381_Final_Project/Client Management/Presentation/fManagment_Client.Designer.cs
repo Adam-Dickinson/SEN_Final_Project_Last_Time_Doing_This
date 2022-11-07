@@ -36,7 +36,6 @@
             this.txt_CSurname = new System.Windows.Forms.TextBox();
             this.txt_CAddress = new System.Windows.Forms.TextBox();
             this.txt_CPhoneNumber = new System.Windows.Forms.TextBox();
-            this.dtp_Client = new System.Windows.Forms.DateTimePicker();
             this.cb_CFamily = new System.Windows.Forms.ComboBox();
             this.cb_CPolicy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -84,6 +83,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.txt_Age = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -166,14 +166,6 @@
             this.txt_CPhoneNumber.Size = new System.Drawing.Size(197, 20);
             this.txt_CPhoneNumber.TabIndex = 7;
             // 
-            // dtp_Client
-            // 
-            this.dtp_Client.Location = new System.Drawing.Point(586, 192);
-            this.dtp_Client.Name = "dtp_Client";
-            this.dtp_Client.Size = new System.Drawing.Size(197, 20);
-            this.dtp_Client.TabIndex = 10;
-            this.dtp_Client.Value = new System.DateTime(2022, 11, 7, 0, 0, 0, 0);
-            // 
             // cb_CFamily
             // 
             this.cb_CFamily.FormattingEnabled = true;
@@ -236,9 +228,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(500, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 17;
-            this.label5.Text = "DOB";
+            this.label5.Text = "Age";
             // 
             // label6
             // 
@@ -481,6 +473,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_Age);
             this.groupBox2.Controls.Add(this.cb_PolicyID);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.btn_DeletFamily);
@@ -497,7 +490,6 @@
             this.groupBox2.Controls.Add(this.txt_CSurname);
             this.groupBox2.Controls.Add(this.txt_CAddress);
             this.groupBox2.Controls.Add(this.txt_CPhoneNumber);
-            this.groupBox2.Controls.Add(this.dtp_Client);
             this.groupBox2.Controls.Add(this.cb_CFamily);
             this.groupBox2.Controls.Add(this.btn_CDelete);
             this.groupBox2.Controls.Add(this.label4);
@@ -696,6 +688,13 @@
             this.label14.TabIndex = 38;
             this.label14.Text = "2: Beneficiary";
             // 
+            // txt_Age
+            // 
+            this.txt_Age.Location = new System.Drawing.Point(586, 189);
+            this.txt_Age.Name = "txt_Age";
+            this.txt_Age.Size = new System.Drawing.Size(197, 20);
+            this.txt_Age.TabIndex = 34;
+            // 
             // fManagment_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -737,7 +736,6 @@
         private System.Windows.Forms.TextBox txt_CSurname;
         private System.Windows.Forms.TextBox txt_CAddress;
         private System.Windows.Forms.TextBox txt_CPhoneNumber;
-        private System.Windows.Forms.DateTimePicker dtp_Client;
         private System.Windows.Forms.ComboBox cb_CFamily;
         private System.Windows.Forms.ComboBox cb_CPolicy;
         private System.Windows.Forms.Label label1;
@@ -785,5 +783,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_Age;
     }
 }
