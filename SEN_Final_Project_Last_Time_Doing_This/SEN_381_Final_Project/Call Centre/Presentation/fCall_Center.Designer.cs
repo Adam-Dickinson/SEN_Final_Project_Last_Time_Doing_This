@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCall_Center));
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_ClientID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_endCall = new System.Windows.Forms.Button();
+            this.btn_StartCall = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -55,8 +58,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.btn_endCall = new System.Windows.Forms.Button();
-            this.btn_StartCall = new System.Windows.Forms.Button();
+            this.CallTimeSecondsLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CallTimeMinutesLabel = new System.Windows.Forms.Label();
+            this.call_timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
@@ -126,6 +131,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CallTimeSecondsLabel);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.CallTimeMinutesLabel);
             this.groupBox1.Controls.Add(this.txt_ClientID);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btn_endCall);
@@ -139,7 +147,7 @@
             // 
             // txt_ClientID
             // 
-            this.txt_ClientID.Location = new System.Drawing.Point(127, 151);
+            this.txt_ClientID.Location = new System.Drawing.Point(136, 151);
             this.txt_ClientID.Name = "txt_ClientID";
             this.txt_ClientID.Size = new System.Drawing.Size(100, 20);
             this.txt_ClientID.TabIndex = 4;
@@ -147,16 +155,42 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(124, 129);
+            this.label2.Location = new System.Drawing.Point(133, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Enter Client ID to Call";
             // 
+            // btn_endCall
+            // 
+            this.btn_endCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_end_128_28144;
+            this.btn_endCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_endCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_endCall.Location = new System.Drawing.Point(264, 69);
+            this.btn_endCall.Name = "btn_endCall";
+            this.btn_endCall.Size = new System.Drawing.Size(75, 73);
+            this.btn_endCall.TabIndex = 2;
+            this.btn_endCall.UseVisualStyleBackColor = true;
+            this.btn_endCall.Click += new System.EventHandler(this.btn_endCall_Click);
+            // 
+            // btn_StartCall
+            // 
+            this.btn_StartCall.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_StartCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_128_28145;
+            this.btn_StartCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_StartCall.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_StartCall.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_StartCall.Location = new System.Drawing.Point(28, 69);
+            this.btn_StartCall.Name = "btn_StartCall";
+            this.btn_StartCall.Size = new System.Drawing.Size(73, 73);
+            this.btn_StartCall.TabIndex = 1;
+            this.btn_StartCall.UseVisualStyleBackColor = false;
+            this.btn_StartCall.Click += new System.EventHandler(this.btn_StartCall_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 16);
+            this.label1.Location = new System.Drawing.Point(148, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 0;
@@ -328,31 +362,35 @@
             this.dataGridView2.Size = new System.Drawing.Size(520, 213);
             this.dataGridView2.TabIndex = 1;
             // 
-            // btn_endCall
+            // CallTimeSecondsLabel
             // 
-            this.btn_endCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_end_128_28144;
-            this.btn_endCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_endCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_endCall.Location = new System.Drawing.Point(238, 53);
-            this.btn_endCall.Name = "btn_endCall";
-            this.btn_endCall.Size = new System.Drawing.Size(75, 73);
-            this.btn_endCall.TabIndex = 2;
-            this.btn_endCall.UseVisualStyleBackColor = true;
-            this.btn_endCall.Click += new System.EventHandler(this.btn_endCall_Click);
+            this.CallTimeSecondsLabel.AutoSize = true;
+            this.CallTimeSecondsLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CallTimeSecondsLabel.Location = new System.Drawing.Point(181, 69);
+            this.CallTimeSecondsLabel.Name = "CallTimeSecondsLabel";
+            this.CallTimeSecondsLabel.Size = new System.Drawing.Size(45, 36);
+            this.CallTimeSecondsLabel.TabIndex = 10;
+            this.CallTimeSecondsLabel.Text = "00";
             // 
-            // btn_StartCall
+            // label9
             // 
-            this.btn_StartCall.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_StartCall.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.ic_call_128_28145;
-            this.btn_StartCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_StartCall.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_StartCall.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_StartCall.Location = new System.Drawing.Point(43, 53);
-            this.btn_StartCall.Name = "btn_StartCall";
-            this.btn_StartCall.Size = new System.Drawing.Size(73, 73);
-            this.btn_StartCall.TabIndex = 1;
-            this.btn_StartCall.UseVisualStyleBackColor = false;
-            this.btn_StartCall.Click += new System.EventHandler(this.btn_StartCall_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(164, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 33);
+            this.label9.TabIndex = 9;
+            this.label9.Text = ":";
+            // 
+            // CallTimeMinutesLabel
+            // 
+            this.CallTimeMinutesLabel.AutoSize = true;
+            this.CallTimeMinutesLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CallTimeMinutesLabel.Location = new System.Drawing.Point(141, 69);
+            this.CallTimeMinutesLabel.Name = "CallTimeMinutesLabel";
+            this.CallTimeMinutesLabel.Size = new System.Drawing.Size(30, 36);
+            this.CallTimeMinutesLabel.TabIndex = 8;
+            this.CallTimeMinutesLabel.Text = "0";
             // 
             // fCall_Center
             // 
@@ -417,5 +455,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label CallTimeSecondsLabel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label CallTimeMinutesLabel;
+        private System.Windows.Forms.Timer call_timer;
     }
 }

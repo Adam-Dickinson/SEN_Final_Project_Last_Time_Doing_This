@@ -49,7 +49,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             return dt;
         }
 
-        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID,int pID, string pName)
+        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
