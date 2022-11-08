@@ -21,7 +21,7 @@ namespace SEN_381_Final_Project.DAL
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spSearchClient", connect);
+                SqlCommand cmd = new SqlCommand("spSearchClientCall", connect);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);

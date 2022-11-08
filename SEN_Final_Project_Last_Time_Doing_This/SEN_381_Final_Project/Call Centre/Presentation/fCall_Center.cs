@@ -48,10 +48,9 @@ namespace SEN_381_Final_Project
 
         private void btn_StartCall_Click(object sender, EventArgs e)
         {
-            /*dgvPolicyDetails.DataSource = provider.searchProvider(txt_Search.Text);
-            txt_Search.Clear();*/
+            
 
-            //dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
+            dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
 
             call_timer.Enabled = true;
             Minutes = 0;

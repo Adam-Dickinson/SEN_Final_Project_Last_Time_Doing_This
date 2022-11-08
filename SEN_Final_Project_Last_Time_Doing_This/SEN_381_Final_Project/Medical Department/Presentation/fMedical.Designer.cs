@@ -38,6 +38,10 @@
             this.dgv_Treatment = new System.Windows.Forms.DataGridView();
             this.dgv_MC = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_PName = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cb_PID = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cb_Condition = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btn_Reload = new System.Windows.Forms.Button();
@@ -70,10 +74,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cb_PName = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cb_PID = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -196,6 +196,43 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Treatment";
+            // 
+            // cb_PName
+            // 
+            this.cb_PName.FormattingEnabled = true;
+            this.cb_PName.Location = new System.Drawing.Point(90, 465);
+            this.cb_PName.Name = "cb_PName";
+            this.cb_PName.Size = new System.Drawing.Size(300, 21);
+            this.cb_PName.TabIndex = 35;
+            this.cb_PName.SelectedIndexChanged += new System.EventHandler(this.cb_PName_SelectedIndexChanged);
+            this.cb_PName.Enter += new System.EventHandler(this.cb_PName_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 468);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Provider Name";
+            // 
+            // cb_PID
+            // 
+            this.cb_PID.FormattingEnabled = true;
+            this.cb_PID.Location = new System.Drawing.Point(90, 434);
+            this.cb_PID.Name = "cb_PID";
+            this.cb_PID.Size = new System.Drawing.Size(300, 21);
+            this.cb_PID.TabIndex = 33;
+            this.cb_PID.Enter += new System.EventHandler(this.cb_PID_Enter);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 437);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Provider_ID";
             // 
             // cb_Condition
             // 
@@ -537,43 +574,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // cb_PName
-            // 
-            this.cb_PName.FormattingEnabled = true;
-            this.cb_PName.Location = new System.Drawing.Point(90, 465);
-            this.cb_PName.Name = "cb_PName";
-            this.cb_PName.Size = new System.Drawing.Size(300, 21);
-            this.cb_PName.TabIndex = 35;
-            this.cb_PName.SelectedIndexChanged += new System.EventHandler(this.cb_PName_SelectedIndexChanged);
-            this.cb_PName.Enter += new System.EventHandler(this.cb_PName_Enter);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 468);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 13);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Provider Name";
-            // 
-            // cb_PID
-            // 
-            this.cb_PID.FormattingEnabled = true;
-            this.cb_PID.Location = new System.Drawing.Point(90, 434);
-            this.cb_PID.Name = "cb_PID";
-            this.cb_PID.Size = new System.Drawing.Size(300, 21);
-            this.cb_PID.TabIndex = 33;
-            this.cb_PID.Enter += new System.EventHandler(this.cb_PID_Enter);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 437);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 13);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Provider_ID";
-            // 
             // fMedical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,8 +591,8 @@
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMedical";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medical Form";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fMedical_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).EndInit();

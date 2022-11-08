@@ -372,8 +372,8 @@
             this.Controls.Add(this.dgvPolicyDetails);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fProvider_Management";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "-";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fProvider_Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).EndInit();
             this.gBPolicyDetails.ResumeLayout(false);
