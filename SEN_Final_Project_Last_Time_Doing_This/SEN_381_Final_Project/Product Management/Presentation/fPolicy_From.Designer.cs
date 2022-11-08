@@ -84,7 +84,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.dgv_Policy);
-            this.groupBox3.Location = new System.Drawing.Point(18, 75);
+            this.groupBox3.Location = new System.Drawing.Point(15, 44);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(954, 319);
             this.groupBox3.TabIndex = 31;
@@ -339,7 +339,7 @@
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_provider.Location = new System.Drawing.Point(728, 27);
+            this.btn_provider.Location = new System.Drawing.Point(786, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
             this.btn_provider.TabIndex = 36;
@@ -352,7 +352,7 @@
             this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_product.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_product.Location = new System.Drawing.Point(566, 27);
+            this.btn_product.Location = new System.Drawing.Point(624, 12);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
             this.btn_product.TabIndex = 35;
@@ -365,7 +365,7 @@
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_medical.Location = new System.Drawing.Point(414, 27);
+            this.btn_medical.Location = new System.Drawing.Point(472, 12);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 34;
@@ -378,7 +378,7 @@
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(240, 27);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(298, 12);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 33;
@@ -391,7 +391,7 @@
             this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_callcentre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_callcentre.Location = new System.Drawing.Point(66, 27);
+            this.btn_callcentre.Location = new System.Drawing.Point(124, 12);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
             this.btn_callcentre.TabIndex = 32;

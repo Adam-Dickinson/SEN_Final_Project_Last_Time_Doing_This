@@ -104,7 +104,7 @@
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_provider.Location = new System.Drawing.Point(1143, 36);
+            this.btn_provider.Location = new System.Drawing.Point(1041, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
             this.btn_provider.TabIndex = 27;
@@ -117,7 +117,7 @@
             this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_product.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_product.Location = new System.Drawing.Point(981, 36);
+            this.btn_product.Location = new System.Drawing.Point(879, 12);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
             this.btn_product.TabIndex = 26;
@@ -130,7 +130,7 @@
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_medical.Location = new System.Drawing.Point(799, 36);
+            this.btn_medical.Location = new System.Drawing.Point(697, 12);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 25;
@@ -143,7 +143,7 @@
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(631, 36);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(529, 12);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 24;
@@ -156,7 +156,7 @@
             this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_callcentre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_callcentre.Location = new System.Drawing.Point(481, 36);
+            this.btn_callcentre.Location = new System.Drawing.Point(379, 12);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
             this.btn_callcentre.TabIndex = 23;
@@ -180,7 +180,7 @@
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.dgv_Family);
-            this.groupBox1.Location = new System.Drawing.Point(813, 65);
+            this.groupBox1.Location = new System.Drawing.Point(813, 48);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(675, 239);
             this.groupBox1.TabIndex = 28;
@@ -368,7 +368,7 @@
             this.groupBox2.Controls.Add(this.btn_CDelete);
             this.groupBox2.Controls.Add(this.btn_CUpdate);
             this.groupBox2.Controls.Add(this.btn_CAdd);
-            this.groupBox2.Location = new System.Drawing.Point(6, 65);
+            this.groupBox2.Location = new System.Drawing.Point(6, 48);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(792, 448);
             this.groupBox2.TabIndex = 29;
@@ -377,8 +377,9 @@
             // 
             // btn_DeletFamily
             // 
-            this.btn_DeletFamily.BackColor = System.Drawing.Color.DimGray;
-            this.btn_DeletFamily.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_DeletFamily.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_DeletFamily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeletFamily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_DeletFamily.Location = new System.Drawing.Point(683, 389);
             this.btn_DeletFamily.Name = "btn_DeletFamily";
             this.btn_DeletFamily.Size = new System.Drawing.Size(75, 37);
@@ -389,8 +390,9 @@
             // 
             // btn_UpdateFamily
             // 
-            this.btn_UpdateFamily.BackColor = System.Drawing.Color.DimGray;
-            this.btn_UpdateFamily.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_UpdateFamily.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_UpdateFamily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UpdateFamily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_UpdateFamily.Location = new System.Drawing.Point(593, 389);
             this.btn_UpdateFamily.Name = "btn_UpdateFamily";
             this.btn_UpdateFamily.Size = new System.Drawing.Size(75, 37);
@@ -401,8 +403,9 @@
             // 
             // btn_AddFamily
             // 
-            this.btn_AddFamily.BackColor = System.Drawing.Color.DimGray;
-            this.btn_AddFamily.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_AddFamily.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_AddFamily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddFamily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_AddFamily.Location = new System.Drawing.Point(505, 389);
             this.btn_AddFamily.Name = "btn_AddFamily";
             this.btn_AddFamily.Size = new System.Drawing.Size(75, 37);
