@@ -41,6 +41,7 @@
             this.btn_Reload = new System.Windows.Forms.Button();
             this.txt_TID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btn_SearchTreatment = new System.Windows.Forms.Button();
             this.txt_TreatmentNameSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rtxt_TreatmentDescription = new System.Windows.Forms.RichTextBox();
@@ -53,21 +54,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_reload2 = new System.Windows.Forms.Button();
             this.txt_CID = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btn_SearchMC = new System.Windows.Forms.Button();
             this.txt_MCNameSearch = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.rtxt_MCInformation = new System.Windows.Forms.RichTextBox();
+            this.btn_DeleteMC = new System.Windows.Forms.Button();
+            this.btn_UpdateMC = new System.Windows.Forms.Button();
+            this.btn_AddMC = new System.Windows.Forms.Button();
             this.txt_MCName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btn_reload2 = new System.Windows.Forms.Button();
-            this.btn_SearchMC = new System.Windows.Forms.Button();
-            this.btn_DeleteMC = new System.Windows.Forms.Button();
-            this.btn_UpdateMC = new System.Windows.Forms.Button();
-            this.btn_AddMC = new System.Windows.Forms.Button();
-            this.btn_SearchTreatment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_provider.Location = new System.Drawing.Point(751, 12);
+            this.btn_provider.Location = new System.Drawing.Point(719, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 24);
             this.btn_provider.TabIndex = 9;
@@ -214,6 +214,20 @@
             this.label9.Size = new System.Drawing.Size(18, 13);
             this.label9.TabIndex = 27;
             this.label9.Text = "ID";
+            // 
+            // btn_SearchTreatment
+            // 
+            this.btn_SearchTreatment.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_SearchTreatment.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_SearchTreatment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_SearchTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchTreatment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_SearchTreatment.Location = new System.Drawing.Point(349, 27);
+            this.btn_SearchTreatment.Name = "btn_SearchTreatment";
+            this.btn_SearchTreatment.Size = new System.Drawing.Size(22, 20);
+            this.btn_SearchTreatment.TabIndex = 21;
+            this.btn_SearchTreatment.UseVisualStyleBackColor = false;
+            this.btn_SearchTreatment.Click += new System.EventHandler(this.btn_SearchTreatment_Click);
             // 
             // txt_TreatmentNameSearch
             // 
@@ -351,6 +365,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Medical Conditions";
             // 
+            // btn_reload2
+            // 
+            this.btn_reload2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_reload2.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_reload2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_reload2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reload2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_reload2.Location = new System.Drawing.Point(232, 376);
+            this.btn_reload2.Name = "btn_reload2";
+            this.btn_reload2.Size = new System.Drawing.Size(40, 29);
+            this.btn_reload2.TabIndex = 30;
+            this.btn_reload2.UseVisualStyleBackColor = false;
+            this.btn_reload2.Click += new System.EventHandler(this.btn_reload2_Click);
+            // 
             // txt_CID
             // 
             this.txt_CID.Location = new System.Drawing.Point(93, 278);
@@ -366,6 +394,20 @@
             this.label8.Size = new System.Drawing.Size(18, 13);
             this.label8.TabIndex = 25;
             this.label8.Text = "ID";
+            // 
+            // btn_SearchMC
+            // 
+            this.btn_SearchMC.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_SearchMC.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_SearchMC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_SearchMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SearchMC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_SearchMC.Location = new System.Drawing.Point(384, 27);
+            this.btn_SearchMC.Name = "btn_SearchMC";
+            this.btn_SearchMC.Size = new System.Drawing.Size(23, 20);
+            this.btn_SearchMC.TabIndex = 24;
+            this.btn_SearchMC.UseVisualStyleBackColor = false;
+            this.btn_SearchMC.Click += new System.EventHandler(this.btn_SearchMC_Click);
             // 
             // txt_MCNameSearch
             // 
@@ -390,64 +432,6 @@
             this.rtxt_MCInformation.Size = new System.Drawing.Size(300, 39);
             this.rtxt_MCInformation.TabIndex = 21;
             this.rtxt_MCInformation.Text = "";
-            // 
-            // txt_MCName
-            // 
-            this.txt_MCName.Location = new System.Drawing.Point(93, 305);
-            this.txt_MCName.Name = "txt_MCName";
-            this.txt_MCName.Size = new System.Drawing.Size(300, 20);
-            this.txt_MCName.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 343);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Information";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 309);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Name";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btn_reload2
-            // 
-            this.btn_reload2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_reload2.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
-            this.btn_reload2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_reload2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reload2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_reload2.Location = new System.Drawing.Point(232, 376);
-            this.btn_reload2.Name = "btn_reload2";
-            this.btn_reload2.Size = new System.Drawing.Size(40, 29);
-            this.btn_reload2.TabIndex = 30;
-            this.btn_reload2.UseVisualStyleBackColor = false;
-            this.btn_reload2.Click += new System.EventHandler(this.btn_reload2_Click);
-            // 
-            // btn_SearchMC
-            // 
-            this.btn_SearchMC.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_SearchMC.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
-            this.btn_SearchMC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_SearchMC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchMC.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_SearchMC.Location = new System.Drawing.Point(384, 27);
-            this.btn_SearchMC.Name = "btn_SearchMC";
-            this.btn_SearchMC.Size = new System.Drawing.Size(23, 20);
-            this.btn_SearchMC.TabIndex = 24;
-            this.btn_SearchMC.UseVisualStyleBackColor = false;
-            this.btn_SearchMC.Click += new System.EventHandler(this.btn_SearchMC_Click);
             // 
             // btn_DeleteMC
             // 
@@ -491,19 +475,35 @@
             this.btn_AddMC.UseVisualStyleBackColor = false;
             this.btn_AddMC.Click += new System.EventHandler(this.btn_AddMC_Click);
             // 
-            // btn_SearchTreatment
+            // txt_MCName
             // 
-            this.btn_SearchTreatment.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_SearchTreatment.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
-            this.btn_SearchTreatment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_SearchTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SearchTreatment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_SearchTreatment.Location = new System.Drawing.Point(349, 27);
-            this.btn_SearchTreatment.Name = "btn_SearchTreatment";
-            this.btn_SearchTreatment.Size = new System.Drawing.Size(22, 20);
-            this.btn_SearchTreatment.TabIndex = 21;
-            this.btn_SearchTreatment.UseVisualStyleBackColor = false;
-            this.btn_SearchTreatment.Click += new System.EventHandler(this.btn_SearchTreatment_Click);
+            this.txt_MCName.Location = new System.Drawing.Point(93, 305);
+            this.txt_MCName.Name = "txt_MCName";
+            this.txt_MCName.Size = new System.Drawing.Size(300, 20);
+            this.txt_MCName.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 343);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Information";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 309);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Name";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // fMedical
             // 

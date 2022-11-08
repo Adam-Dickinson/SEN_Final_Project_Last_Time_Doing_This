@@ -30,25 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagment_Client));
             this.dgv_Client = new System.Windows.Forms.DataGridView();
-            this.btn_CAdd = new System.Windows.Forms.Button();
-            this.btn_CUpdate = new System.Windows.Forms.Button();
-            this.btn_CDelete = new System.Windows.Forms.Button();
             this.btn_provider = new System.Windows.Forms.Button();
             this.btn_product = new System.Windows.Forms.Button();
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_RoleType = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txt_FID = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_FName = new System.Windows.Forms.TextBox();
+            this.txt_FSurname = new System.Windows.Forms.TextBox();
+            this.txt_FPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btn_FSearch = new System.Windows.Forms.Button();
             this.txt_FSearch = new System.Windows.Forms.TextBox();
             this.dgv_Family = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_Reload = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btn_CSearch = new System.Windows.Forms.Button();
-            this.txt_CSearch = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_DeletFamily = new System.Windows.Forms.Button();
+            this.btn_UpdateFamily = new System.Windows.Forms.Button();
+            this.btn_AddFamily = new System.Windows.Forms.Button();
             this.txt_Age = new System.Windows.Forms.TextBox();
             this.cb_PolicyID = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -70,21 +76,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_RoleType = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_FID = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_FName = new System.Windows.Forms.TextBox();
-            this.txt_FSurname = new System.Windows.Forms.TextBox();
-            this.txt_FPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btn_DeletFamily = new System.Windows.Forms.Button();
-            this.btn_UpdateFamily = new System.Windows.Forms.Button();
-            this.btn_AddFamily = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_CSearch = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_Reload = new System.Windows.Forms.Button();
+            this.btn_CSearch = new System.Windows.Forms.Button();
+            this.btn_CDelete = new System.Windows.Forms.Button();
+            this.btn_CUpdate = new System.Windows.Forms.Button();
+            this.btn_CAdd = new System.Windows.Forms.Button();
+            this.btn_FSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -102,48 +102,6 @@
             this.dgv_Client.Size = new System.Drawing.Size(488, 260);
             this.dgv_Client.TabIndex = 0;
             this.dgv_Client.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Client_CellClick_1);
-            // 
-            // btn_CAdd
-            // 
-            this.btn_CAdd.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_CAdd.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.add_circle_create_expand_new_plus_icon_123218;
-            this.btn_CAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_CAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_CAdd.Location = new System.Drawing.Point(521, 343);
-            this.btn_CAdd.Name = "btn_CAdd";
-            this.btn_CAdd.Size = new System.Drawing.Size(41, 40);
-            this.btn_CAdd.TabIndex = 1;
-            this.btn_CAdd.UseVisualStyleBackColor = false;
-            this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
-            // 
-            // btn_CUpdate
-            // 
-            this.btn_CUpdate.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_CUpdate.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.refresh_paper_load_update_icon_141966;
-            this.btn_CUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_CUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_CUpdate.Location = new System.Drawing.Point(607, 343);
-            this.btn_CUpdate.Name = "btn_CUpdate";
-            this.btn_CUpdate.Size = new System.Drawing.Size(43, 40);
-            this.btn_CUpdate.TabIndex = 2;
-            this.btn_CUpdate.UseVisualStyleBackColor = false;
-            this.btn_CUpdate.Click += new System.EventHandler(this.btn_CUpdate_Click);
-            // 
-            // btn_CDelete
-            // 
-            this.btn_CDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_CDelete.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.waste_bin_delete_remove_recycle_icon_123840;
-            this.btn_CDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_CDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_CDelete.Location = new System.Drawing.Point(698, 343);
-            this.btn_CDelete.Name = "btn_CDelete";
-            this.btn_CDelete.Size = new System.Drawing.Size(44, 40);
-            this.btn_CDelete.TabIndex = 3;
-            this.btn_CDelete.UseVisualStyleBackColor = false;
-            this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
             // 
             // btn_provider
             // 
@@ -176,7 +134,7 @@
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_medical.Location = new System.Drawing.Point(655, 36);
+            this.btn_medical.Location = new System.Drawing.Point(799, 36);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 25;
@@ -189,7 +147,7 @@
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(811, 36);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(631, 36);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 24;
@@ -232,328 +190,6 @@
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Family";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.btn_FSearch);
-            this.groupBox6.Controls.Add(this.txt_FSearch);
-            this.groupBox6.Location = new System.Drawing.Point(373, 25);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(276, 40);
-            this.groupBox6.TabIndex = 32;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Search Family";
-            // 
-            // btn_FSearch
-            // 
-            this.btn_FSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_FSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
-            this.btn_FSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_FSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_FSearch.Location = new System.Drawing.Point(242, 14);
-            this.btn_FSearch.Name = "btn_FSearch";
-            this.btn_FSearch.Size = new System.Drawing.Size(28, 20);
-            this.btn_FSearch.TabIndex = 26;
-            this.btn_FSearch.UseVisualStyleBackColor = false;
-            // 
-            // txt_FSearch
-            // 
-            this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
-            this.txt_FSearch.Name = "txt_FSearch";
-            this.txt_FSearch.Size = new System.Drawing.Size(230, 20);
-            this.txt_FSearch.TabIndex = 25;
-            // 
-            // dgv_Family
-            // 
-            this.dgv_Family.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgv_Family.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Family.Location = new System.Drawing.Point(6, 22);
-            this.dgv_Family.Name = "dgv_Family";
-            this.dgv_Family.Size = new System.Drawing.Size(358, 212);
-            this.dgv_Family.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_DeletFamily);
-            this.groupBox2.Controls.Add(this.btn_UpdateFamily);
-            this.groupBox2.Controls.Add(this.btn_AddFamily);
-            this.groupBox2.Controls.Add(this.txt_Age);
-            this.groupBox2.Controls.Add(this.cb_PolicyID);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.cb_RoleID);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txt_CID);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txt_CName);
-            this.groupBox2.Controls.Add(this.txt_CSurname);
-            this.groupBox2.Controls.Add(this.txt_CAddress);
-            this.groupBox2.Controls.Add(this.txt_CPhoneNumber);
-            this.groupBox2.Controls.Add(this.cb_CFamily);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cb_CPolicy);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.btn_Reload);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.dgv_Client);
-            this.groupBox2.Controls.Add(this.btn_CDelete);
-            this.groupBox2.Controls.Add(this.btn_CUpdate);
-            this.groupBox2.Controls.Add(this.btn_CAdd);
-            this.groupBox2.Location = new System.Drawing.Point(6, 65);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(792, 448);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Client";
-            // 
-            // btn_Reload
-            // 
-            this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_Reload.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
-            this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Reload.Location = new System.Drawing.Point(233, 291);
-            this.btn_Reload.Name = "btn_Reload";
-            this.btn_Reload.Size = new System.Drawing.Size(37, 32);
-            this.btn_Reload.TabIndex = 26;
-            this.btn_Reload.UseVisualStyleBackColor = false;
-            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btn_CSearch);
-            this.groupBox4.Controls.Add(this.txt_CSearch);
-            this.groupBox4.Location = new System.Drawing.Point(507, 25);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 40);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search Client";
-            // 
-            // btn_CSearch
-            // 
-            this.btn_CSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_CSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
-            this.btn_CSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_CSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_CSearch.Location = new System.Drawing.Point(241, 14);
-            this.btn_CSearch.Name = "btn_CSearch";
-            this.btn_CSearch.Size = new System.Drawing.Size(29, 20);
-            this.btn_CSearch.TabIndex = 26;
-            this.btn_CSearch.UseVisualStyleBackColor = false;
-            this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
-            // 
-            // txt_CSearch
-            // 
-            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
-            this.txt_CSearch.Name = "txt_CSearch";
-            this.txt_CSearch.Size = new System.Drawing.Size(229, 20);
-            this.txt_CSearch.TabIndex = 25;
-            // 
-            // txt_Age
-            // 
-            this.txt_Age.Location = new System.Drawing.Point(586, 189);
-            this.txt_Age.Name = "txt_Age";
-            this.txt_Age.Size = new System.Drawing.Size(197, 20);
-            this.txt_Age.TabIndex = 55;
-            // 
-            // cb_PolicyID
-            // 
-            this.cb_PolicyID.FormattingEnabled = true;
-            this.cb_PolicyID.Location = new System.Drawing.Point(586, 293);
-            this.cb_PolicyID.Name = "cb_PolicyID";
-            this.cb_PolicyID.Size = new System.Drawing.Size(196, 21);
-            this.cb_PolicyID.TabIndex = 53;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(502, 296);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
-            this.label11.TabIndex = 54;
-            this.label11.Text = "Policy ID";
-            // 
-            // cb_RoleID
-            // 
-            this.cb_RoleID.FormattingEnabled = true;
-            this.cb_RoleID.Location = new System.Drawing.Point(587, 244);
-            this.cb_RoleID.Name = "cb_RoleID";
-            this.cb_RoleID.Size = new System.Drawing.Size(195, 21);
-            this.cb_RoleID.TabIndex = 51;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(502, 247);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 13);
-            this.label10.TabIndex = 52;
-            this.label10.Text = "Role Type";
-            // 
-            // txt_CID
-            // 
-            this.txt_CID.Location = new System.Drawing.Point(586, 65);
-            this.txt_CID.Name = "txt_CID";
-            this.txt_CID.Size = new System.Drawing.Size(198, 20);
-            this.txt_CID.TabIndex = 50;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(500, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 49;
-            this.label8.Text = "ID Number";
-            // 
-            // txt_CName
-            // 
-            this.txt_CName.Location = new System.Drawing.Point(586, 88);
-            this.txt_CName.Name = "txt_CName";
-            this.txt_CName.Size = new System.Drawing.Size(198, 20);
-            this.txt_CName.TabIndex = 35;
-            // 
-            // txt_CSurname
-            // 
-            this.txt_CSurname.Location = new System.Drawing.Point(586, 114);
-            this.txt_CSurname.Name = "txt_CSurname";
-            this.txt_CSurname.Size = new System.Drawing.Size(197, 20);
-            this.txt_CSurname.TabIndex = 36;
-            // 
-            // txt_CAddress
-            // 
-            this.txt_CAddress.Location = new System.Drawing.Point(586, 140);
-            this.txt_CAddress.Name = "txt_CAddress";
-            this.txt_CAddress.Size = new System.Drawing.Size(197, 20);
-            this.txt_CAddress.TabIndex = 37;
-            // 
-            // txt_CPhoneNumber
-            // 
-            this.txt_CPhoneNumber.Location = new System.Drawing.Point(586, 166);
-            this.txt_CPhoneNumber.Name = "txt_CPhoneNumber";
-            this.txt_CPhoneNumber.Size = new System.Drawing.Size(197, 20);
-            this.txt_CPhoneNumber.TabIndex = 38;
-            // 
-            // cb_CFamily
-            // 
-            this.cb_CFamily.FormattingEnabled = true;
-            this.cb_CFamily.Items.AddRange(new object[] {
-            "Individual",
-            "Family"});
-            this.cb_CFamily.Location = new System.Drawing.Point(587, 218);
-            this.cb_CFamily.Name = "cb_CFamily";
-            this.cb_CFamily.Size = new System.Drawing.Size(195, 21);
-            this.cb_CFamily.TabIndex = 39;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(500, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 13);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Phone Number";
-            // 
-            // cb_CPolicy
-            // 
-            this.cb_CPolicy.FormattingEnabled = true;
-            this.cb_CPolicy.Location = new System.Drawing.Point(587, 269);
-            this.cb_CPolicy.Name = "cb_CPolicy";
-            this.cb_CPolicy.Size = new System.Drawing.Size(195, 21);
-            this.cb_CPolicy.TabIndex = 40;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(504, 272);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Policy Type";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(500, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(534, 296);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 46;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(500, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Surname";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(500, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 45;
-            this.label6.Text = "Is Family";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(500, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Address";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(500, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "Age";
             // 
             // label14
             // 
@@ -667,6 +303,73 @@
             this.label18.TabIndex = 43;
             this.label18.Text = "Surname";
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btn_FSearch);
+            this.groupBox6.Controls.Add(this.txt_FSearch);
+            this.groupBox6.Location = new System.Drawing.Point(373, 25);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(276, 40);
+            this.groupBox6.TabIndex = 32;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Search Family";
+            // 
+            // txt_FSearch
+            // 
+            this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
+            this.txt_FSearch.Name = "txt_FSearch";
+            this.txt_FSearch.Size = new System.Drawing.Size(230, 20);
+            this.txt_FSearch.TabIndex = 25;
+            // 
+            // dgv_Family
+            // 
+            this.dgv_Family.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgv_Family.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Family.Location = new System.Drawing.Point(6, 22);
+            this.dgv_Family.Name = "dgv_Family";
+            this.dgv_Family.Size = new System.Drawing.Size(358, 212);
+            this.dgv_Family.TabIndex = 1;
+            this.dgv_Family.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Family_CellClick_1);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_DeletFamily);
+            this.groupBox2.Controls.Add(this.btn_UpdateFamily);
+            this.groupBox2.Controls.Add(this.btn_AddFamily);
+            this.groupBox2.Controls.Add(this.txt_Age);
+            this.groupBox2.Controls.Add(this.cb_PolicyID);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.cb_RoleID);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txt_CID);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.txt_CName);
+            this.groupBox2.Controls.Add(this.txt_CSurname);
+            this.groupBox2.Controls.Add(this.txt_CAddress);
+            this.groupBox2.Controls.Add(this.txt_CPhoneNumber);
+            this.groupBox2.Controls.Add(this.cb_CFamily);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.cb_CPolicy);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.btn_Reload);
+            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.dgv_Client);
+            this.groupBox2.Controls.Add(this.btn_CDelete);
+            this.groupBox2.Controls.Add(this.btn_CUpdate);
+            this.groupBox2.Controls.Add(this.btn_CAdd);
+            this.groupBox2.Location = new System.Drawing.Point(6, 65);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(792, 448);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Client";
+            // 
             // btn_DeletFamily
             // 
             this.btn_DeletFamily.BackColor = System.Drawing.Color.DimGray;
@@ -699,6 +402,311 @@
             this.btn_AddFamily.TabIndex = 56;
             this.btn_AddFamily.Text = "Add Family";
             this.btn_AddFamily.UseVisualStyleBackColor = false;
+            // 
+            // txt_Age
+            // 
+            this.txt_Age.Location = new System.Drawing.Point(586, 189);
+            this.txt_Age.Name = "txt_Age";
+            this.txt_Age.Size = new System.Drawing.Size(197, 20);
+            this.txt_Age.TabIndex = 55;
+            // 
+            // cb_PolicyID
+            // 
+            this.cb_PolicyID.FormattingEnabled = true;
+            this.cb_PolicyID.Location = new System.Drawing.Point(586, 293);
+            this.cb_PolicyID.Name = "cb_PolicyID";
+            this.cb_PolicyID.Size = new System.Drawing.Size(196, 21);
+            this.cb_PolicyID.TabIndex = 53;
+            this.cb_PolicyID.SelectedIndexChanged += new System.EventHandler(this.cb_PolicyID_SelectedIndexChanged_1);
+            this.cb_PolicyID.Enter += new System.EventHandler(this.cb_PolicyID_Enter_1);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(502, 296);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 13);
+            this.label11.TabIndex = 54;
+            this.label11.Text = "Policy ID";
+            // 
+            // cb_RoleID
+            // 
+            this.cb_RoleID.FormattingEnabled = true;
+            this.cb_RoleID.Location = new System.Drawing.Point(587, 244);
+            this.cb_RoleID.Name = "cb_RoleID";
+            this.cb_RoleID.Size = new System.Drawing.Size(195, 21);
+            this.cb_RoleID.TabIndex = 51;
+            this.cb_RoleID.Enter += new System.EventHandler(this.cb_RoleID_Enter_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(502, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 13);
+            this.label10.TabIndex = 52;
+            this.label10.Text = "Role Type";
+            // 
+            // txt_CID
+            // 
+            this.txt_CID.Location = new System.Drawing.Point(586, 65);
+            this.txt_CID.Name = "txt_CID";
+            this.txt_CID.Size = new System.Drawing.Size(198, 20);
+            this.txt_CID.TabIndex = 50;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(500, 68);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "ID Number";
+            // 
+            // txt_CName
+            // 
+            this.txt_CName.Location = new System.Drawing.Point(586, 88);
+            this.txt_CName.Name = "txt_CName";
+            this.txt_CName.Size = new System.Drawing.Size(198, 20);
+            this.txt_CName.TabIndex = 35;
+            // 
+            // txt_CSurname
+            // 
+            this.txt_CSurname.Location = new System.Drawing.Point(586, 114);
+            this.txt_CSurname.Name = "txt_CSurname";
+            this.txt_CSurname.Size = new System.Drawing.Size(197, 20);
+            this.txt_CSurname.TabIndex = 36;
+            // 
+            // txt_CAddress
+            // 
+            this.txt_CAddress.Location = new System.Drawing.Point(586, 140);
+            this.txt_CAddress.Name = "txt_CAddress";
+            this.txt_CAddress.Size = new System.Drawing.Size(197, 20);
+            this.txt_CAddress.TabIndex = 37;
+            // 
+            // txt_CPhoneNumber
+            // 
+            this.txt_CPhoneNumber.Location = new System.Drawing.Point(586, 166);
+            this.txt_CPhoneNumber.Name = "txt_CPhoneNumber";
+            this.txt_CPhoneNumber.Size = new System.Drawing.Size(197, 20);
+            this.txt_CPhoneNumber.TabIndex = 38;
+            // 
+            // cb_CFamily
+            // 
+            this.cb_CFamily.FormattingEnabled = true;
+            this.cb_CFamily.Items.AddRange(new object[] {
+            "Individual",
+            "Family"});
+            this.cb_CFamily.Location = new System.Drawing.Point(587, 218);
+            this.cb_CFamily.Name = "cb_CFamily";
+            this.cb_CFamily.Size = new System.Drawing.Size(195, 21);
+            this.cb_CFamily.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(500, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 13);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Phone Number";
+            // 
+            // cb_CPolicy
+            // 
+            this.cb_CPolicy.FormattingEnabled = true;
+            this.cb_CPolicy.Location = new System.Drawing.Point(587, 269);
+            this.cb_CPolicy.Name = "cb_CPolicy";
+            this.cb_CPolicy.Size = new System.Drawing.Size(195, 21);
+            this.cb_CPolicy.TabIndex = 40;
+            this.cb_CPolicy.SelectedIndexChanged += new System.EventHandler(this.cb_CPolicy_SelectedIndexChanged);
+            this.cb_CPolicy.SelectionChangeCommitted += new System.EventHandler(this.cb_CPolicy_SelectionChangeCommitted);
+            this.cb_CPolicy.Enter += new System.EventHandler(this.cb_CPolicy_Enter_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(504, 272);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Policy Type";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(500, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(534, 296);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(500, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Surname";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(500, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "Is Family";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(500, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Address";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(500, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Age";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_CSearch);
+            this.groupBox4.Controls.Add(this.txt_CSearch);
+            this.groupBox4.Location = new System.Drawing.Point(507, 25);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(276, 40);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Search Client";
+            // 
+            // txt_CSearch
+            // 
+            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
+            this.txt_CSearch.Name = "txt_CSearch";
+            this.txt_CSearch.Size = new System.Drawing.Size(229, 20);
+            this.txt_CSearch.TabIndex = 25;
+            // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Reload.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Reload.Location = new System.Drawing.Point(233, 291);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(37, 32);
+            this.btn_Reload.TabIndex = 26;
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
+            // btn_CSearch
+            // 
+            this.btn_CSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_CSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CSearch.Location = new System.Drawing.Point(241, 14);
+            this.btn_CSearch.Name = "btn_CSearch";
+            this.btn_CSearch.Size = new System.Drawing.Size(29, 20);
+            this.btn_CSearch.TabIndex = 26;
+            this.btn_CSearch.UseVisualStyleBackColor = false;
+            this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
+            // 
+            // btn_CDelete
+            // 
+            this.btn_CDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CDelete.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.waste_bin_delete_remove_recycle_icon_123840;
+            this.btn_CDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CDelete.Location = new System.Drawing.Point(698, 343);
+            this.btn_CDelete.Name = "btn_CDelete";
+            this.btn_CDelete.Size = new System.Drawing.Size(44, 40);
+            this.btn_CDelete.TabIndex = 3;
+            this.btn_CDelete.UseVisualStyleBackColor = false;
+            this.btn_CDelete.Click += new System.EventHandler(this.btn_CDelete_Click);
+            // 
+            // btn_CUpdate
+            // 
+            this.btn_CUpdate.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CUpdate.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.refresh_paper_load_update_icon_141966;
+            this.btn_CUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CUpdate.Location = new System.Drawing.Point(607, 343);
+            this.btn_CUpdate.Name = "btn_CUpdate";
+            this.btn_CUpdate.Size = new System.Drawing.Size(43, 40);
+            this.btn_CUpdate.TabIndex = 2;
+            this.btn_CUpdate.UseVisualStyleBackColor = false;
+            this.btn_CUpdate.Click += new System.EventHandler(this.btn_CUpdate_Click);
+            // 
+            // btn_CAdd
+            // 
+            this.btn_CAdd.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_CAdd.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.add_circle_create_expand_new_plus_icon_123218;
+            this.btn_CAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_CAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_CAdd.Location = new System.Drawing.Point(521, 343);
+            this.btn_CAdd.Name = "btn_CAdd";
+            this.btn_CAdd.Size = new System.Drawing.Size(41, 40);
+            this.btn_CAdd.TabIndex = 1;
+            this.btn_CAdd.UseVisualStyleBackColor = false;
+            this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
+            // 
+            // btn_FSearch
+            // 
+            this.btn_FSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_FSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_FSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_FSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_FSearch.Location = new System.Drawing.Point(242, 14);
+            this.btn_FSearch.Name = "btn_FSearch";
+            this.btn_FSearch.Size = new System.Drawing.Size(28, 20);
+            this.btn_FSearch.TabIndex = 26;
+            this.btn_FSearch.UseVisualStyleBackColor = false;
+            this.btn_FSearch.Click += new System.EventHandler(this.btn_FSearch_Click_1);
             // 
             // fManagment_Client
             // 

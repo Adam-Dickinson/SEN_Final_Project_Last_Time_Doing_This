@@ -94,7 +94,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
-                SqlCommand cmd = new SqlCommand("spUpdateClientsNew1", connection);
+                SqlCommand cmd = new SqlCommand("spUpdateClientsNew", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Client_ID", id);
@@ -106,7 +106,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
                 cmd.Parameters.AddWithValue("@Role_ID", rID);
                 cmd.Parameters.AddWithValue("@Policy_ID", pID);
-                cmd.Parameters.AddWithValue("@Policy_Type", pName);
+                cmd.Parameters.AddWithValue("@Policy_Name", pName);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();

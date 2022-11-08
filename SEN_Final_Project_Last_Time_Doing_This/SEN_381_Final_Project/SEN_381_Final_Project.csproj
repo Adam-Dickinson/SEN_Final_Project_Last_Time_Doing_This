@@ -159,10 +159,10 @@
     <None Include="Resources\1487086362-cancel_81578.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ic_call_128_28145.ico" />
+    <None Include="Resources\ic_call_end_128_28144.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ic_call_end_128_28144.ico" />
+    <Content Include="Resources\ic_call_128_28145.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

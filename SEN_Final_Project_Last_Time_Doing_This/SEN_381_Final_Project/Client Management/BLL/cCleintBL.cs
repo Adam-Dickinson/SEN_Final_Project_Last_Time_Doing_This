@@ -42,9 +42,9 @@ namespace SEN_381_Final_Project.Client_Management.BLL
             client.addFamily(cid, rID, name, surname, phonenumber);
         }
 
-        public void updateClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
+        public void updateClient(int id, string name, string surname, string age, string address, string phonenumber, string isFamily, int Role, int PolicyID, string PName)
         {
-            client.updateClient(id, name, surname, age, address, PhoneNumber, isFamily, rID, pID, pName);
+            client.updateClient(id, name, surname, age, address, phonenumber , isFamily, Role, PolicyID, PName);
         }
 
         public void updateFamily(int cid, int rID, string name, string surname, string phonenumber)

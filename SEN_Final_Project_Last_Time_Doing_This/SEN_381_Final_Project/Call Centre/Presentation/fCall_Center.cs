@@ -124,9 +124,8 @@ namespace SEN_381_Final_Project
 
         }
 
-        private void call_timer_Tick(object sender, EventArgs e)
+        private void call_timer_Tick_1(object sender, EventArgs e)
         {
-
             string sMinutes;
             string sSeconds;
 

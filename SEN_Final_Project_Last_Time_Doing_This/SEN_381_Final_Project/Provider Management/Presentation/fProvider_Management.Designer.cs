@@ -38,6 +38,7 @@
             this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Clear = new System.Windows.Forms.Button();
             this.lbl_Status = new System.Windows.Forms.Label();
             this.lbl_Address = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).BeginInit();
             this.gBPolicyDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -159,6 +159,19 @@
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 16;
             this.label2.Text = "Phone Number";
+            // 
+            // btn_Clear
+            // 
+            this.btn_Clear.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Clear.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._1487086362_cancel_81578;
+            this.btn_Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Clear.Location = new System.Drawing.Point(104, 285);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(44, 33);
+            this.btn_Clear.TabIndex = 13;
+            this.btn_Clear.UseVisualStyleBackColor = false;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // lbl_Status
             // 
@@ -285,7 +298,7 @@
             // 
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_medical.Location = new System.Drawing.Point(417, 12);
+            this.btn_medical.Location = new System.Drawing.Point(569, 12);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 10;
@@ -297,7 +310,7 @@
             // 
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(573, 12);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(395, 12);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 9;
@@ -360,19 +373,6 @@
             this.btn_Search.TabIndex = 4;
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // btn_Clear
-            // 
-            this.btn_Clear.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_Clear.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._1487086362_cancel_81578;
-            this.btn_Clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Clear.Location = new System.Drawing.Point(104, 285);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(44, 33);
-            this.btn_Clear.TabIndex = 13;
-            this.btn_Clear.UseVisualStyleBackColor = false;
-            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // fProvider_Management
             // 

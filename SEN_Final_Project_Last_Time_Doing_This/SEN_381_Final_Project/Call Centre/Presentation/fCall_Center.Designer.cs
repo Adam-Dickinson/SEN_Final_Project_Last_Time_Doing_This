@@ -36,6 +36,9 @@
             this.btn_product = new System.Windows.Forms.Button();
             this.btn_provider = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CallTimeSecondsLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.CallTimeMinutesLabel = new System.Windows.Forms.Label();
             this.txt_ClientID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_endCall = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.CallTimeSecondsLabel = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.CallTimeMinutesLabel = new System.Windows.Forms.Label();
             this.call_timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +144,36 @@
             this.groupBox1.Size = new System.Drawing.Size(376, 198);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // CallTimeSecondsLabel
+            // 
+            this.CallTimeSecondsLabel.AutoSize = true;
+            this.CallTimeSecondsLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CallTimeSecondsLabel.Location = new System.Drawing.Point(181, 69);
+            this.CallTimeSecondsLabel.Name = "CallTimeSecondsLabel";
+            this.CallTimeSecondsLabel.Size = new System.Drawing.Size(45, 36);
+            this.CallTimeSecondsLabel.TabIndex = 10;
+            this.CallTimeSecondsLabel.Text = "00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(164, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 33);
+            this.label9.TabIndex = 9;
+            this.label9.Text = ":";
+            // 
+            // CallTimeMinutesLabel
+            // 
+            this.CallTimeMinutesLabel.AutoSize = true;
+            this.CallTimeMinutesLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CallTimeMinutesLabel.Location = new System.Drawing.Point(141, 69);
+            this.CallTimeMinutesLabel.Name = "CallTimeMinutesLabel";
+            this.CallTimeMinutesLabel.Size = new System.Drawing.Size(30, 36);
+            this.CallTimeMinutesLabel.TabIndex = 8;
+            this.CallTimeMinutesLabel.Text = "0";
             // 
             // txt_ClientID
             // 
@@ -362,35 +392,10 @@
             this.dataGridView2.Size = new System.Drawing.Size(520, 213);
             this.dataGridView2.TabIndex = 1;
             // 
-            // CallTimeSecondsLabel
+            // call_timer
             // 
-            this.CallTimeSecondsLabel.AutoSize = true;
-            this.CallTimeSecondsLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CallTimeSecondsLabel.Location = new System.Drawing.Point(181, 69);
-            this.CallTimeSecondsLabel.Name = "CallTimeSecondsLabel";
-            this.CallTimeSecondsLabel.Size = new System.Drawing.Size(45, 36);
-            this.CallTimeSecondsLabel.TabIndex = 10;
-            this.CallTimeSecondsLabel.Text = "00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(164, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 33);
-            this.label9.TabIndex = 9;
-            this.label9.Text = ":";
-            // 
-            // CallTimeMinutesLabel
-            // 
-            this.CallTimeMinutesLabel.AutoSize = true;
-            this.CallTimeMinutesLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CallTimeMinutesLabel.Location = new System.Drawing.Point(141, 69);
-            this.CallTimeMinutesLabel.Name = "CallTimeMinutesLabel";
-            this.CallTimeMinutesLabel.Size = new System.Drawing.Size(30, 36);
-            this.CallTimeMinutesLabel.TabIndex = 8;
-            this.CallTimeMinutesLabel.Text = "0";
+            this.call_timer.Interval = 1000;
+            this.call_timer.Tick += new System.EventHandler(this.call_timer_Tick_1);
             // 
             // fCall_Center
             // 
