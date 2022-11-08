@@ -67,16 +67,15 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
         private void fManagment_Client_Load(object sender, EventArgs e)
         {
             dgv_Client.DataSource = client.displayClient();
-            cb_CPolicy.Text = "Select a Policy";
+            
             cb_RoleID.Text = "1: Main 2: Beneficiary";
-            cb_PolicyID.Text = "Auto Filled In";
+            
             btn_AddFamily.Visible = false;
             btn_UpdateFamily.Visible = false;
             btn_DeletFamily.Visible = false;
 
             this.dgv_Client.Columns["Client_ID"].Visible = false;
             this.dgv_Client.Columns["Role_ID"].Visible = false;
-            this.dgv_Client.Columns["Policy_ID"].Visible = false;
         }
 
         private void btn_Reload_Click(object sender, EventArgs e)
@@ -91,9 +90,9 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             txt_CSurname.Clear();
             txt_Age.Clear();
             cb_CFamily.SelectedIndex = -1;
-            cb_CPolicy.Text = "Select a Policy";
+            
             cb_RoleID.Text = "1: Main 2: Beneficiary";
-            cb_PolicyID.Text = "Auto Filled In";
+            
         }
 
         private void btn_CSearch_Click(object sender, EventArgs e)
@@ -107,9 +106,9 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
             txt_CSearch.Clear();
             txt_CSurname.Clear();
             cb_CFamily.SelectedIndex = -1;
-            cb_CPolicy.Text = "Select a Policy";
+            
             cb_RoleID.Text = "1: Main 2: Beneficiary";
-            cb_PolicyID.Text = "Auto Filled In";
+            
         }
 
         private void btn_CAdd_Click(object sender, EventArgs e)
@@ -118,7 +117,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
 
             if (cb_CFamily.Text == "Individual")
             {
-                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text), int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);
+                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text));
                 MessageBox.Show("Client Has been added");
 
                 txt_CID.Clear();
@@ -128,68 +127,63 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
                 txt_Age.Clear();
                 txt_CPhoneNumber.Clear();
                 cb_CFamily.SelectedIndex = -1;
-                cb_CPolicy.Text = "Select a Policy";
+                
                 cb_RoleID.Text = "1: Main 2: Beneficiary";
-                cb_PolicyID.Text = "Auto Filled In";
+
+                dgv_Client.DataSource = client.displayClient();
+                
             }
             else if (cb_CFamily.Text == "Family")
             {
                 btn_AddFamily.Visible = true;
-                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text), int.Parse(cb_PolicyID.Text), cb_CPolicy.Text);
+                client.addClient(int.Parse(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, int.Parse(cb_RoleID.Text));
             }
         }
 
         private void btn_CUpdate_Click(object sender, EventArgs e)
         {
-            client.updateClient(Convert.ToInt32(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, Convert.ToInt32(cb_RoleID.Text), Convert.ToInt32(cb_PolicyID.Text), cb_CPolicy.Text);
+            if(cb_CFamily.Text == "Individual")
+            {
+                client.updateClient(Convert.ToInt32(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, Convert.ToInt32(cb_RoleID.Text));
 
-            txt_CID.Clear();
-            txt_CName.Clear();
-            txt_CSurname.Clear();
-            txt_CAddress.Clear();
-            txt_Age.Clear();
-            txt_CPhoneNumber.Clear();
-            cb_CFamily.SelectedIndex = -1;
-            cb_RoleID.SelectedIndex = -1;
-            cb_CPolicy.SelectedIndex = -1;
+                txt_CID.Clear();
+                txt_CName.Clear();
+                txt_CSurname.Clear();
+                txt_CAddress.Clear();
+                txt_Age.Clear();
+                txt_CPhoneNumber.Clear();
+                cb_CFamily.SelectedIndex = -1;
+                cb_RoleID.SelectedIndex = -1;
+                cb_RoleID.Text = "1: Main 2: Beneficiary";
+                dgv_Client.DataSource = client.displayClient();
 
-            cb_CPolicy.Text = "Select a Policy";
-            cb_RoleID.Text = "1: Main 2: Beneficiary";
-            cb_PolicyID.Text = "Auto Filled In";
-
-            dgv_Client.DataSource = client.displayClient();
+            }else if (cb_CFamily.Text == "Family")
+            {
+                btn_UpdateFamily.Visible = true;
+                client.updateClient(Convert.ToInt32(txt_CID.Text), txt_CName.Text, txt_CSurname.Text, txt_Age.Text, txt_CAddress.Text, txt_CPhoneNumber.Text, cb_CFamily.Text, Convert.ToInt32(cb_RoleID.Text));
+            }  
         }
 
         private void btn_CDelete_Click(object sender, EventArgs e)
         {
-            client.deleteClient(int.Parse(txt_CID.Text));
-            dgv_Client.DataSource = client.displayClient();
 
-            txt_CID.Clear();
-            txt_CName.Clear();
-            txt_CSurname.Clear();
-            txt_CAddress.Clear();
-            txt_Age.Clear();
-            txt_CPhoneNumber.Clear();
-            cb_CFamily.SelectedIndex = -1;
-            cb_RoleID.SelectedIndex = -1;
-            cb_CPolicy.SelectedIndex = -1;
-        }
+            if (cb_CFamily.Text == "Individual")
+            {
+                client.deleteClient(int.Parse(txt_CID.Text));
 
-        private void btn_AddFamily_Click(object sender, EventArgs e)
-        {
-            client.addFamily(int.Parse(txt_CID.Text), int.Parse(cb_RoleID.Text), txt_CName.Text, txt_CSurname.Text, txt_CPhoneNumber.Text);
-
-            txt_CID.Clear();
-            txt_CName.Clear();
-            txt_CSurname.Clear();
-            txt_CAddress.Clear();
-            txt_Age.Clear();
-            txt_CPhoneNumber.Clear();
-            cb_CFamily.SelectedIndex = -1;
-            cb_RoleID.SelectedIndex = -1;
-            cb_CPolicy.SelectedIndex = -1;
-
+                txt_CID.Clear();
+                txt_CName.Clear();
+                txt_CSurname.Clear();
+                txt_CAddress.Clear();
+                txt_Age.Clear();
+                txt_CPhoneNumber.Clear();
+                cb_CFamily.SelectedIndex = -1;
+                cb_RoleID.Text = "1: Main 2: Beneficiary";
+            }else if(cb_CFamily.Text == "Family")
+            {
+                btn_DeletFamily.Visible = true;
+                client.deleteFamily(int.Parse(txt_CID.Text));
+            }
         }
 
         private void dgv_Client_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -206,8 +200,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
                 txt_Age.Text = dgvRow.Cells[3].Value.ToString();
                 cb_CFamily.Text = dgvRow.Cells[6].Value.ToString();
                 cb_RoleID.Text = dgvRow.Cells[7].Value.ToString();
-                cb_CPolicy.Text = dgvRow.Cells[8].Value.ToString();
-                cb_PolicyID.Text = dgvRow.Cells[9].Value.ToString();
+                
             }
         }
 
@@ -225,8 +218,7 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
                 txt_Age.Text = dgvRow.Cells[3].Value.ToString();
                 cb_CFamily.Text = dgvRow.Cells[6].Value.ToString();
                 cb_RoleID.Text = dgvRow.Cells[7].Value.ToString();
-                cb_CPolicy.Text = dgvRow.Cells[9].Value.ToString();
-                cb_PolicyID.Text = dgvRow.Cells[8].Value.ToString();
+                
             }
         }
 
@@ -241,20 +233,12 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
 
         private void cb_CPolicy_Enter_1(object sender, EventArgs e)
         {
-            if (cb_CPolicy.Text == "Select a Policy")
-            {
-                cb_CPolicy.DataSource = Policy.showAllPolicys();
-                cb_CPolicy.DisplayMember = "Policy_Name";
-            }
+                
         }
 
         private void cb_PolicyID_Enter_1(object sender, EventArgs e)
         {
-            if (cb_PolicyID.Text == "Auto Filled In")
-            {
-                cb_PolicyID.DataSource = Policy.showAllPolicys();
-                cb_PolicyID.DisplayMember = "Policy_ID";
-            }
+                
         }
 
         private void cb_PolicyID_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -264,22 +248,13 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
 
         private void cb_CPolicy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < cb_CPolicy.Items.Count; i++)
-            {
-                if (cb_CPolicy.SelectedIndex == i)
-                {
-                    cb_PolicyID.SelectedIndex = i;
-                }
-            }
+            
         }
 
         private void cb_RoleID_Enter_1(object sender, EventArgs e)
         {
-            if (cb_RoleID.Text == "1: Main 2: Beneficiary")
-            {
                 cb_RoleID.DataSource = client.displayRoles();
                 cb_RoleID.DisplayMember = "Role_ID";
-            }
         }
 
         private void cb_CPolicy_SelectionChangeCommitted(object sender, EventArgs e)
@@ -299,6 +274,59 @@ namespace SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.P
                 txt_FSurname.Text = dgvRow.Cells[4].Value.ToString();
                 txt_FPhoneNumber.Text = dgvRow.Cells[5].Value.ToString();
             }
+        }
+
+        private void btn_ReloadFmaily_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_AddFamily_Click_1(object sender, EventArgs e)
+        {
+            client.addFamily(int.Parse(txt_CID.Text), int.Parse(cb_RoleID.Text), txt_CName.Text, txt_CSurname.Text, txt_CPhoneNumber.Text);
+
+            txt_CID.Clear();
+            txt_CName.Clear();
+            txt_CSurname.Clear();
+            txt_CAddress.Clear();
+            txt_Age.Clear();
+            txt_CPhoneNumber.Clear();
+            cb_CFamily.SelectedIndex = -1;
+            cb_RoleID.SelectedIndex = -1;
+
+            btn_AddFamily.Visible = false;
+        }
+
+        private void btn_UpdateFamily_Click(object sender, EventArgs e)
+        {
+            client.updateFamily(int.Parse(txt_CID.Text), int.Parse(cb_RoleID.Text), txt_CName.Text, txt_CSurname.Text, txt_CPhoneNumber.Text);
+
+            txt_CID.Clear();
+            txt_CName.Clear();
+            txt_CSurname.Clear();
+            txt_CAddress.Clear();
+            txt_Age.Clear();
+            txt_CPhoneNumber.Clear();
+            cb_CFamily.SelectedIndex = -1;
+            cb_RoleID.SelectedIndex = -1;
+
+            btn_UpdateFamily.Visible = false;
+        }
+
+        private void btn_DeletFamily_Click(object sender, EventArgs e)
+        {
+            client.deleteClient(int.Parse(txt_CID.Text));
+
+            txt_CID.Clear();
+            txt_CName.Clear();
+            txt_CSurname.Clear();
+            txt_CAddress.Clear();
+            txt_Age.Clear();
+            txt_CPhoneNumber.Clear();
+            cb_CFamily.SelectedIndex = -1;
+            cb_RoleID.SelectedIndex = -1;
+
+            btn_DeletFamily.Visible = false;
         }
     }
 }

@@ -77,7 +77,7 @@ namespace SEN_381_Final_Project
         }
         private void fProvider_Management_Load(object sender, EventArgs e)
         {
-            
+            dgvPolicyDetails.DataSource = provider.ShowAllProviders();
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)

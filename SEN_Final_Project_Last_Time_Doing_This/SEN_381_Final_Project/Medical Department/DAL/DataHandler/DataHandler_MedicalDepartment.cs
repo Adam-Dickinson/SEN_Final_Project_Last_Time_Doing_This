@@ -56,7 +56,7 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void addTreatment(int id, string name, string descrip, int conID)
+        public void addTreatment(int id, string name, string descrip,string conName, int conID, string PName, int PID)
         {
             using (SqlConnection connect = new SqlConnection(conn))
             {
@@ -66,7 +66,10 @@ namespace SEN_381_Final_Project.DAL
                 cmd.Parameters.AddWithValue("@Treatment_ID", id);
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);
                 cmd.Parameters.AddWithValue("@Treatment_Description", descrip);
+                cmd.Parameters.AddWithValue("@Condition_Name", conName);
                 cmd.Parameters.AddWithValue("@Condition_ID", conID);
+                cmd.Parameters.AddWithValue("@Policy_Name", PName);
+                cmd.Parameters.AddWithValue("@Policy_ID", PID);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();
@@ -113,7 +116,7 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
-        public void updateTreatment(int id, string name, string descrip, int conID)
+        public void updateTreatment(int id, string name, string descrip,string conName, int conID, string PName, int PID)
         {
             using(SqlConnection connect = new SqlConnection(conn))
             {
@@ -122,8 +125,11 @@ namespace SEN_381_Final_Project.DAL
 
                 cmd.Parameters.AddWithValue("@Treatment_ID", id);
                 cmd.Parameters.AddWithValue("@Treatment_Name", name);
-                cmd.Parameters.AddWithValue("@Treatment_Description", descrip);
+                cmd.Parameters.AddWithValue("@Treatment_Desc", descrip);
+                cmd.Parameters.AddWithValue("@Condition_Name", conName);
                 cmd.Parameters.AddWithValue("@Condition_ID", conID);
+                cmd.Parameters.AddWithValue("@Policy_Name", PName);
+                cmd.Parameters.AddWithValue("@Policy_ID", PID);
 
                 connect.Open();
                 cmd.ExecuteNonQuery();

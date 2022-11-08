@@ -54,14 +54,10 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).BeginInit();
             this.gBPolicyDetails.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPolicyDetails
@@ -330,24 +326,6 @@
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(705, 510);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 179);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Treatments Treated By Providers";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(501, 150);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // btn_Refresh
             // 
             this.btn_Refresh.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -381,7 +359,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1243, 724);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
             this.Controls.Add(this.btn_product);
             this.Controls.Add(this.btn_medical);
@@ -395,14 +372,12 @@
             this.Controls.Add(this.dgvPolicyDetails);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fProvider_Management";
-            this.Text = "Provider Management Form";
+            this.Text = "-";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.fProvider_Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolicyDetails)).EndInit();
             this.gBPolicyDetails.ResumeLayout(false);
             this.gBPolicyDetails.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,8 +408,6 @@
         private System.Windows.Forms.Button btn_medical;
         private System.Windows.Forms.Button btn_clientpolicy;
         private System.Windows.Forms.Button btn_callcentre;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label lbl_email;
         private System.Windows.Forms.TextBox txt_ID;

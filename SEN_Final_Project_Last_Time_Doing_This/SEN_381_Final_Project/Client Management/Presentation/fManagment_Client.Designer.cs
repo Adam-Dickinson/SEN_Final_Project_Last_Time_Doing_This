@@ -49,6 +49,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_FSearch = new System.Windows.Forms.Button();
             this.txt_FSearch = new System.Windows.Forms.TextBox();
             this.dgv_Family = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,8 +57,6 @@
             this.btn_UpdateFamily = new System.Windows.Forms.Button();
             this.btn_AddFamily = new System.Windows.Forms.Button();
             this.txt_Age = new System.Windows.Forms.TextBox();
-            this.cb_PolicyID = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.cb_RoleID = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_CID = new System.Windows.Forms.TextBox();
@@ -68,23 +67,20 @@
             this.txt_CPhoneNumber = new System.Windows.Forms.TextBox();
             this.cb_CFamily = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cb_CPolicy = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txt_CSearch = new System.Windows.Forms.TextBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn_Reload = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_CSearch = new System.Windows.Forms.Button();
+            this.txt_CSearch = new System.Windows.Forms.TextBox();
             this.btn_CDelete = new System.Windows.Forms.Button();
             this.btn_CUpdate = new System.Windows.Forms.Button();
             this.btn_CAdd = new System.Windows.Forms.Button();
-            this.btn_FSearch = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btn_ReloadFmaily = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -314,6 +310,20 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Search Family";
             // 
+            // btn_FSearch
+            // 
+            this.btn_FSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_FSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
+            this.btn_FSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_FSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_FSearch.Location = new System.Drawing.Point(242, 14);
+            this.btn_FSearch.Name = "btn_FSearch";
+            this.btn_FSearch.Size = new System.Drawing.Size(28, 20);
+            this.btn_FSearch.TabIndex = 26;
+            this.btn_FSearch.UseVisualStyleBackColor = false;
+            this.btn_FSearch.Click += new System.EventHandler(this.btn_FSearch_Click_1);
+            // 
             // txt_FSearch
             // 
             this.txt_FSearch.Location = new System.Drawing.Point(6, 14);
@@ -337,8 +347,6 @@
             this.groupBox2.Controls.Add(this.btn_UpdateFamily);
             this.groupBox2.Controls.Add(this.btn_AddFamily);
             this.groupBox2.Controls.Add(this.txt_Age);
-            this.groupBox2.Controls.Add(this.cb_PolicyID);
-            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.cb_RoleID);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txt_CID);
@@ -349,10 +357,7 @@
             this.groupBox2.Controls.Add(this.txt_CPhoneNumber);
             this.groupBox2.Controls.Add(this.cb_CFamily);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cb_CPolicy);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label3);
@@ -380,6 +385,7 @@
             this.btn_DeletFamily.TabIndex = 58;
             this.btn_DeletFamily.Text = "Delete Family";
             this.btn_DeletFamily.UseVisualStyleBackColor = false;
+            this.btn_DeletFamily.Click += new System.EventHandler(this.btn_DeletFamily_Click);
             // 
             // btn_UpdateFamily
             // 
@@ -391,6 +397,7 @@
             this.btn_UpdateFamily.TabIndex = 57;
             this.btn_UpdateFamily.Text = "Update Family ";
             this.btn_UpdateFamily.UseVisualStyleBackColor = false;
+            this.btn_UpdateFamily.Click += new System.EventHandler(this.btn_UpdateFamily_Click);
             // 
             // btn_AddFamily
             // 
@@ -402,6 +409,7 @@
             this.btn_AddFamily.TabIndex = 56;
             this.btn_AddFamily.Text = "Add Family";
             this.btn_AddFamily.UseVisualStyleBackColor = false;
+            this.btn_AddFamily.Click += new System.EventHandler(this.btn_AddFamily_Click_1);
             // 
             // txt_Age
             // 
@@ -409,27 +417,6 @@
             this.txt_Age.Name = "txt_Age";
             this.txt_Age.Size = new System.Drawing.Size(197, 20);
             this.txt_Age.TabIndex = 55;
-            // 
-            // cb_PolicyID
-            // 
-            this.cb_PolicyID.FormattingEnabled = true;
-            this.cb_PolicyID.Location = new System.Drawing.Point(586, 293);
-            this.cb_PolicyID.Name = "cb_PolicyID";
-            this.cb_PolicyID.Size = new System.Drawing.Size(196, 21);
-            this.cb_PolicyID.TabIndex = 53;
-            this.cb_PolicyID.SelectedIndexChanged += new System.EventHandler(this.cb_PolicyID_SelectedIndexChanged_1);
-            this.cb_PolicyID.Enter += new System.EventHandler(this.cb_PolicyID_Enter_1);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(502, 296);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
-            this.label11.TabIndex = 54;
-            this.label11.Text = "Policy ID";
             // 
             // cb_RoleID
             // 
@@ -519,28 +506,6 @@
             this.label4.TabIndex = 48;
             this.label4.Text = "Phone Number";
             // 
-            // cb_CPolicy
-            // 
-            this.cb_CPolicy.FormattingEnabled = true;
-            this.cb_CPolicy.Location = new System.Drawing.Point(587, 269);
-            this.cb_CPolicy.Name = "cb_CPolicy";
-            this.cb_CPolicy.Size = new System.Drawing.Size(195, 21);
-            this.cb_CPolicy.TabIndex = 40;
-            this.cb_CPolicy.SelectedIndexChanged += new System.EventHandler(this.cb_CPolicy_SelectedIndexChanged);
-            this.cb_CPolicy.SelectionChangeCommitted += new System.EventHandler(this.cb_CPolicy_SelectionChangeCommitted);
-            this.cb_CPolicy.Enter += new System.EventHandler(this.cb_CPolicy_Enter_1);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(504, 272);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Policy Type";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -551,16 +516,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(534, 296);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
-            this.label7.TabIndex = 46;
             // 
             // label2
             // 
@@ -606,24 +561,6 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Age";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btn_CSearch);
-            this.groupBox4.Controls.Add(this.txt_CSearch);
-            this.groupBox4.Location = new System.Drawing.Point(507, 25);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(276, 40);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Search Client";
-            // 
-            // txt_CSearch
-            // 
-            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
-            this.txt_CSearch.Name = "txt_CSearch";
-            this.txt_CSearch.Size = new System.Drawing.Size(229, 20);
-            this.txt_CSearch.TabIndex = 25;
-            // 
             // btn_Reload
             // 
             this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -638,6 +575,17 @@
             this.btn_Reload.UseVisualStyleBackColor = false;
             this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btn_CSearch);
+            this.groupBox4.Controls.Add(this.txt_CSearch);
+            this.groupBox4.Location = new System.Drawing.Point(507, 25);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(276, 40);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Search Client";
+            // 
             // btn_CSearch
             // 
             this.btn_CSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -651,6 +599,13 @@
             this.btn_CSearch.TabIndex = 26;
             this.btn_CSearch.UseVisualStyleBackColor = false;
             this.btn_CSearch.Click += new System.EventHandler(this.btn_CSearch_Click);
+            // 
+            // txt_CSearch
+            // 
+            this.txt_CSearch.Location = new System.Drawing.Point(6, 14);
+            this.txt_CSearch.Name = "txt_CSearch";
+            this.txt_CSearch.Size = new System.Drawing.Size(229, 20);
+            this.txt_CSearch.TabIndex = 25;
             // 
             // btn_CDelete
             // 
@@ -694,19 +649,19 @@
             this.btn_CAdd.UseVisualStyleBackColor = false;
             this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
             // 
-            // btn_FSearch
+            // btn_ReloadFmaily
             // 
-            this.btn_FSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_FSearch.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
-            this.btn_FSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_FSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_FSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_FSearch.Location = new System.Drawing.Point(242, 14);
-            this.btn_FSearch.Name = "btn_FSearch";
-            this.btn_FSearch.Size = new System.Drawing.Size(28, 20);
-            this.btn_FSearch.TabIndex = 26;
-            this.btn_FSearch.UseVisualStyleBackColor = false;
-            this.btn_FSearch.Click += new System.EventHandler(this.btn_FSearch_Click_1);
+            this.btn_ReloadFmaily.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_ReloadFmaily.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_ReloadFmaily.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ReloadFmaily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ReloadFmaily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_ReloadFmaily.Location = new System.Drawing.Point(1128, 309);
+            this.btn_ReloadFmaily.Name = "btn_ReloadFmaily";
+            this.btn_ReloadFmaily.Size = new System.Drawing.Size(37, 32);
+            this.btn_ReloadFmaily.TabIndex = 30;
+            this.btn_ReloadFmaily.UseVisualStyleBackColor = false;
+            this.btn_ReloadFmaily.Click += new System.EventHandler(this.btn_ReloadFmaily_Click);
             // 
             // fManagment_Client
             // 
@@ -715,6 +670,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1495, 544);
+            this.Controls.Add(this.btn_ReloadFmaily);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -776,8 +732,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txt_Age;
-        private System.Windows.Forms.ComboBox cb_PolicyID;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cb_RoleID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_CID;
@@ -788,10 +742,7 @@
         private System.Windows.Forms.TextBox txt_CPhoneNumber;
         private System.Windows.Forms.ComboBox cb_CFamily;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cb_CPolicy;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
@@ -799,5 +750,6 @@
         private System.Windows.Forms.Button btn_DeletFamily;
         private System.Windows.Forms.Button btn_UpdateFamily;
         private System.Windows.Forms.Button btn_AddFamily;
+        private System.Windows.Forms.Button btn_ReloadFmaily;
     }
 }

@@ -49,7 +49,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             return dt;
         }
 
-        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
+        public void addClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
@@ -64,8 +64,6 @@ namespace SEN_381_Final_Project.Client_Management.DAL
                 cmd.Parameters.AddWithValue("@Client_PhoneNumber", PhoneNumber);
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
                 cmd.Parameters.AddWithValue("@Role_ID", rID);
-                cmd.Parameters.AddWithValue("@Policy_ID", pID);
-                cmd.Parameters.AddWithValue("@Policy_Name", pName);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -90,7 +88,7 @@ namespace SEN_381_Final_Project.Client_Management.DAL
             }
         }
 
-        public void updateClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID, int pID, string pName)
+        public void updateClient(int id, string name, string surname, string age, string address, string PhoneNumber, string isFamily, int rID)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
@@ -105,8 +103,6 @@ namespace SEN_381_Final_Project.Client_Management.DAL
                 cmd.Parameters.AddWithValue("@Client_PhoneNumber", PhoneNumber);
                 cmd.Parameters.AddWithValue("@Client_IsFamily", isFamily);
                 cmd.Parameters.AddWithValue("@Role_ID", rID);
-                cmd.Parameters.AddWithValue("@Policy_ID", pID);
-                cmd.Parameters.AddWithValue("@Policy_Name", pName);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();

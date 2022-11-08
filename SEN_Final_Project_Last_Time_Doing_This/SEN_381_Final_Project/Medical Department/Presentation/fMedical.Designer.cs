@@ -38,6 +38,8 @@
             this.dgv_Treatment = new System.Windows.Forms.DataGridView();
             this.dgv_MC = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_Condition = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btn_Reload = new System.Windows.Forms.Button();
             this.txt_TID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,6 +70,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cb_PName = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cb_PID = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Treatment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MC)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -162,6 +168,12 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.cb_PName);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.cb_PID);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.cb_Condition);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btn_Reload);
             this.groupBox1.Controls.Add(this.txt_TID);
             this.groupBox1.Controls.Add(this.label9);
@@ -180,10 +192,29 @@
             this.groupBox1.Controls.Add(this.dgv_Treatment);
             this.groupBox1.Location = new System.Drawing.Point(2, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(430, 451);
+            this.groupBox1.Size = new System.Drawing.Size(430, 577);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Treatment";
+            // 
+            // cb_Condition
+            // 
+            this.cb_Condition.FormattingEnabled = true;
+            this.cb_Condition.Location = new System.Drawing.Point(90, 410);
+            this.cb_Condition.Name = "cb_Condition";
+            this.cb_Condition.Size = new System.Drawing.Size(300, 21);
+            this.cb_Condition.TabIndex = 31;
+            this.cb_Condition.SelectedIndexChanged += new System.EventHandler(this.cb_Condition_SelectedIndexChanged);
+            this.cb_Condition.Enter += new System.EventHandler(this.cb_Condition_Enter);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 413);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 13);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Medical Condition";
             // 
             // btn_Reload
             // 
@@ -192,7 +223,7 @@
             this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Reload.Location = new System.Drawing.Point(251, 412);
+            this.btn_Reload.Location = new System.Drawing.Point(269, 503);
             this.btn_Reload.Name = "btn_Reload";
             this.btn_Reload.Size = new System.Drawing.Size(47, 33);
             this.btn_Reload.TabIndex = 29;
@@ -260,7 +291,7 @@
             this.btn_DeleteTreatment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_DeleteTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteTreatment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_DeleteTreatment.Location = new System.Drawing.Point(198, 412);
+            this.btn_DeleteTreatment.Location = new System.Drawing.Point(216, 503);
             this.btn_DeleteTreatment.Name = "btn_DeleteTreatment";
             this.btn_DeleteTreatment.Size = new System.Drawing.Size(47, 33);
             this.btn_DeleteTreatment.TabIndex = 17;
@@ -274,7 +305,7 @@
             this.btn_UpdateTreatment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_UpdateTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_UpdateTreatment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_UpdateTreatment.Location = new System.Drawing.Point(145, 412);
+            this.btn_UpdateTreatment.Location = new System.Drawing.Point(163, 503);
             this.btn_UpdateTreatment.Name = "btn_UpdateTreatment";
             this.btn_UpdateTreatment.Size = new System.Drawing.Size(47, 33);
             this.btn_UpdateTreatment.TabIndex = 16;
@@ -288,7 +319,7 @@
             this.btn_AddTreatment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_AddTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddTreatment.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_AddTreatment.Location = new System.Drawing.Point(97, 412);
+            this.btn_AddTreatment.Location = new System.Drawing.Point(115, 503);
             this.btn_AddTreatment.Name = "btn_AddTreatment";
             this.btn_AddTreatment.Size = new System.Drawing.Size(42, 33);
             this.btn_AddTreatment.TabIndex = 15;
@@ -302,6 +333,7 @@
             this.cb_TreatmentMC.Name = "cb_TreatmentMC";
             this.cb_TreatmentMC.Size = new System.Drawing.Size(300, 21);
             this.cb_TreatmentMC.TabIndex = 17;
+            this.cb_TreatmentMC.SelectedIndexChanged += new System.EventHandler(this.cb_TreatmentMC_SelectedIndexChanged);
             this.cb_TreatmentMC.TextChanged += new System.EventHandler(this.cb_TreatmentMC_TextChanged);
             this.cb_TreatmentMC.Enter += new System.EventHandler(this.cb_TreatmentMC_Enter);
             this.cb_TreatmentMC.Leave += new System.EventHandler(this.cb_TreatmentMC_Leave);
@@ -318,9 +350,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 382);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Medical Condition";
+            this.label5.Text = "Medical ID";
             // 
             // label2
             // 
@@ -505,13 +537,50 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // cb_PName
+            // 
+            this.cb_PName.FormattingEnabled = true;
+            this.cb_PName.Location = new System.Drawing.Point(90, 465);
+            this.cb_PName.Name = "cb_PName";
+            this.cb_PName.Size = new System.Drawing.Size(300, 21);
+            this.cb_PName.TabIndex = 35;
+            this.cb_PName.SelectedIndexChanged += new System.EventHandler(this.cb_PName_SelectedIndexChanged);
+            this.cb_PName.Enter += new System.EventHandler(this.cb_PName_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 468);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Provider Name";
+            // 
+            // cb_PID
+            // 
+            this.cb_PID.FormattingEnabled = true;
+            this.cb_PID.Location = new System.Drawing.Point(90, 434);
+            this.cb_PID.Name = "cb_PID";
+            this.cb_PID.Size = new System.Drawing.Size(300, 21);
+            this.cb_PID.TabIndex = 33;
+            this.cb_PID.Enter += new System.EventHandler(this.cb_PID_Enter);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 437);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Provider_ID";
+            // 
             // fMedical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1005, 527);
+            this.ClientSize = new System.Drawing.Size(1005, 685);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_provider);
@@ -575,5 +644,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_Reload;
         private System.Windows.Forms.Button btn_reload2;
+        private System.Windows.Forms.ComboBox cb_Condition;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cb_PName;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cb_PID;
+        private System.Windows.Forms.Label label12;
     }
 }
