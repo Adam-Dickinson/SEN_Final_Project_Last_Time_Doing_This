@@ -17,9 +17,8 @@ namespace SEN_381_Final_Project.Call_Centre.Presentation
             InitializeComponent();
         }
 
-        private void Splash_Screen_Load(object sender, EventArgs e)
+        private void fSplash_Screen_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Width = this.BackgroundImage.Width;
             this.Height = this.BackgroundImage.Height;
@@ -28,7 +27,7 @@ namespace SEN_381_Final_Project.Call_Centre.Presentation
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Start();
-            this.Close();
+            this.Close(); 
         }
     }
 }

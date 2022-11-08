@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Call Centre\BLL\Buisness Object\CallBL.cs" />
+    <Compile Include="Call Centre\Presentation\fSplash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Call Centre\Presentation\fSplash_Screen.Designer.cs">
+      <DependentUpon>fSplash_Screen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client Management\BLL\cCleintBL.cs" />
     <Compile Include="Client Management\BLL\cClient.cs" />
     <Compile Include="Client Management\BLL\cFamily.cs" />
@@ -98,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Call Centre\Presentation\fCall_Center.resx">
       <DependentUpon>fCall_Center.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Call Centre\Presentation\fSplash_Screen.resx">
+      <DependentUpon>fSplash_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Client Management\Presentation\fManagment_Client.resx">
       <DependentUpon>fManagment_Client.cs</DependentUpon>
@@ -163,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\ic_call_128_28145.ico" />
+    <None Include="Resources\Logo_Background2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
