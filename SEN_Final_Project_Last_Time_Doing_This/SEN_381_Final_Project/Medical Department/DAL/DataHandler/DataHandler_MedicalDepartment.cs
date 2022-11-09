@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace SEN_381_Final_Project.DAL
 {
@@ -197,6 +198,25 @@ namespace SEN_381_Final_Project.DAL
             }
         }
 
+        public void addToTableCTP(int TID, string Tname, int CID, string CName, int PID, string PName)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spAddCallDetailsCTP", connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Treatment_ID", TID);
+                cmd.Parameters.AddWithValue("@Treatment_Name", Tname);
+                cmd.Parameters.AddWithValue("@Condition_ID", CID);
+                cmd.Parameters.AddWithValue("@Condition_Name", CName);
+                cmd.Parameters.AddWithValue("@Policy_ID", PID);
+                cmd.Parameters.AddWithValue("@Policy_Name", PName);
+
+
+                connect.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 
 }

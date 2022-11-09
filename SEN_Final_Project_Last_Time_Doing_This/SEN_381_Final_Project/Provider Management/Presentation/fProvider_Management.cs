@@ -78,6 +78,7 @@ namespace SEN_381_Final_Project
         private void fProvider_Management_Load(object sender, EventArgs e)
         {
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
+            this.dgvPolicyDetails.Columns["Provider_ID"].Visible = false;
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace SEN_381_Final_Project
         private void btn_Update_Click(object sender, EventArgs e)
         {
             provider.updateProviders(int.Parse(txt_ID.Text), txt_Name.Text, txt_Address.Text, txt_email.Text, txt_PhoneNumber.Text, cb_Status.Text);
+            provider.updateProviderToPolicy(int.Parse(txt_ID.Text), txt_Name.Text);
             dgvPolicyDetails.DataSource = provider.ShowAllProviders();
             txt_ID.Clear();
             txt_Name.Clear();

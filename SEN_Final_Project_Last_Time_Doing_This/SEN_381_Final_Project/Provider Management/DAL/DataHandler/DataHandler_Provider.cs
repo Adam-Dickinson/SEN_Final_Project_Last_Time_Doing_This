@@ -102,5 +102,20 @@ namespace SEN_381_Final_Project.DAL
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void spUPDATEPOlicyFROMProvider(int id, string name)
+        {
+            using (SqlConnection connect = new SqlConnection(conn))
+            {
+                SqlCommand cmd = new SqlCommand("spUPDATEPOlicyFROMProvider", connect);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Provider_ID", id);
+                cmd.Parameters.AddWithValue("@Provider_Name", name);
+                connect.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

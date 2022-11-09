@@ -1,4 +1,5 @@
-﻿using SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation;
+﻿using SEN_381_Final_Project.BusinessLayer.BL;
+using SEN_381_Final_Project.Client_and_Policy_Management.Client_Management.Presentation;
 using SEN_381_Final_Project.Medical_Department.Presentation;
 using SEN_381_Final_Project.Product_Management.BLL;
 using SEN_381_Final_Project.Product_Management.DAL.DataHandler;
@@ -22,6 +23,7 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
         }
 
         cPolicyBL policy = new cPolicyBL();
+        ProviderBL provider = new ProviderBL();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -48,6 +50,7 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             dgv_Policy.DataSource = policy.showAllPolicys();
             this.dgv_Policy.Columns["Policy_ID"].Visible = false;
             this.dgv_Policy.Columns["Cover_ID"].Visible = false;
+            this.dgv_Policy.Columns["Provider_ID"].Visible = false;
         }
 
         private void btn_PSearch_Click(object sender, EventArgs e)
@@ -58,7 +61,7 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
 
         private void btn_PAdd_Click(object sender, EventArgs e)
         {
-            policy.addPolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text);
+            policy.addPolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text, int.Parse(cb_ProviderID.Text), cb_Provider.Text);
             dgv_Policy.DataSource = policy.showAllPolicys();
 
             txt_PID.Clear();
@@ -67,11 +70,13 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             txt_PSearch.Clear();
             cb_Status.SelectedIndex = -1;
             cb_CoverLevel.SelectedIndex = -1;
+            cb_Provider.SelectedIndex = -1;
+            cb_ProviderID.SelectedIndex = -1;
         }
 
         private void btn_PUpdate_Click(object sender, EventArgs e)
         {
-            policy.updatePolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text);
+            policy.updatePolicy(int.Parse(txt_PID.Text), txt_PName.Text, txt_PPrice.Text, cb_Status.Text, cb_CoverLevel.Text, int.Parse(cb_ProviderID.Text), cb_Provider.Text);
             dgv_Policy.DataSource = policy.showAllPolicys();
 
             txt_PID.Clear();
@@ -80,6 +85,8 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             txt_PSearch.Clear();
             cb_Status.SelectedIndex = -1;
             cb_CoverLevel.SelectedIndex = -1;
+            cb_Provider.SelectedIndex = -1;
+            cb_ProviderID.SelectedIndex = -1;
         }
 
 
@@ -94,6 +101,8 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             txt_PSearch.Clear();
             cb_Status.SelectedIndex = -1;
             cb_CoverLevel.SelectedIndex = -1;
+            cb_Provider.SelectedIndex = -1;
+            cb_ProviderID.SelectedIndex = -1;
         }
 
         private void btn_callcentre_Click(object sender, EventArgs e)
@@ -142,6 +151,8 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
                 txt_PPrice.Text = dgvRow.Cells[2].Value.ToString();
                 cb_Status.Text = dgvRow.Cells[3].Value.ToString();
                 cb_CoverLevel.Text = dgvRow.Cells[5].Value.ToString();
+                cb_ProviderID.Text = dgvRow.Cells[6].Value.ToString();
+                cb_Provider.Text = dgvRow.Cells[7].Value.ToString();
             }
         }
 
@@ -161,9 +172,35 @@ namespace SEN_381_Final_Project.Product_Management.Presentation
             txt_PSearch.Clear();
             cb_Status.SelectedIndex = -1;
             cb_CoverLevel.SelectedIndex = -1;
+            cb_Provider.SelectedIndex = -1;
+            cb_ProviderID.SelectedIndex = -1;
 
             this.dgv_Policy.Columns["Policy_ID"].Visible = false;
             this.dgv_Policy.Columns["Cover_ID"].Visible = false;
+            this.dgv_Policy.Columns["Provider_ID"].Visible = false;
+        }
+
+        private void cb_Provider_Enter(object sender, EventArgs e)
+        {
+            cb_Provider.DataSource = provider.ShowAllProviders();
+            cb_Provider.DisplayMember = "Provider_Name";
+        }
+
+        private void cb_ProviderID_Enter(object sender, EventArgs e)
+        {
+            cb_ProviderID.DataSource = provider.ShowAllProviders();
+            cb_ProviderID.DisplayMember = "Provider_ID";
+        }
+
+        private void cb_Provider_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cb_Provider.Items.Count; i++)
+            {
+                if (cb_Provider.SelectedIndex == i)
+                {
+                    cb_ProviderID.SelectedIndex = i;
+                }
+            }
         }
     }
 }

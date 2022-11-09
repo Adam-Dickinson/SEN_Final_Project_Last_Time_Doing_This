@@ -18,14 +18,14 @@ namespace SEN_381_Final_Project.Product_Management.BLL
             return policy.displayPolicy();
         }
 
-        public void addPolicy(int id, string name, string price, string status, string level)
+        public void addPolicy(int id, string name, string price, string status, string level, int PID, string PName)
         {
-            policy.addPolicy(id, name, price, status, level);
+            policy.addPolicy(id, name, price, status, level, PID, PName);
         }
 
-        public void updatePolicy(int id, string name, string price, string status, string level)
+        public void updatePolicy(int id, string name, string price, string status, string level, int PID, string PName)
         {
-            policy.updatePolicy(id, name, price, status, level);
+            policy.updatePolicy(id, name, price, status, level, PID, PName);
         }
 
         public void deletePolicy(int id)

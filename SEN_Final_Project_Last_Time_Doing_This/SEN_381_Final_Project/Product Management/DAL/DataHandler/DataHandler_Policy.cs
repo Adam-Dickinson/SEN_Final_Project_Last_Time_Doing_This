@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,7 +28,7 @@ namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
             return dt;
         }
 
-        public void addPolicy(int id, string name, string price, string status, string level)
+        public void addPolicy(int id, string name, string price, string status, string level, int PID, string PName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
@@ -39,6 +40,8 @@ namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
                 cmd.Parameters.AddWithValue("@Policy_Price", price);
                 cmd.Parameters.AddWithValue("@Policy_Status", status);
                 cmd.Parameters.AddWithValue("@Policy_CoverLevel", level);
+                cmd.Parameters.AddWithValue("@Provider_ID", PID);
+                cmd.Parameters.AddWithValue("@Provider_Name", PName);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -65,7 +68,7 @@ namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
             }
         }
 
-        public void updatePolicy(int id, string name, string price, string status, string level)
+        public void updatePolicy(int id, string name, string price, string status, string level, int PID, string PName)
         {
             using (SqlConnection connection = new SqlConnection(conn))
             {
@@ -77,6 +80,8 @@ namespace SEN_381_Final_Project.Product_Management.DAL.DataHandler
                 cmd.Parameters.AddWithValue("@Policy_Price", price);
                 cmd.Parameters.AddWithValue("@Policy_Status", status);
                 cmd.Parameters.AddWithValue("@Policy_CoverLevel", level);
+                cmd.Parameters.AddWithValue("@Provider_ID", PID);
+                cmd.Parameters.AddWithValue("@Provider_Name", PName);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();

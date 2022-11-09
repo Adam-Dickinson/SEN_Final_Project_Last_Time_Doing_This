@@ -39,10 +39,18 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
         {
             tratment.Id = id;
             tratment.Name = name;
-            tratment.Description = descrip;
-            tratment.Condition_ID = conID;
+            tratment.Descrip = descrip; 
+            tratment.ConName = conName;
+            tratment.ConID = conID;
+            tratment.PName1 = PName;
+            tratment.PID1 = PID;
 
             Condition.addTreatment(id, name, descrip, conName, conID, PName, PID);
+        }
+
+        public void insertCTP(int TID, string Tname, int CID, string CName, int PID, string PName)
+        {
+            Condition.addToTableCTP(TID, Tname, CID, CName, PID, PName);
         }
 
         public DataTable searchCondition(string name)
@@ -72,8 +80,11 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
         {
             tratment.Id = id;
             tratment.Name = name;
-            tratment.Description = descrip;
-            tratment.Condition_ID = conID;
+            tratment.Descrip = descrip;
+            tratment.ConName = conName;
+            tratment.ConID = conID;
+            tratment.PName1 = PName;
+            tratment.PID1 = PID;
 
             Condition.updateTreatment(id, name, descrip, conName, conID, PName, PID);
         }

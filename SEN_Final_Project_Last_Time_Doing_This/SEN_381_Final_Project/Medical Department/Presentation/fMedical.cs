@@ -32,8 +32,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_CID.Clear();
             txt_MCName.Clear();
             rtxt_MCInformation.Clear();
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
         }
@@ -48,8 +48,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             dgv_MC.DataSource = Condition.displayConditions();
             dgv_Treatment.DataSource = Condition.displayTreatments();
 
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
 
@@ -75,17 +75,16 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             }
         }
 
-
-
         private void btn_AddTreatment_Click(object sender, EventArgs e)
         {
             Condition.insertTreatment(int.Parse(txt_TID.Text), txt_TreatmentName.Text, rtxt_TreatmentDescription.Text,cb_Condition.Text, int.Parse(cb_TreatmentMC.Text), cb_PName.Text, int.Parse(cb_PID.Text));
+            Condition.insertCTP(int.Parse(txt_TID.Text),txt_TreatmentName.Text, int.Parse(cb_TreatmentMC.Text), cb_Condition.Text, int.Parse(cb_PID.Text), cb_PName.Text);
             dgv_Treatment.DataSource = Condition.displayTreatments();
             txt_TID.Clear();
             txt_TreatmentName.Clear();
             rtxt_TreatmentDescription.Clear();
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
         }
@@ -143,8 +142,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_TID.Clear();
             txt_TreatmentName.Clear();
             rtxt_TreatmentDescription.Clear();
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
         }
@@ -163,8 +162,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_TID.Clear();
             txt_TreatmentName.Clear();
             rtxt_TreatmentDescription.Clear();
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
         }
@@ -176,8 +175,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             txt_CID.Clear();
             txt_MCName.Clear();
             rtxt_MCInformation.Clear();
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
         }
@@ -225,8 +224,8 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
             dgv_Treatment.DataSource = Condition.displayTreatments();
             txt_TreatmentNameSearch.Clear();
 
-            cb_TreatmentMC.Text = "Medical Condition";
-            cb_Condition.Text = "Medcial Condition ID";
+            cb_TreatmentMC.Text = "Medcial Condition ID";
+            cb_Condition.Text = "Medcial Condition";
             cb_PID.Text = "Policy ID";
             cb_PName.Text = "Policy Name";
 
@@ -266,7 +265,6 @@ namespace SEN_381_Final_Project.Medical_Department.Presentation
         {
                 cb_Condition.DataSource = Condition.displayConditions();
                 cb_Condition.DisplayMember = "Condition_Name";
-
         }
 
         private void cb_PID_Enter(object sender, EventArgs e)

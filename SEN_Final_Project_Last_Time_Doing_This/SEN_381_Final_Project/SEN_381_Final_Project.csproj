@@ -84,7 +84,6 @@
     <Compile Include="Call Centre\BLL\Buisness Object\cClient_Details.cs" />
     <Compile Include="Medical Department\BLL\Buisness Logic\cMedical_Conditions.cs" />
     <Compile Include="Provider Management\BLL\Buisness Object\cProviderBO.cs" />
-    <Compile Include="Medical Department\BLL\Buisness Logic\Hospital.cs" />
     <Compile Include="Call Centre\DAL\DataHandler\DataHandler_CallCentre.cs" />
     <Compile Include="Medical Department\DAL\DataHandler\DataHandler_MedicalDepartment.cs" />
     <Compile Include="Provider Management\DAL\DataHandler\DataHandler_Provider.cs" />

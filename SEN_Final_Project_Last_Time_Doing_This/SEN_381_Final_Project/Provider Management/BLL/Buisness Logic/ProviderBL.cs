@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 namespace SEN_381_Final_Project.BusinessLayer.BL
 {
-    public class ProviderBL
+    public class ProviderBL : cProviderBO
     {
         DataHandler_Provider provider = new DataHandler_Provider();
         cProviderBO providerBO = new cProviderBO();
@@ -32,6 +32,13 @@ namespace SEN_381_Final_Project.BusinessLayer.BL
              providerBO.Provider_email = email;
              providerBO.Provider_Status = status;
              provider.updateProvider(id, name, address, email, phoneNumber, status);
+        }
+
+        public void updateProviderToPolicy(int id, string name)
+        {
+
+            providerBO.Provider_name = name;
+            provider.spUPDATEPOlicyFROMProvider(id, name);
         }
 
         public void deleteProvider(int id)

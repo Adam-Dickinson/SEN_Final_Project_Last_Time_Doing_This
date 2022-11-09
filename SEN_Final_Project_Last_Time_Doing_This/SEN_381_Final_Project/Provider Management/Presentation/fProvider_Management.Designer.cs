@@ -63,7 +63,7 @@
             // dgvPolicyDetails
             // 
             this.dgvPolicyDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolicyDetails.Location = new System.Drawing.Point(119, 80);
+            this.dgvPolicyDetails.Location = new System.Drawing.Point(198, 67);
             this.dgvPolicyDetails.Name = "dgvPolicyDetails";
             this.dgvPolicyDetails.Size = new System.Drawing.Size(563, 580);
             this.dgvPolicyDetails.TabIndex = 0;
@@ -88,7 +88,7 @@
             this.gBPolicyDetails.Controls.Add(this.txt_Name);
             this.gBPolicyDetails.Controls.Add(this.btn_Update);
             this.gBPolicyDetails.Controls.Add(this.btn_Add);
-            this.gBPolicyDetails.Location = new System.Drawing.Point(705, 80);
+            this.gBPolicyDetails.Location = new System.Drawing.Point(784, 67);
             this.gBPolicyDetails.Name = "gBPolicyDetails";
             this.gBPolicyDetails.Size = new System.Drawing.Size(261, 424);
             this.gBPolicyDetails.TabIndex = 1;
@@ -250,7 +250,7 @@
             // 
             // txt_Search
             // 
-            this.txt_Search.Location = new System.Drawing.Point(271, 52);
+            this.txt_Search.Location = new System.Drawing.Point(350, 39);
             this.txt_Search.Name = "txt_Search";
             this.txt_Search.Size = new System.Drawing.Size(185, 20);
             this.txt_Search.TabIndex = 5;
@@ -260,7 +260,7 @@
             // lbl_Serach
             // 
             this.lbl_Serach.AutoSize = true;
-            this.lbl_Serach.Location = new System.Drawing.Point(140, 56);
+            this.lbl_Serach.Location = new System.Drawing.Point(219, 43);
             this.lbl_Serach.Name = "lbl_Serach";
             this.lbl_Serach.Size = new System.Drawing.Size(114, 13);
             this.lbl_Serach.TabIndex = 6;
@@ -270,7 +270,7 @@
             // 
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_provider.Location = new System.Drawing.Point(905, 12);
+            this.btn_provider.Location = new System.Drawing.Point(915, 3);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
             this.btn_provider.TabIndex = 12;
@@ -282,7 +282,7 @@
             // 
             this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_product.Location = new System.Drawing.Point(743, 12);
+            this.btn_product.Location = new System.Drawing.Point(753, 3);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
             this.btn_product.TabIndex = 11;
@@ -294,7 +294,7 @@
             // 
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_medical.Location = new System.Drawing.Point(569, 12);
+            this.btn_medical.Location = new System.Drawing.Point(579, 3);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 10;
@@ -306,7 +306,7 @@
             // 
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(395, 12);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(405, 3);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 9;
@@ -318,7 +318,7 @@
             // 
             this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_callcentre.Location = new System.Drawing.Point(243, 12);
+            this.btn_callcentre.Location = new System.Drawing.Point(253, 3);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
             this.btn_callcentre.TabIndex = 8;
@@ -332,7 +332,7 @@
             this.btn_Refresh.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
             this.btn_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Refresh.Location = new System.Drawing.Point(384, 666);
+            this.btn_Refresh.Location = new System.Drawing.Point(463, 653);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(49, 34);
             this.btn_Refresh.TabIndex = 7;
@@ -345,7 +345,7 @@
             this.btn_Search.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources.searchmagnifierinterfacesymbol_79894;
             this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Location = new System.Drawing.Point(462, 51);
+            this.btn_Search.Location = new System.Drawing.Point(541, 38);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(30, 21);
             this.btn_Search.TabIndex = 4;

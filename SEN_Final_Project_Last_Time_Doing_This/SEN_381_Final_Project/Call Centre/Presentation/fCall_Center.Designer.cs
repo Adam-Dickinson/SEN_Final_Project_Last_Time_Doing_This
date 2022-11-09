@@ -62,6 +62,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.call_timer = new System.Windows.Forms.Timer(this.components);
+            this.btn_Reload = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
@@ -73,7 +74,7 @@
             // 
             this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_callcentre.Location = new System.Drawing.Point(257, 11);
+            this.btn_callcentre.Location = new System.Drawing.Point(259, 11);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(75, 24);
             this.btn_callcentre.TabIndex = 0;
@@ -85,7 +86,7 @@
             // 
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(402, 11);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(404, 11);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 24);
             this.btn_clientpolicy.TabIndex = 1;
@@ -97,7 +98,7 @@
             // 
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_medical.Location = new System.Drawing.Point(580, 11);
+            this.btn_medical.Location = new System.Drawing.Point(582, 11);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 24);
             this.btn_medical.TabIndex = 2;
@@ -109,7 +110,7 @@
             // 
             this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_product.Location = new System.Drawing.Point(740, 12);
+            this.btn_product.Location = new System.Drawing.Point(742, 12);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 24);
             this.btn_product.TabIndex = 3;
@@ -121,7 +122,7 @@
             // 
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_provider.Location = new System.Drawing.Point(924, 12);
+            this.btn_provider.Location = new System.Drawing.Point(926, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 24);
             this.btn_provider.TabIndex = 4;
@@ -139,7 +140,7 @@
             this.groupBox1.Controls.Add(this.btn_endCall);
             this.groupBox1.Controls.Add(this.btn_StartCall);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(453, 42);
+            this.groupBox1.Location = new System.Drawing.Point(442, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(376, 198);
             this.groupBox1.TabIndex = 5;
@@ -233,7 +234,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dgv_Client);
-            this.groupBox2.Location = new System.Drawing.Point(98, 297);
+            this.groupBox2.Location = new System.Drawing.Point(81, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(548, 303);
             this.groupBox2.TabIndex = 6;
@@ -285,7 +286,7 @@
             // 
             this.btn_approve.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_approve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_approve.Location = new System.Drawing.Point(114, 622);
+            this.btn_approve.Location = new System.Drawing.Point(97, 622);
             this.btn_approve.Name = "btn_approve";
             this.btn_approve.Size = new System.Drawing.Size(91, 23);
             this.btn_approve.TabIndex = 7;
@@ -297,7 +298,7 @@
             // 
             this.btn_decline.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_decline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_decline.Location = new System.Drawing.Point(221, 622);
+            this.btn_decline.Location = new System.Drawing.Point(204, 622);
             this.btn_decline.Name = "btn_decline";
             this.btn_decline.Size = new System.Drawing.Size(91, 23);
             this.btn_decline.TabIndex = 8;
@@ -309,12 +310,13 @@
             // 
             this.btn_pending.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_pending.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pending.Location = new System.Drawing.Point(325, 622);
+            this.btn_pending.Location = new System.Drawing.Point(308, 622);
             this.btn_pending.Name = "btn_pending";
             this.btn_pending.Size = new System.Drawing.Size(91, 23);
             this.btn_pending.TabIndex = 9;
             this.btn_pending.Text = "Pending";
             this.btn_pending.UseVisualStyleBackColor = false;
+            this.btn_pending.Click += new System.EventHandler(this.btn_pending_Click);
             // 
             // groupBox3
             // 
@@ -325,7 +327,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.dataGridView2);
-            this.groupBox3.Location = new System.Drawing.Point(652, 256);
+            this.groupBox3.Location = new System.Drawing.Point(635, 256);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(545, 344);
             this.groupBox3.TabIndex = 6;
@@ -339,6 +341,8 @@
             this.cb_Provider.Name = "cb_Provider";
             this.cb_Provider.Size = new System.Drawing.Size(121, 21);
             this.cb_Provider.TabIndex = 10;
+            this.cb_Provider.SelectedIndexChanged += new System.EventHandler(this.cb_Provider_SelectedIndexChanged);
+            this.cb_Provider.Enter += new System.EventHandler(this.cb_Provider_Enter);
             // 
             // cb_Treatment
             // 
@@ -347,6 +351,8 @@
             this.cb_Treatment.Name = "cb_Treatment";
             this.cb_Treatment.Size = new System.Drawing.Size(121, 21);
             this.cb_Treatment.TabIndex = 11;
+            this.cb_Treatment.SelectedIndexChanged += new System.EventHandler(this.cb_Treatment_SelectedIndexChanged);
+            this.cb_Treatment.Enter += new System.EventHandler(this.cb_Treatment_Enter);
             // 
             // cb_Condition
             // 
@@ -356,15 +362,16 @@
             this.cb_Condition.Size = new System.Drawing.Size(121, 21);
             this.cb_Condition.TabIndex = 5;
             this.cb_Condition.SelectedIndexChanged += new System.EventHandler(this.cb_Condition_SelectedIndexChanged);
+            this.cb_Condition.Enter += new System.EventHandler(this.cb_Condition_Enter);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(269, 41);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Provider";
+            this.label7.Text = "Policy";
             // 
             // label6
             // 
@@ -397,12 +404,27 @@
             this.call_timer.Interval = 1000;
             this.call_timer.Tick += new System.EventHandler(this.call_timer_Tick_1);
             // 
+            // btn_Reload
+            // 
+            this.btn_Reload.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Reload.BackgroundImage = global::SEN_381_Final_Project.Properties.Resources._4213447_arrow_load_loading_refresh_reload_restart_sync_115423;
+            this.btn_Reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Reload.Location = new System.Drawing.Point(824, 131);
+            this.btn_Reload.Name = "btn_Reload";
+            this.btn_Reload.Size = new System.Drawing.Size(47, 33);
+            this.btn_Reload.TabIndex = 30;
+            this.btn_Reload.UseVisualStyleBackColor = false;
+            this.btn_Reload.Click += new System.EventHandler(this.btn_Reload_Click);
+            // 
             // fCall_Center
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1261, 655);
+            this.Controls.Add(this.btn_Reload);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_pending);
             this.Controls.Add(this.btn_decline);
@@ -418,6 +440,7 @@
             this.Name = "fCall_Center";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Call Center ";
+            this.Load += new System.EventHandler(this.fCall_Center_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -464,5 +487,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label CallTimeMinutesLabel;
         private System.Windows.Forms.Timer call_timer;
+        private System.Windows.Forms.Button btn_Reload;
     }
 }

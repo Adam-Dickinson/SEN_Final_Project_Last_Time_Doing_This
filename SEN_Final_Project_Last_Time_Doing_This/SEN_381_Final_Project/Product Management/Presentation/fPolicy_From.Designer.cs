@@ -57,6 +57,10 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
+            this.cb_Provider = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_ProviderID = new System.Windows.Forms.ComboBox();
+            this.ProviderID = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -64,6 +68,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cb_ProviderID);
+            this.groupBox3.Controls.Add(this.ProviderID);
+            this.groupBox3.Controls.Add(this.cb_Provider);
+            this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.btn_Reload);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
@@ -84,7 +92,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.dgv_Policy);
-            this.groupBox3.Location = new System.Drawing.Point(18, 75);
+            this.groupBox3.Location = new System.Drawing.Point(15, 44);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(954, 319);
             this.groupBox3.TabIndex = 31;
@@ -110,7 +118,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(783, 199);
+            this.label4.Location = new System.Drawing.Point(783, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 13);
             this.label4.TabIndex = 44;
@@ -121,7 +129,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(783, 212);
+            this.label3.Location = new System.Drawing.Point(783, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 13);
             this.label3.TabIndex = 43;
@@ -132,7 +140,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(783, 225);
+            this.label2.Location = new System.Drawing.Point(783, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 13);
             this.label2.TabIndex = 42;
@@ -143,7 +151,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(783, 186);
+            this.label1.Location = new System.Drawing.Point(783, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 41;
@@ -213,7 +221,7 @@
             this.btn_PDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_PDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_PDelete.Location = new System.Drawing.Point(706, 215);
+            this.btn_PDelete.Location = new System.Drawing.Point(719, 271);
             this.btn_PDelete.Name = "btn_PDelete";
             this.btn_PDelete.Size = new System.Drawing.Size(43, 33);
             this.btn_PDelete.TabIndex = 37;
@@ -227,7 +235,7 @@
             this.btn_PUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_PUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_PUpdate.Location = new System.Drawing.Point(643, 215);
+            this.btn_PUpdate.Location = new System.Drawing.Point(656, 271);
             this.btn_PUpdate.Name = "btn_PUpdate";
             this.btn_PUpdate.Size = new System.Drawing.Size(42, 33);
             this.btn_PUpdate.TabIndex = 36;
@@ -241,7 +249,7 @@
             this.btn_PAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_PAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_PAdd.Location = new System.Drawing.Point(581, 215);
+            this.btn_PAdd.Location = new System.Drawing.Point(594, 271);
             this.btn_PAdd.Name = "btn_PAdd";
             this.btn_PAdd.Size = new System.Drawing.Size(40, 33);
             this.btn_PAdd.TabIndex = 35;
@@ -339,7 +347,7 @@
             this.btn_provider.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_provider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_provider.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_provider.Location = new System.Drawing.Point(728, 27);
+            this.btn_provider.Location = new System.Drawing.Point(786, 12);
             this.btn_provider.Name = "btn_provider";
             this.btn_provider.Size = new System.Drawing.Size(75, 23);
             this.btn_provider.TabIndex = 36;
@@ -352,7 +360,7 @@
             this.btn_product.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_product.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_product.Location = new System.Drawing.Point(566, 27);
+            this.btn_product.Location = new System.Drawing.Point(624, 12);
             this.btn_product.Name = "btn_product";
             this.btn_product.Size = new System.Drawing.Size(75, 23);
             this.btn_product.TabIndex = 35;
@@ -365,7 +373,7 @@
             this.btn_medical.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_medical.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_medical.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_medical.Location = new System.Drawing.Point(414, 27);
+            this.btn_medical.Location = new System.Drawing.Point(472, 12);
             this.btn_medical.Name = "btn_medical";
             this.btn_medical.Size = new System.Drawing.Size(75, 23);
             this.btn_medical.TabIndex = 34;
@@ -378,7 +386,7 @@
             this.btn_clientpolicy.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_clientpolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientpolicy.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_clientpolicy.Location = new System.Drawing.Point(240, 27);
+            this.btn_clientpolicy.Location = new System.Drawing.Point(298, 12);
             this.btn_clientpolicy.Name = "btn_clientpolicy";
             this.btn_clientpolicy.Size = new System.Drawing.Size(87, 23);
             this.btn_clientpolicy.TabIndex = 33;
@@ -391,13 +399,64 @@
             this.btn_callcentre.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btn_callcentre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_callcentre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_callcentre.Location = new System.Drawing.Point(66, 27);
+            this.btn_callcentre.Location = new System.Drawing.Point(124, 12);
             this.btn_callcentre.Name = "btn_callcentre";
             this.btn_callcentre.Size = new System.Drawing.Size(87, 23);
             this.btn_callcentre.TabIndex = 32;
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
+            // 
+            // cb_Provider
+            // 
+            this.cb_Provider.FormattingEnabled = true;
+            this.cb_Provider.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cb_Provider.Location = new System.Drawing.Point(580, 231);
+            this.cb_Provider.Name = "cb_Provider";
+            this.cb_Provider.Size = new System.Drawing.Size(197, 21);
+            this.cb_Provider.TabIndex = 47;
+            this.cb_Provider.SelectedIndexChanged += new System.EventHandler(this.cb_Provider_SelectedIndexChanged);
+            this.cb_Provider.Enter += new System.EventHandler(this.cb_Provider_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(498, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Provider";
+            // 
+            // cb_ProviderID
+            // 
+            this.cb_ProviderID.FormattingEnabled = true;
+            this.cb_ProviderID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cb_ProviderID.Location = new System.Drawing.Point(580, 209);
+            this.cb_ProviderID.Name = "cb_ProviderID";
+            this.cb_ProviderID.Size = new System.Drawing.Size(197, 21);
+            this.cb_ProviderID.TabIndex = 49;
+            this.cb_ProviderID.Enter += new System.EventHandler(this.cb_ProviderID_Enter);
+            // 
+            // ProviderID
+            // 
+            this.ProviderID.AutoSize = true;
+            this.ProviderID.BackColor = System.Drawing.Color.Transparent;
+            this.ProviderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ProviderID.Location = new System.Drawing.Point(498, 212);
+            this.ProviderID.Name = "ProviderID";
+            this.ProviderID.Size = new System.Drawing.Size(60, 13);
+            this.ProviderID.TabIndex = 48;
+            this.ProviderID.Text = "Provider ID";
             // 
             // fPolicy_From
             // 
@@ -455,5 +514,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Reload;
+        private System.Windows.Forms.ComboBox cb_Provider;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cb_ProviderID;
+        private System.Windows.Forms.Label ProviderID;
     }
 }

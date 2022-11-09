@@ -22,6 +22,8 @@ namespace SEN_381_Final_Project
             InitializeComponent();
         }
 
+        CallBL call = new CallBL();
+
         public int Seconds;
         public int Minutes;
 
@@ -43,23 +45,37 @@ namespace SEN_381_Final_Project
 
         private void cb_Condition_SelectedIndexChanged(object sender, EventArgs e)
         { 
-
+            for(int i = 0; i < cb_Condition.Items.Count; i++)
+            {
+                if(cb_Condition.SelectedIndex == i || cb_Treatment.SelectedIndex == i)
+                {
+                    cb_Provider.SelectedIndex = i;
+                }
+            }
         }
 
         private void btn_StartCall_Click(object sender, EventArgs e)
         {
-            
+            dataGridView2.DataSource = callBL.displayRecord(int.Parse(txt_ClientID.Text));
 
             dgv_Client.DataSource = callBL.searchClient(int.Parse(txt_ClientID.Text));
 
             call_timer.Enabled = true;
             Minutes = 0;
             Seconds = 0;
+
+            this.groupBox2.Visible = true;
+            this.groupBox3.Visible = true;
+            this.btn_approve.Visible = true;
+            this.btn_decline.Visible = true;
+            this.btn_pending.Visible = true;
         }
 
         private void btn_endCall_Click(object sender, EventArgs e)
         {
-            //txt_ClientID.Clear();
+            txt_ClientID.Clear();
+
+            
 
             call_timer.Enabled = false;
 
@@ -82,12 +98,32 @@ namespace SEN_381_Final_Project
         {
             String message = "Claim has been approved";
             MessageBox.Show(message);
+
+            callBL.insertRecord(int.Parse(txt_ClientID.Text), txt_Name.Text, txt_Surname.Text, cb_Condition.Text, cb_Treatment.Text, cb_Provider.Text);
+
+            txt_ClientID.Clear();
+            txt_Name.Clear();
+            txt_Surname.Clear();
         }
 
         private void btn_decline_Click(object sender, EventArgs e)
         {
             String message = "Claim has been declined";
             MessageBox.Show(message);
+
+            txt_ClientID.Clear();
+            txt_Name.Clear();
+            txt_Surname.Clear();
+        }
+
+        private void btn_pending_Click(object sender, EventArgs e)
+        {
+            String message = "Claim will be pending";
+            MessageBox.Show(message);
+
+            txt_ClientID.Clear();
+            txt_Name.Clear();
+            txt_Surname.Clear();
         }
 
         private void dgv_Client_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -149,6 +185,52 @@ namespace SEN_381_Final_Project
                 CallTimeMinutesLabel.Text = Minutes.ToString();
                 CallTimeSecondsLabel.Text = Seconds.ToString();
             }
+        }
+
+        private void cb_Provider_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_Treatment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_Condition_Enter(object sender, EventArgs e)
+        {
+            cb_Condition.DataSource = call.displayClient();
+            cb_Condition.DisplayMember = "Condition_Name";
+        }
+
+        private void cb_Provider_Enter(object sender, EventArgs e)
+        {
+            cb_Provider.DataSource = call.displayClient();
+            cb_Provider.DisplayMember = "Policy_Name";
+        }
+
+        private void cb_Treatment_Enter(object sender, EventArgs e)
+        {
+            cb_Treatment.DataSource = call.displayClient();
+            cb_Treatment.DisplayMember = "Treatment_Name";
+        }
+
+        private void fCall_Center_Load(object sender, EventArgs e)
+        {
+            this.groupBox2.Visible = false;
+            this.groupBox3.Visible = false;
+            this.btn_approve.Visible = false;
+            this.btn_decline.Visible = false;
+            this.btn_pending.Visible = false;
+        }
+
+        private void btn_Reload_Click(object sender, EventArgs e)
+        {
+            this.groupBox2.Visible = false;
+            this.groupBox3.Visible = false;
+            this.btn_approve.Visible = false;
+            this.btn_decline.Visible = false;
+            this.btn_pending.Visible = false;
         }
     }
 }

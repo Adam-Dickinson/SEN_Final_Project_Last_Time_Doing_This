@@ -15,12 +15,18 @@ namespace SEN_381_Final_Project.Medical_Department.BLL.Buisness_Object
 
         private int id;
         private string name;
-        private string description;
-        private int condition_id;
+        private string descrip;
+        private string conName;
+        private int conID;
+        private string PName;
+        private int PID;
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-        public string Description { get => description; set => description = value; }
-        public int Condition_ID { get => condition_id; set => condition_id = value; }
+        public string Descrip { get => descrip; set => descrip = value; }
+        public string ConName { get => conName; set => conName = value; }
+        public int ConID { get => conID; set => conID = value; }
+        public string PName1 { get => PName; set => PName = value; }
+        public int PID1 { get => PID; set => PID = value; }
     }
 }
