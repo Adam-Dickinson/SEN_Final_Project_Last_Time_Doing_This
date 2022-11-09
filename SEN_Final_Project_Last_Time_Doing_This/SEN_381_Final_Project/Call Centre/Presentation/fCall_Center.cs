@@ -114,6 +114,10 @@ namespace SEN_381_Final_Project
             txt_ClientID.Clear();
             txt_Name.Clear();
             txt_Surname.Clear();
+
+            cb_Condition.SelectedIndex = -1;
+            cb_Treatment.SelectedIndex = -1;
+            cb_Provider.SelectedIndex = -1;
         }
 
         private void btn_pending_Click(object sender, EventArgs e)

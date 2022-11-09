@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagment_Client));
             this.dgv_Client = new System.Windows.Forms.DataGridView();
             this.btn_provider = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             this.btn_CAdd = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btn_ReloadFmaily = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -651,6 +653,7 @@
             this.btn_CAdd.TabIndex = 1;
             this.btn_CAdd.UseVisualStyleBackColor = false;
             this.btn_CAdd.Click += new System.EventHandler(this.btn_CAdd_Click);
+            this.btn_CAdd.MouseHover += new System.EventHandler(this.btn_CAdd_MouseHover);
             // 
             // btn_ReloadFmaily
             // 
@@ -665,6 +668,11 @@
             this.btn_ReloadFmaily.TabIndex = 30;
             this.btn_ReloadFmaily.UseVisualStyleBackColor = false;
             this.btn_ReloadFmaily.Click += new System.EventHandler(this.btn_ReloadFmaily_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.Tag = "1; Main member";
             // 
             // fManagment_Client
             // 
@@ -754,5 +762,6 @@
         private System.Windows.Forms.Button btn_UpdateFamily;
         private System.Windows.Forms.Button btn_AddFamily;
         private System.Windows.Forms.Button btn_ReloadFmaily;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

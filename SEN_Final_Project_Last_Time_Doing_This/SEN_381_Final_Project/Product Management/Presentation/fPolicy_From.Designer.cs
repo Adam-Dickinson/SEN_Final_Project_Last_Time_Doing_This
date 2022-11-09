@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPolicy_From));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cb_ProviderID = new System.Windows.Forms.ComboBox();
+            this.ProviderID = new System.Windows.Forms.Label();
+            this.cb_Provider = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_Reload = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,10 +61,6 @@
             this.btn_medical = new System.Windows.Forms.Button();
             this.btn_clientpolicy = new System.Windows.Forms.Button();
             this.btn_callcentre = new System.Windows.Forms.Button();
-            this.cb_Provider = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cb_ProviderID = new System.Windows.Forms.ComboBox();
-            this.ProviderID = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Policy)).BeginInit();
@@ -98,6 +98,57 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Policy";
+            // 
+            // cb_ProviderID
+            // 
+            this.cb_ProviderID.FormattingEnabled = true;
+            this.cb_ProviderID.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cb_ProviderID.Location = new System.Drawing.Point(580, 209);
+            this.cb_ProviderID.Name = "cb_ProviderID";
+            this.cb_ProviderID.Size = new System.Drawing.Size(197, 21);
+            this.cb_ProviderID.TabIndex = 49;
+            this.cb_ProviderID.Enter += new System.EventHandler(this.cb_ProviderID_Enter);
+            // 
+            // ProviderID
+            // 
+            this.ProviderID.AutoSize = true;
+            this.ProviderID.BackColor = System.Drawing.Color.Transparent;
+            this.ProviderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ProviderID.Location = new System.Drawing.Point(498, 212);
+            this.ProviderID.Name = "ProviderID";
+            this.ProviderID.Size = new System.Drawing.Size(60, 13);
+            this.ProviderID.TabIndex = 48;
+            this.ProviderID.Text = "Provider ID";
+            // 
+            // cb_Provider
+            // 
+            this.cb_Provider.FormattingEnabled = true;
+            this.cb_Provider.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cb_Provider.Location = new System.Drawing.Point(580, 231);
+            this.cb_Provider.Name = "cb_Provider";
+            this.cb_Provider.Size = new System.Drawing.Size(197, 21);
+            this.cb_Provider.TabIndex = 47;
+            this.cb_Provider.SelectedIndexChanged += new System.EventHandler(this.cb_Provider_SelectedIndexChanged);
+            this.cb_Provider.Enter += new System.EventHandler(this.cb_Provider_Enter);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(498, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Provider";
             // 
             // btn_Reload
             // 
@@ -142,9 +193,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(783, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 13);
+            this.label2.Size = new System.Drawing.Size(130, 13);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Cover Level: 4 = Bronze";
+            this.label2.Text = "Cover Level: 4 = Diamond";
             // 
             // label1
             // 
@@ -406,57 +457,6 @@
             this.btn_callcentre.Text = "Call Centre";
             this.btn_callcentre.UseVisualStyleBackColor = false;
             this.btn_callcentre.Click += new System.EventHandler(this.btn_callcentre_Click);
-            // 
-            // cb_Provider
-            // 
-            this.cb_Provider.FormattingEnabled = true;
-            this.cb_Provider.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cb_Provider.Location = new System.Drawing.Point(580, 231);
-            this.cb_Provider.Name = "cb_Provider";
-            this.cb_Provider.Size = new System.Drawing.Size(197, 21);
-            this.cb_Provider.TabIndex = 47;
-            this.cb_Provider.SelectedIndexChanged += new System.EventHandler(this.cb_Provider_SelectedIndexChanged);
-            this.cb_Provider.Enter += new System.EventHandler(this.cb_Provider_Enter);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(498, 234);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Provider";
-            // 
-            // cb_ProviderID
-            // 
-            this.cb_ProviderID.FormattingEnabled = true;
-            this.cb_ProviderID.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cb_ProviderID.Location = new System.Drawing.Point(580, 209);
-            this.cb_ProviderID.Name = "cb_ProviderID";
-            this.cb_ProviderID.Size = new System.Drawing.Size(197, 21);
-            this.cb_ProviderID.TabIndex = 49;
-            this.cb_ProviderID.Enter += new System.EventHandler(this.cb_ProviderID_Enter);
-            // 
-            // ProviderID
-            // 
-            this.ProviderID.AutoSize = true;
-            this.ProviderID.BackColor = System.Drawing.Color.Transparent;
-            this.ProviderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ProviderID.Location = new System.Drawing.Point(498, 212);
-            this.ProviderID.Name = "ProviderID";
-            this.ProviderID.Size = new System.Drawing.Size(60, 13);
-            this.ProviderID.TabIndex = 48;
-            this.ProviderID.Text = "Provider ID";
             // 
             // fPolicy_From
             // 
